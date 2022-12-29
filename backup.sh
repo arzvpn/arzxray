@@ -2,15 +2,15 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/yokkovpn/theme/color.conf)
+colornow=$(cat /etc/arzvpn/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m" 
-COLOR1="$(cat /etc/yokkovpn/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/yokkovpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"                    
+COLOR1="$(cat /etc/arzvpn/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+COLBG1="$(cat /etc/arzvpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"                    
 ###########- END COLOR CODE -##########
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/artanodrop/permission/main/ipmini > /root/tmp
+    curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -28,7 +28,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/artanodrop/permission/main/ipmini | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -45,7 +45,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/artanodrop/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -73,12 +73,12 @@ IP=$(curl -sS ipv4.icanhazip.com);
 date=$(date +"%Y-%m-%d")
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-NameUser=$(curl -sS https://raw.githubusercontent.com/artanodrop/permission/main/ipmini | grep $MYIP | awk '{print $2}')
+NameUser=$(curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • BACKUP PANEL MENU •             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             •MENU BACKUP•             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}  [INFO] Create password for database"
@@ -109,7 +109,7 @@ zip -rP $InputPass $NameUser.zip backup > /dev/null 2>&1
 ##############++++++++++++++++++++++++#############
 LLatest=`date`
 Get_Data () {
-git clone https://github.com/artanodrop/backupuserarta.git /root/user-backup/ &> /dev/null
+git clone https://github.com/arzvpn/backupuserarz.git /root/user-backup/ &> /dev/null
 }
 
 Mkdir_Data () {
@@ -129,15 +129,15 @@ mv /root/$NameUser.zip /root/user-backup/$NameUser/
 Save_And_Exit () {
     DATE=$(date +'%d %B %Y')
     cd /root/user-backup
-    git config --global user.email "artakun@outlook.com" &> /dev/null
-    git config --global user.name "artanodrop" &> /dev/null
+    git config --global user.email "arzstore22@gmail.com" &> /dev/null
+    git config --global user.name "arzvpnstore" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m backup &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/artanodrop/backupuserarta
-    git push -f https://ghp_v8d51q9efX6VuyDodAYGo0271QJlhx1toMX@github.com/artanodrop/backupuserarta.git &> /dev/null
+    git remote add origin https://github.com/arzvpn/backupuserarz
+    git push -f https://ghp_v8d51q9efX6VuyDodAYGo0271QJlhx1toMX@github.com/arzvpn/backupuserarz.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -174,8 +174,8 @@ rm -rf /root/backup &> /dev/null
 rm -rf /root/user-backup &> /dev/null
 rm -f /root/$NameUser.zip &> /dev/null
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz VPN STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo
 read -n 1 -s -r -p "   Press any key to back on menu"

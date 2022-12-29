@@ -98,7 +98,7 @@ cp /etc/shadow /root/backup/ &> /dev/null
 cp /etc/gshadow /root/backup/ &> /dev/null
 cp /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
 cp /etc/ipsec.d/passwd /root/backup/passwd1 &> /dev/null
-cp -r /var/lib/artanodrop-pro/ /root/backup/artanodrop-pro &> /dev/null
+cp -r /var/lib/artanodrop-pro/ /root/backup/arzvpn-pro &> /dev/null
 cp -r /etc/xray /root/backup/xray &> /dev/null
 cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
 cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
@@ -152,7 +152,7 @@ sleep 1
 echo -e "$COLOR1│${NC}  [INFO] Processing updating server...... "
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/artanodrop/backupuserarta/main/$NameUser/$NameUser.zip"
+link="https://raw.githubusercontent.com/arzvpn/backupuserarz/main/$NameUser/$NameUser.zip"
 sleep 1
 echo -e "$COLOR1│${NC}  [INFO] Backup done "
 sleep 1

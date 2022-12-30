@@ -1,14 +1,14 @@
 #!/bin/bash
 MYIP=$(wget -qO- ipinfo.io/ip);
 
-colornow=$(cat /etc/yokkovpn/theme/color.conf)
+colornow=$(cat /etc/arzvpn/theme/color.conf)
 NC="\e[0m"
-COLOR1="$(cat /etc/yokkovpn/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/yokkovpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+COLOR1="$(cat /etc/arzvpn/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+COLBG1="$(cat /etc/arzvpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
 
-APIGIT=$(cat /etc/yokkovpn/github/api)
-EMAILGIT=$(cat /etc/yokkovpn/github/email)
-USERGIT=$(cat /etc/yokkovpn/github/username)
+APIGIT=$(cat /etc/arzvpn/github/api)
+EMAILGIT=$(cat /etc/arzvpn/github/email)
+USERGIT=$(cat /etc/arzvpn/github/username)
 
 export RED='\033[0;31m';
 export GREEN='\033[0;32m';
@@ -19,7 +19,7 @@ export INFO="[${GREEN}INFO${NC}]";
 function setdns(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}                 • USERS LOGS •                ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}                 •USER LOG•                ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 read -p "│  DNS : " setdnss
@@ -28,8 +28,8 @@ if [ -z $setdnss ]; then
 echo -e "$COLOR1│${NC}"
 echo -e "$COLOR1│${NC}  ${ERROR} DNS Cannot Be Empty";
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -45,8 +45,8 @@ sleep 2
 echo -e "$COLOR1│${NC}  ${INFO} DNS Update Successfully";
 fi
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VVPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -56,7 +56,7 @@ menu-dns
 function resdns(){
     clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}                 • USERS LOGS •                ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}                 •USER LOG•                ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 read -p "│   Reset Default DNS [Y/N]: " -e answer
@@ -77,8 +77,8 @@ echo -e "$COLOR1│${NC}"
 echo -e "$COLOR1│${NC}   $INFO Operation Cancelled By User"
 fi
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -87,7 +87,7 @@ menu-dns
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}                 • USERS LOGS •                ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}                 •USER LOG•                ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 
@@ -103,8 +103,8 @@ echo -e "$COLOR1│${NC}  $COLOR1 [02]$NC • RESET DNS        $COLOR1 [04]$NC �
 echo -e "$COLOR1│${NC}"
 echo -e "$COLOR1│${NC}  $COLOR1 [00]$NC • GO BACK"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -p " Select menu :  "  opt

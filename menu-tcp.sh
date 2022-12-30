@@ -2,11 +2,11 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/yokkovpn/theme/color.conf)
+colornow=$(cat /etc/arzvpn/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m" 
-COLOR1="$(cat /etc/yokkovpn/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/yokkovpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"                    
+COLOR1="$(cat /etc/arzvpn/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+COLBG1="$(cat /etc/arzvpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"                    
 ###########- END COLOR CODE -##########
 
 
@@ -60,8 +60,8 @@ sysctl -p /etc/sysctl.conf >/dev/null
 echo "cubic" >/proc/sys/net/ipv4/tcp_congestion_control
 echo -e "$COLOR1│$NC   [INFO] BBR settings successfully removed."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -109,8 +109,8 @@ install_bbr2() {
   if [ $? -eq 0 ]; then
 echo -e "$COLOR1│$NC   [INFO]  TCP BBR already  installed."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -122,8 +122,8 @@ echo -e "$COLOR1│$NC  [INFO]  Your kernel version is greater than 4.9, directl
     sysctl_config
 echo -e "$COLOR1│$NC   [INFO]  Setting TCP BBR completed..."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -133,8 +133,8 @@ read -n 1 -s -r -p "   Press any key to back on menu"
   if [[ x"${release}" == x"centos" ]]; then
 echo -e "$COLOR1│$NC   [ERROR] Centos not support"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -153,8 +153,8 @@ echo -e "$COLOR1┌────────────────────�
     install_bbr2
   else
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -181,8 +181,8 @@ net.ipv4.tcp_slow_start_after_idle = 0" /etc/sysctl.conf >/tmp/syscl && mv /tmp/
     sysctl -p /etc/sysctl.conf >/dev/null
 echo -e "$COLOR1│$NC   [INFO] TCP Tweaker settings successfully removed."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -213,8 +213,8 @@ net.ipv4.tcp_slow_start_after_idle = 0" >>/etc/sysctl.conf
     sysctl -p /etc/sysctl.conf >/dev/null
 echo -e "$COLOR1│$NC  [INFO] TCP Tweaker settings added successfully."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -249,8 +249,8 @@ net.core.netdev_max_backlog = 16384" /etc/sysctl.conf >/tmp/syscl && mv /tmp/sys
     sysctl -p /etc/sysctl.conf >/dev/null
 echo -e "$COLOR1│$NC  TCP Tweaker settings successfully removed."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -287,8 +287,8 @@ net.core.netdev_max_backlog = 16384" >>/etc/sysctl.conf
     sysctl -p /etc/sysctl.conf >/dev/null
 echo -e "$COLOR1│$NC   [INFO] TCP Tweaker settings added successfully."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -315,8 +315,8 @@ echo -e "$COLOR1│${NC}  ${COLOR1}[03]${NC} • Install TCP 2    ${COLOR1}[06]$
 echo -e "$COLOR1│${NC}  "
 echo -e "$COLOR1│${NC}  ${COLOR1}[00]${NC} • GO BACK          ${COLOR1}[07]${NC} • REBOOT"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -p " Select menu :  " opt

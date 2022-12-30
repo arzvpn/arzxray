@@ -3,33 +3,33 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 
 colornow=$(cat /etc/yokkovpn/theme/color.conf)
 NC="\e[0m"
-COLOR1="$(cat /etc/yokkovpn/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/yokkovpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+COLOR1="$(cat /etc/arzvpn/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+COLBG1="$(cat /etc/arzvpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
 
-APIGIT=$(cat /etc/yokkovpn/github/api)
-EMAILGIT=$(cat /etc/yokkovpn/github/email)
-USERGIT=$(cat /etc/yokkovpn/github/username)
+APIGIT=$(cat /etc/arzvpn/github/api)
+EMAILGIT=$(cat /etc/arzvpn/github/email)
+USERGIT=$(cat /etc/arzvpn/github/username)
 
 
 function setapi(){
     clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}              • IPVPS GITHUB API •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}              •IP VPS GITHUB API•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 
-if [[ -f /etc/yokkovpn/github/api && -f /etc/yokkovpn/github/email && /etc/yokkovpn/github/username ]]; then
+if [[ -f /etc/arzvpn/github/api && -f /etc/arzvpn/github/email && /etc/arzvpn/github/username ]]; then
    rec="OK"
 else
-    mkdir /etc/yokkovpn/github > /dev/null 2>&1
+    mkdir /etc/arzvpn/github > /dev/null 2>&1
 fi
 
 read -p " E-mail   : " EMAIL1
 if [ -z $EMAIL1 ]; then
 echo -e "$COLOR1│${NC}   [INFO] Please Input Your Github Email Adress"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -40,8 +40,8 @@ read -p " Username : " USERNAME1
 if [ -z $USERNAME1 ]; then
 echo -e "$COLOR1│${NC}   [INFO] Please Input Your Github Username"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -52,8 +52,8 @@ read -p " API      : " API1
 if [ -z $API1 ]; then
 echo -e "$COLOR1│${NC}  [INFO] Please Input Your Github API"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
@@ -61,13 +61,13 @@ menu-ip
 fi
 
 sleep 2
-echo "$EMAIL1" > /etc/yokkovpn/github/email
-echo "$USERNAME1" > /etc/yokkovpn/github/username
-echo "$API1" > /etc/yokkovpn/github/api
-echo "ON" > /etc/yokkovpn/github/gitstat
+echo "$EMAIL1" > /etc/arzvpn/github/email
+echo "$USERNAME1" > /etc/arzvpn/github/username
+echo "$API1" > /etc/arzvpn/github/api
+echo "ON" > /etc/arzvpn/github/gitstat
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}   [INFO] Github Api Setup Successfully"
@@ -76,8 +76,8 @@ echo -e "$COLOR1│${NC}   • Email : $EMAIL1"
 echo -e "$COLOR1│${NC}   • User  : $USERNAME1"
 echo -e "$COLOR1│${NC}   • API   : $API1"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -87,7 +87,7 @@ menu-ip
 function viewapi(){
     clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • LIST REGISTER IP •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             •LIST REGISTER IP•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}  • Email : $EMAILGIT"
@@ -96,8 +96,8 @@ echo -e "$COLOR1│${NC}  • API   : $APIGIT"
 echo -e "$COLOR1│${NC}  • All U need Is Create a new repository "
 echo -e "$COLOR1│${NC}    & Nammed : permission "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -107,7 +107,7 @@ menu-ip
 function add_ip(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 rm -rf /root/permission
@@ -119,8 +119,8 @@ REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/permission/main/ip
 if [[ $daftar = $REQIP ]]; then
 echo -e "$COLOR1│${NC}  [INFO] VPS IP Already Registered!!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -132,7 +132,7 @@ sleep 3
 clear
 fi
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 read -p "│  User Name  : " client
@@ -140,8 +140,8 @@ if [ -z $client ]; then
 cd
 echo -e "$COLOR1│${NC}  [INFO] Please Input client"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -154,8 +154,8 @@ if [ -z $exp ]; then
 cd
 echo -e "$COLOR1│${NC}   [INFO] Please Input exp date"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -207,7 +207,7 @@ git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git &> /dev/null
 sleep 1
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}  Client IP Regested Successfully"
@@ -220,8 +220,8 @@ echo -e "$COLOR1│${NC}  Expired Date  : $exp"
 cd
 rm -rf /root/permission
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -239,13 +239,13 @@ git init &> /dev/null
 touch ipmini &> /dev/null
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}                 • DELETE IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}                 •DELETE IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^### " "/root/permission/ipmini" | cut -d ' ' -f 2-4 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -rp "   Please Input Number : " nombor
@@ -253,12 +253,12 @@ if [ -z $nombor ]; then
 cd
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}                 • DELETE IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}                 •DELETE IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1│${NC}   [INFO] Please Input Correct Number"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -284,7 +284,7 @@ git remote add origin https://github.com/${USERGIT}/permission.git &> /dev/null
 git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git &> /dev/null
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}  Client IP Deleted Successfully"
@@ -295,8 +295,8 @@ echo -e "$COLOR1│${NC}  Client Name  : $name1"
 cd
 rm -rf /root/permission
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -306,7 +306,7 @@ menu-ip
 function renewipvps(){
  clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 rm -rf /root/permission
@@ -323,13 +323,13 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/permission/ipmini")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
   clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}   [INFO] You have no existing clients!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -337,13 +337,13 @@ menu-ip
 fi
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^### " "/root/permission/ipmini" | cut -d ' ' -f 2-4 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
@@ -356,13 +356,13 @@ if [ -z $CLIENT_NUMBER ]; then
 cd
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}   [INFO] Please Input Correct Number"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -375,13 +375,13 @@ if [ -z $masaaktif ]; then
 cd
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}  [INFO] Please Input Correct Number"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -405,7 +405,7 @@ git remote add origin https://github.com/${USERGIT}/permission.git
 git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}  Client IP VPS Renew Successfully"
@@ -418,8 +418,8 @@ echo -e "$COLOR1│${NC}  Client Name   : $name1"
 cd
 rm -rf /root/permission
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -438,13 +438,13 @@ git init
 touch ipmini
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^### " "/root/permission/ipmini" | cut -d ' ' -f 2 | nl -s '. '
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 cd
 rm -rf /root/permission
@@ -454,37 +454,37 @@ menu-ip
 }
 function resetipvps(){
 clear
-rm -f /etc/yokkovpn/github/email
-rm -f /etc/yokkovpn/github/username
-rm -f /etc/yokkovpn/github/api
-rm -f /etc/yokkovpn/github/gitstat
-echo "OFF" > /etc/yokkovpn/github/gitstat
+rm -f /etc/arzvpn/github/email
+rm -f /etc/arzvpn/github/username
+rm -f /etc/arzvpn/github/api
+rm -f /etc/arzvpn/github/gitstat
+echo "OFF" > /etc/arzvpn/github/gitstat
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}              • RESET GITUB API •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}              •RESET GITHUB API•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}  [INFO] Github API Reseted Successfully"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip  
 }
-Isadmin=$(curl -sS https://raw.githubusercontent.com/artanodrop/permission/main/ipmini | grep $MYIP | awk '{print $5}')
+Isadmin=$(curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/ipmini | grep $MYIP | awk '{print $5}')
 if [ "$Isadmin" = "OFF" ]; then
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            • PREMIUM USER ONLY •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}            •PREMIUM USER ONLY•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} [INFO] Only PRO Users Can Use This Panel"
 echo -e "$COLOR1│${NC} [INFO] Buy Premium Membership : "
-echo -e "$COLOR1│${NC} [INFO] PM : Yokko Eddy Store / wa.me/6281949400586/"
+echo -e "$COLOR1│${NC} [INFO] PM : Arz-VPN-STORE / wa.me/6283117634078/"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -492,35 +492,35 @@ menu-ip
 fi
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-GITREQ=/etc/yokkovpn/github/gitstat
+GITREQ=/etc/arzvpn/github/gitstat
 if [ -f "$GITREQ" ]; then
     cekk="ok"
 else 
-    mkdir /etc/yokkovpn/github
-    touch /etc/yokkovpn/github/gitstat
-    echo "OFF" > /etc/yokkovpn/github/gitstat
+    mkdir /etc/arzvpn/github
+    touch /etc/arzvpn/github/gitstat
+    echo "OFF" > /etc/arzvpn/github/gitstat
 fi
 
-stst1=$(cat /etc/yokkovpn/github/gitstat)
+stst1=$(cat /etc/arzvpn/github/gitstat)
 if [ "$stst1" = "OFF" ]; then
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • REGISTER IPVPS •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •REGISTER IP VPS•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}   • You Need To Set Github API First!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to Set API"
 setapi
 fi
-stst=$(cat /etc/yokkovpn/github/gitstat)
+stst=$(cat /etc/arzvpn/github/gitstat)
 if [ "$stst" = "ON" ]; then
 APIOK="CEK API"
 rex="viewapi"
@@ -542,8 +542,8 @@ echo -e "   "
 echo -e "   $COLOR1 [00]$NC • GO BACK"
 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • ARTA MAULANA PREMI •              $COLOR1│$NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -p " Select menu :  "  opt

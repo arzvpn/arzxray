@@ -20,7 +20,7 @@ commonname=none
 email=admin@sedang.my.id
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/arzvpn/multiws/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scarzvpn99 -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:arzvpn99 -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -129,9 +129,9 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -q -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/arzvpn/multiws/main/ssh/nginx.conf"
+wget -q -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/nginx.conf"
 rm /etc/nginx/conf.d/vps.conf
-wget -q O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/arzvpn/multiws/main/ssh/vps.conf"
+wget -q O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/vps.conf"
 /etc/init.d/nginx restart
 
 mkdir /etc/systemd/system/nginx.service.d
@@ -142,13 +142,13 @@ service nginx restart
 cd
 mkdir /home/vps
 mkdir /home/vps/public_html
-wget -q -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/arzvpn/multiws/main/ssh/multiport"
-wget -q -O /home/vps/public_html/.htaccess "https://raw.githubusercontent.com/arzvpn/multiws/main/ssh/.htaccess"
+wget -q -O /home/vps/public_html/index.html "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/multiport"
+wget -q -O /home/vps/public_html/.htaccess "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/.htaccess"
 mkdir /home/vps/public_html/ss-ws
 mkdir /home/vps/public_html/clash-ws
 # install badvpn
 cd
-wget -q -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/arzvpn/multiws/main/ssh/newudpgw"
+wget -q -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -265,9 +265,9 @@ sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dr
 
 # download script
 cd /usr/bin
-wget -q -O speedtest "https://raw.githubusercontent.com/arzvpn/multiws/main/ssh/speedtest_cli.py"
-wget -q -O xp "https://raw.githubusercontent.com/arzvpn/multiws/main/ssh/xp.sh"
-wget -q -O auto-set "https://raw.githubusercontent.com/arzvpn/multiws/main/xray/auto-set.sh"
+wget -q -O speedtest "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/speedtest_cli.py"
+wget -q -O xp "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/xp.sh"
+wget -q -O auto-set "https://raw.githubusercontent.com/arzvpn/arzxray/main/xray/auto-set.sh"
 chmod +x speedtest
 chmod +x xp
 chmod +x auto-set

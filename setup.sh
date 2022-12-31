@@ -172,10 +172,10 @@ exit 0
 fi
 sleep 3
 
-mkdir -p /etc/yokkovpn
-mkdir -p /etc/yokkovpn/theme
-mkdir -p /var/lib/yokkovpn-pro >/dev/null 2>&1
-echo "IP=" >> /var/lib/yokkovpn-pro/ipvps.conf
+mkdir -p /etc/arzvpn
+mkdir -p /etc/arzvpn/theme
+mkdir -p /var/lib/arzvpn-pro >/dev/null 2>&1
+echo "IP=" >> /var/lib/arzvpn-pro/ipvps.conf
 
 if [ -f "/etc/xray/domain" ]; then
 echo ""
@@ -203,7 +203,7 @@ echo "$pp" > /root/domain
 echo "$pp" > /root/scdomain
 echo "$pp" > /etc/xray/domain
 echo "$pp" > /etc/xray/scdomain
-echo "IP=$pp" > /var/lib/arzpn-pro/ipvps.conf
+echo "IP=$pp" > /var/lib/yokkopn-pro/ipvps.conf
 
 #THEME RED
 cat <<EOF>> /etc/arzvpn/theme/red

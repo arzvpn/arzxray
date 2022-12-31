@@ -216,7 +216,7 @@ BG : \E[40;1;44m
 TEXT : \033[0;34m
 EOF
 #THEME GREEN
-cat <<EOF>> /etc/yokkovpn/theme/green
+cat <<EOF>> /etc/arzvpn/theme/green
 BG : \E[40;1;42m
 TEXT : \033[0;32m
 EOF

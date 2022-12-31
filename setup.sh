@@ -203,7 +203,7 @@ echo "$pp" > /root/domain
 echo "$pp" > /root/scdomain
 echo "$pp" > /etc/xray/domain
 echo "$pp" > /etc/xray/scdomain
-echo "IP=$pp" > /var/lib/yokkopn-pro/ipvps.conf
+echo "IP=$pp" > /var/lib/arzpn-pro/ipvps.conf
 
 #THEME RED
 cat <<EOF>> /etc/arzvpn/theme/red

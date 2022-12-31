@@ -129,15 +129,15 @@ mv /root/$NameUser.zip /root/user-backup/$NameUser/
 Save_And_Exit () {
     DATE=$(date +'%d %B %Y')
     cd /root/user-backup
-    git config --global user.email "arzstore22@gmail.com" &> /dev/null
-    git config --global user.name "arzvpnstore" &> /dev/null
+    git config --global user.email "haris21arrasyid21@gmail.com" &> /dev/null
+    git config --global user.name "arzvpn" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m backup &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/arzvpn/backupuserarz
-    git push -f https://ghp_v8d51q9efX6VuyDodAYGo0271QJlhx1toMX@github.com/arzvpn/backupuserarz.git &> /dev/null
+    git push -f https://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@github.com/arzvpn/backupuserarz.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then

@@ -174,7 +174,7 @@ sleep 3
 
 mkdir -p /etc/arzvpn
 mkdir -p /etc/arzvpn/theme
-mkdir -p /var/lib/ayokkopn-pro >/dev/null 2>&1
+mkdir -p /var/lib/yokkopn-pro >/dev/null 2>&1
 echo "IP=" >> /var/lib/yokkovpn-pro/ipvps.conf
 
 if [ -f "/etc/xray/domain" ]; then

@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/tridebleng/izinvps/ipuk/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -70,8 +70,8 @@ fi
 
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 DOMAIN=scriptarzvpn.tech
-SUB_DOMAIN=${sub}.kazekage.my.id
-CF_ID=premi335um@gmail.com
+SUB_DOMAIN=${sub}.scriptarzvpn.tech
+CF_ID=arzstore22@gmail.com
 CF_KEY=8772ff286d8515ccb36caf0f0f69b2fde1831
 set -euo pipefail
 IP=$(curl -sS ifconfig.me);

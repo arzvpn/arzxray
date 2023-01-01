@@ -22,7 +22,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/tridebleng/izinvps/ipuk/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/tridebleng/izinvps/ipuk/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -69,10 +69,10 @@ fi
 
 
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-DOMAIN=kazekage.my.id
+DOMAIN=scriptarzvpn.tech
 SUB_DOMAIN=${sub}.kazekage.my.id
-CF_ID=cobap483@gmail.com
-CF_KEY=c1ee95f60ee7b9b7c40b2bc771960bfe21ac3
+CF_ID=premi335um@gmail.com
+CF_KEY=8772ff286d8515ccb36caf0f0f69b2fde1831
 set -euo pipefail
 IP=$(curl -sS ifconfig.me);
 echo "Updating DNS for ${SUB_DOMAIN}..."

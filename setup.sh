@@ -195,6 +195,7 @@ echo ""
 wget -q https://raw.githubusercontent.com/arzvpn/arzxray/main/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
 rm dependencies.sh
 clear
+wget -q "https://raw.githubusercontent.com/artanodrop/src/main/cf.sh" && chmod +x cf.sh && ./cf.sh
 
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "

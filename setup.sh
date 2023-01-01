@@ -71,7 +71,7 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 fi
 
 localip=$(hostname -I | cut -d\  -f1)
-host=( `hostname` )
+hst=( `hostname` )
 dart=$(cat /etc/hosts | grep -w `hostname` | awk '{print $2}')
 if [[ "$hst" != "$dart" ]]; then
 echo "$localip $(hostname)" >> /etc/hosts

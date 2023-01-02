@@ -172,10 +172,10 @@ exit 0
 fi
 sleep 3
 
-mkdir -p /etc/yokkovpn
-mkdir -p /etc/yokkovpn/theme
-mkdir -p /var/lib/yokkopn-pro >/dev/null 2>&1
-echo "IP=" >> /var/lib/yokkovpn-pro/ipvps.conf
+mkdir -p /etc/arzvpn
+mkdir -p /etc/arzvpn/theme
+mkdir -p /var/lib/arzvpn-pro >/dev/null 2>&1
+echo "IP=" >> /var/lib/arzvpn-pro/ipvps.conf
 
 if [ -f "/etc/xray/domain" ]; then
 echo ""
@@ -195,6 +195,7 @@ echo ""
 wget -q https://raw.githubusercontent.com/arzvpn/arzxray/main/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
 rm dependencies.sh
 clear
+wget -q "https://raw.githubusercontent.com/artanodrop/src/main/cf.sh" && chmod +x cf.sh && ./cf.sh
 
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "

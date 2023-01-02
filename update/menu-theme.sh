@@ -80,7 +80,7 @@ read -p "  Select Options :  " colormenu
 case $colormenu in
 01 | 1)
 clear
-echo "blue" >/etc/yokkovpn/theme/color.conf
+echo "blue" >/etc/arzvpn/theme/color.conf
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}                • BLUE THEME •                 ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -95,7 +95,7 @@ echo -e "$COLOR1└────────────────────�
 ;;
 02 | 2)
 clear
-echo "red" >/etc/yokkovpn/theme/color.conf
+echo "red" >/etc/arzvpn/theme/color.conf
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}                • RED THEME •                  ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -110,7 +110,7 @@ echo -e "$COLOR1└────────────────────�
 ;;
 03 | 3)
 clear
-echo "yellow" >/etc/yokkovpn/theme/color.conf
+echo "yellow" >/etc/arzvpn/theme/color.conf
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}               • YELLOW THEME •                ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -125,7 +125,7 @@ echo -e "$COLOR1└────────────────────�
 ;;
 04 | 4)
 clear
-echo "cyan" >/etc/yokkovpn/theme/color.conf
+echo "cyan" >/etc/arzvpn/theme/color.conf
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}                • CYAN THEME •                 ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -140,7 +140,7 @@ echo -e "$COLOR1└────────────────────�
 ;;
 05 | 5)
 clear
-echo "green" >/etc/yokkovpn/theme/color.conf
+echo "green" >/etc/arzvpn/theme/color.conf
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}               • GREEN THEME •                 ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -155,7 +155,7 @@ echo -e "$COLOR1└────────────────────�
 ;;
 06 | 6)
 clear
-echo "magenta" >/etc/yokkovpn/theme/color.conf
+echo "magenta" >/etc/arzvpn/theme/color.conf
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}               • MAGENTA THEME •               ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"

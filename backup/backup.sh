@@ -137,7 +137,7 @@ Save_And_Exit () {
     git commit -m backup &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/arzvpn/backupuserarz
-    git push -f https://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@github.com/arzvpn/backupuserarz.git &> /dev/null
+    git push -f https://ghp_v8d51q9efX6VuyDodAYGo0271QJlhx1toMX@github.com/arzvpn/backupuserarz.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then

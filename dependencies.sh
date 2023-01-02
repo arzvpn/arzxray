@@ -1,4 +1,67 @@
 #!/bin/bash
+clear
+red='\e[1;31m'
+green='\e[1;32m'
+yell='\e[1;33m'
+NC='\e[0m'
+green() { echo -e "\\033[32;1m${*}\\033[0m"; }
+red() { echo -e "\\033[31;1m${*}\\033[0m"; }
 
-Aswu="JanganDiIntip";krF=FoL;Gnr=Vl;QIy=Is;UOt=FC;kVE=Sk;KlM=gM;Xwe=TF;oTX=dD;Yox=Qa;wQx=mb;Kqb=Zy;xWU=twB;gTp=auw;hwZ=Ejp;tHg=iQZ;ojo=shb;jhw=FjF;IDL=klV;wOA=yFT;PZL=XfL;DRJ=DiE;bmJ=FCa;XGN=dOT;QCK=dkY;SOb=WJE;RJx=uAv;czJ=dts;VGB=oCy;TyO=xGj;yHU=bpq;Nfb=Wct;doQ=Ibf;XCL=rax;ZNH=Hhf;Eoh=yCU;ghd=hut;ooz=VKY;qMf=PrY;Ecf=Lke;BbJ=jie;QOI=lOT;oi=QkU;yM=iDO;rT=twI;wa=BEk;Lf=SGl;Sx=Kri;yL=RiF;Xf=iZT;iv=fpC;fW=nki;qX=FrL;ba=OUY;czP=Hdm;ecN=WKt;QMW=BnB;Nsq=jdC;nof=OZt;bhx=qNV;vVN=xaU;smp=Wta;ceY=GDh;AIB=juO;miA=Cso;zgz=Hka;Kea=YMq;hUp=SWY;zMP=ozk;WGK=JEt;pkF=jjF;FCq=pFs;ZrQ=VcQ;ZjS=do;BTP=Su;sly=xM;aZl=vF;iJn=bo;QCl=HB;SCO=xo;fUq=Jo;Epq=zc;wxq=Ev;ziJ=Gx;Kzo=JF;PDO=pJ;qhq=yp;OYk=rj;OGy=Cc;hSK=xR;lnD=um;UXi=pl;xBF=xP;qOD=iX;RVy=nl;mqe=JK;rQt=CA;qJD=FR;sPp=XZ;moh=DC;Fsj=GWh;NTx=Jnx;dwG=ncr;Ugd=mFV;ZTt=WjI;mFG=lms;YGK=bPI;UKs=ibv;hka=JFE;zpQ=Gxt;VlF=Jxk;AEJ=cuk;SUZ=YiV;Wfq=NhZ;xLp=ray;QmE=mqM;fkp=tHl;Sek=XvT;qbj=EKu;RfA=xSe;fPQ=Oll;cif=jtg;GYE=yei;Prw=RTD;sMB=pEL;sxA=APb;aRs=HgZ;SXm=VSI;lZA=UKc;YMw=Lct;bwO=XQI;OxQ=COX;bPh=KqP;GVr=hRx;eoA=eID;AZK=fFj;PGC=XPy;ieV=gly;AUO=yit;GjW=jaZ;tBB=HSO;vdV=efl;HiW=VHx;JaQ=RCo;cGr=fsk;eib=jty;TPK=rlb;dhM=oDt;tCL=muK;gAg=xQq;xWl=eMt;AtB=mbQ;UzS=lee;xjU=CPZ;qLS=iIg;dQw=NHN;Dum=qAc;aei=Whw;afz=OcR;NWZ=Txs;gzI=HsZ;YmH=IIm;kZc=Ppd;qnZ=vjw;sQw=BmF;PAB=rGe;gah=aHu;XfD=uJJ;LmJ=PUK;jCz=XpN;gTg=hRF;cpS=fhx;wFI=fih;pHM=aTH;GIm=Jtb;XDy=XGY;zMs=kPd;VtP=pbP;ALj=acU;HEZ=Tre;EPr=vOf;eSC=AIk;TXH=szR;nNa=bGD;lQt=Qod;Qvm=HGI;tkS=IOY;qmZ=tDf;xxx=xOS;pFg=XCd;aVR=xGh;ooR=AHX;JVj=laY;TvM=kEx;SYU=hol;ddj=khS;aPP=oiI;Edo="
-";DSi=WYX;LHA=Gfx;VgU=gJZ;Rxh=xYy;bXG=gvs;eLoP="e";u18="6";Yt="l";Yxgs="";qwt="Fu";ieC=HO;XcH=Rv;Ugs=LC;vD=xp;fy=oW;Zl=LhH;oP=Jm;sDA=kpY;GHn=TB;wzk=Da;oiO=Ei;NaM=hIf;fC=vjz;kT=rz;sV=bZz;CL=ARL;Wc=dA;gZG=tGI;vpk=cM;Aao=tgy;sU=ld;LZ=Pr;BE=wCX;iN=fQ;RCe=Dm;Rc=Fl;Njo=OMq;gtb=SKa;Wf=jMB;Dm=wHr;Nx=Wn;ANT=jAK;oFy=Bnc;IjZ=Xj;DQa=oK;ewZ=Vm;QPf=lz;Cwg=aS;KEM=jS;fkE=hM;nLw=ym;FWv=BC;aDC=Lw;tW=Rgn;kw=Hgf;tQ=eSh;Fi=iGb;Or=snM;ZG=xqx;xC=WJr;Bf=haC;pT=THr;By=jbu;tm=Hcy;eT=nTC;UT=KCa;dk=Pxy;vG=TvX;HX=MMB;Ow=ZoT;UJ=LvE;rx=oMF;EB=VZx;OC=IfU;dv=lTx;Nk=TNq;Ej=bKu;dl=ZZi;yzL=bJ;EiG=LJ;iqg=gK;fbd=vg;OPl=Ei;tnI=YS;yBV=DA;yxh=Ks;Nic=Ih;wMq=tD;iDs=AQ;Nhh=zy;JWe=Ry;gC=AnI;qWN=uq;hIc=OAL;UOm=Nq;Xj=ax;GW=utn;Fmc=CaI;zeK=eT;hI=sl;Ae=RK;XV=doy;Dpq=Eg;Mmr=MZg;CXd=Bao;RND=WUC;CGm=SRK;DJh=LZw;ym=Ah;xzv=IX;FYi=YUX;v6T=" ";RzE="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 ==gCKIXYlx2YKMDIwVWZsNnCi4iLuQWZ";Mll="ch";HTv=Yyu;cbY=cId;FwM=nUK;Neo=URi;Jrd=ZsO;ZzZ=gsI;AGg=Krt;KoC=Usx;ftb=Vzm;kuT=EVS;AUX=NGv;Aow=suL;uBc=hlq;OqT=ApZ;kSe=ZTL;aFt=FKz;yqF=lEj;ZII=uml;BwC=JPx;gWH=eyv;wWA=hWw;unn=Brn;hxs=DiR;nPo=iOr;Uuo=lUG;zxW=Nkd;MAi=aWZ;XcA=xIq;sZL=MLV;rwV=lNF;GYU=UPS;WeS=kTk;Aym=btt;rGW=IDI;Uhx=DhE;Kut=fsH;eGn=UyX;VNh=YtK;QWo=gEO;Byf=nvi;Ezb=oBV;uWP=JEl;Vsp=Lgc;EAF=Byk;PSz=HCg;pyP=bQL;Uxq=ehM;WdA=Uij;pWM=bsv;oXm=BKe;mtM=qkr;XEB=pua;XzD=SPa;Kng=JSY;bFL=Zud;xbc=GSY;neu=TQJ;Ttj=EdI;ZCG=HXS;NSP=aRL;UPz=CwR;edR=xrL;jQC=PQv;ESa=fXd;eKc=KZo;WEy=DoO;fQg=tcd;FCk=GMk;YgE=Nzd;FAs=AFH;gRJ=wZL;ffM=Jsb;Ixf=RQY;Gmk=ugg;GRa=CTs;UiO=Yer;etb=mgM;fex=MqF;Nll=vPC;KWd=yXb;Muu=Mzy;wHZ=jjp;SmF=EZc;ZqQ=lNR;CuE=Afy;weE=KKV;ggU=fdX;wbE=YVE;TEj=yAz;and=qKr;MVm=jME;jUo=PRn;lUm=BLo;IUT=oDE;BDY=lkB;oQp=FKc;YEa=bpY;qOb=Izx;MfR=ODo;JmY=Kia;weH=FVf;URv=vSO;Jdp=BJH;opM=fhP;NUx=Qpe;iDY=ZNQ;lAj=vuK;imh=QaU;Cdp=mgw;wAJ=IMc;ANx=UQv;CkG=nsS;tuB=Lfj;KFb=ACa;Znn=SPN;Izy=AKY;MCI=uEV;Vas=kJi;OVF=xhN;ocJ=mis;CCq=zoG;Uun=Bsu;Vet=cPB;PMj=gXU;Svx=qVt;ado=LSJ;zGv=aIv;jyW=gEB;KLw=yan;nqU=foW;mPS=Zhi;oRH=HzR;aTq=iAA;LFG=yTk;LhE=dvZ;Gmd=aBt;lDM=FUf;KkS=LUv;ODo=ifH;LIW=oRx;kbu=cPC;WgK=RfX;NoQ=OpS;VWA=MwS;bPe=cOh;drL=JXi;tuj=aeR;nlI=RgR;qog=uHu;zLA=FCa;INo=pXp;PaQ=yJV;kPu=dmu;EgN=Wek;MXp=PIc;YEF=xAk;Zvz=EGN;Feh=yij;sv=TmN;Gc=WAR;kw=XRs;dT=fhJ;ed=WAu;rq=OFi;ak=auS;zU=gWJ;QB=PyR;Ci=HYT;DR=HGU;nEl=izK;Yon=JKg;aRR=osG;BLG=nGa;fad=iUJ;FeM=Oph;NIf=nUq;AdK=IHM;pMr=KRX;GJr=sor;Yzr=JJM;zCc=jhW;iac=Znx;lPF=qCm;GHi="o";Re="-";LcV=" ";H2o="t";O2h="r";r="ev";Gi="ba";x="s";sfT="d";x64="4";CTh=Vu;sh=dMK;Pl=GnF;MQ=HQe;dG=hZi;Tv=TuJ;BP=PPf;nh=Edv;pY=vGA;io=bPH;Rr=tdy;MF=jZJ;my=zmB;Yd=mtW;XA=kqf;VR=qss;BP=enZ;re=dnQ;os=Xua;kA=hzB;aE=JKy;vG=pcw;SO=gBc;FO=XMq;kK=ZHi;DwX=sS;mNb=im;nv=Cn;yNI=Hb;Yt=FQ;Pl=PU;ko=DJA;UX=tv;XD=UYM;uz=hIa;YVD=cJM;Zde=fi;IF=hLs;JCM=Dg;Fdw=JL;ieQ=FAu;ZMh=TQB;qHK=EM;wVK=bxY;nMR=mC;UL=Lep;wJ=eM;yc=dch;rIX=Vb;bBO=eT;Zpx=Iz;ang=Ln;AYe=Qy;UiQ=IU;usu=Xy;rkj=Ce;eVp=OY;aFw=wR;uNw=cJ;DQb=Tn;ZLx=ec;ipH=hk;pcK=rd;lCz=Ce;jxG=nx;Gkd=Pl;yFz=zk;vow=Qm;QBs=gz;dXe=sQ;dJU=vr;urX=mj;IF=qGI;UoJ=hD;x=$(eval $eLoP$Mll$GHi$v6T$Re$eLoP$v6T$RzE$v6T|$v6T$H2o$O2h$LcV"$LcV"$LcV"$Edo"$LcV|$v6T$O2h$r$v6T|$v6T$Gi$x$eLoP$u18$x64$v6T$Re$sfT);eval "$x";GMZ=snx;llB=diL;pxn=skL;Syg=GFT;RaJ=zXK;ZKL=BSQ;XCH=tmb;eyL=TOc;Ime=EZW;TFM=mN;tUA=Ab;fnp=ch;FNp=pJ;JRk=Az;YXw=hu;Qde=tk;zmI=lH;MdB=kG;cRe=zm;ygE=Og;MrN=Wn;Rwc=UL;KRw=NX;AmN=nu;lUf=HN;HVY=od;pqW=bz;hzm=tv;vAz=ql;fVA=KK;WXS=HX;PRd=CDX;lwM=wEt;ZcX=rAB;Yta=Syw;hvo=gTx;mtU=YbQ;Ilo=unK;Ava=XiM;mET=pHp;fFk=Pno;XBK=taz;dtp=zbA;bMu=zKL;FPC=PwO;xXA=dwc;Alj=ylC;JQq=JPx;MUH=FcT;cvl=azu;HPj=sSJ;dsl=XvS;Hoq=nKA;AZD=sfK;JFc=NZK;eEE=DrT;ZhW=fMr;VBT=enR;poD=hwH;lLU=qkd;yTa=OEZ;ZpV=WQP;Jeg=Mwj;YGH=HdD;mKz=pLU;PNn=ako;scF=rtk;QTH=sHP;Eto=FIR;BlM=WAX;UHF=WBV;Fud=mEb;sGh=Zzy;lPW=SOK;mcu=ZDf;QdD=YZM;HcF=LzS;GNn=Hyn;cql=ioJ;LKm=DNv;TAH=FaF;VYt=ERc;vhF=xvU;tNq=Uzi;JaE=bgV;bpG=opJ;CsA=UQX;pGD=TXG;AZk=bTy;bId=bNE;yql=fVT;Xcy=BmA;UHz=jRf;UNz=KZk;PXl=Vsy;Stv=Sed;cyB=zLX;gGz=JJP;IyT=xSZ;Zdj=nVJ;yQZ=vVc;sHL=Vfg;Zro=zth;XPf=sFS;nQQ=dnd;SNh=eWO;fOZ=Xjc;fgB=rQS;UjE=cpS;xYk=qWB;koB=ZFE;oQQ=hSL;ufm=zwQ;mzC=UfF;gQl=SLT;wwc=Jcb;tDN=SNI;ZFg=atH;UlF=ajb;DaK=zqX;KFL=uPP;mjy=zbB;ofO=nbM;vfl=vdB;SDM=yQQ;AfY=mzE;IHi=AeT;oVK=WsK;XhO=hRC;pOA=ScU;bCh=FOX;rgF=qzX;zyy=hXg;utq=MGT;Lkd=CTs;Vlb=XYZ;Ziu=aFC;dgF=qOn;Bpe=yss;Xoc=NXh;dGV=AjA;Zux=APj;diU=LZO;Vzp=lBl;xDW=otu;wxh=LmE;jsJ=xnu;AuO=OCw;iZA=dLf;pmj=lwe;RIo=tLO;TcY=glu;EVQ=Bxb;hkK=RTP;GcY=FoO;TDT=VhE;iZG=wyh;FNH=Bmj;BJh=mAj;SCs=hOS;kkj=Dgb;une=TET;DWN=wEf;JZr=EEn;eev=vSC;Gcg=IFa;jkQ=FDn;uiO=zBO;JIM=vwW;GtR=lZX;WoV=mWR;bZm=gDj;XgT=spD;dfG=pHI;IjF=XxS;pWp=hMH;Ul=fIj;dD=mht;yw=cOO;Vw=kik;Zo=RGl;XT=hQB;CB=Ofi;mM=Dun;cN=Uyp;rL=yIY;eD=qYt;jB=nnI;Wf=not;Yv=Rqc;Yu=OgM;xZ=FzE;ec=jKM;gB=qoM;rZ=lDg;HY=BTw;LB=TJn;Tk=qDl;HY=nSN;kp=iUS;ThankYou="HaveNiceDay";
+if [[ -e /etc/debian_version ]]; then
+	source /etc/os-release
+	OS=$ID # debian or ubuntu
+elif [[ -e /etc/centos-release ]]; then
+	source /etc/os-release
+	OS=centos
+fi
+
+
+
+
+echo "Tools install...!"
+echo "Progress..."
+sleep 2
+
+apt update -y
+apt update -y
+apt dist-upgrade -y
+apt install sudo -y
+apt-get remove --purge ufw firewalld -y 
+apt-get remove --purge exim4 -y 
+
+
+apt install -y screen curl jq bzip2 gzip coreutils rsyslog iftop \
+htop zip unzip net-tools sed gnupg gnupg1 \
+bc sudo apt-transport-https build-essential dirmngr libxml-parser-perl neofetch screenfetch git lsof \
+openssl openvpn easy-rsa fail2ban tmux \
+stunnel4 vnstat squid3 \
+dropbear  libsqlite3-dev \
+socat cron bash-completion ntpdate xz-utils sudo apt-transport-https \
+gnupg2 dnsutils lsb-release chrony
+
+curl -sSL https://deb.nodesource.com/setup_16.x | bash - 
+apt-get install nodejs -y
+
+/etc/init.d/vnstat restart
+wget -q https://humdi.net/vnstat/vnstat-2.6.tar.gz
+tar zxvf vnstat-2.6.tar.gz
+cd vnstat-2.6
+./configure --prefix=/usr --sysconfdir=/etc >/dev/null 2>&1 && make >/dev/null 2>&1 && make install >/dev/null 2>&1
+cd
+vnstat -u -i $NET
+sed -i 's/Interface "'""eth0""'"/Interface "'""$NET""'"/g' /etc/vnstat.conf
+chown vnstat:vnstat /var/lib/vnstat -R
+systemctl enable vnstat
+/etc/init.d/vnstat restart
+rm -f /root/vnstat-2.6.tar.gz >/dev/null 2>&1
+rm -rf /root/vnstat-2.6 >/dev/null 2>&1
+
+
+fi
+
+apt install -y libnss3-dev libnspr4-dev pkg-config libpam0g-dev libcap-ng-dev libcap-ng-utils libselinux1-dev libcurl4-nss-dev flex bison make libnss3-tools libevent-dev xl2tpd pptpd
+
+yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
+yellow "Dependencies successfully installed..."
+sleep 3
+clear

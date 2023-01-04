@@ -196,7 +196,7 @@ wget -q https://raw.githubusercontent.com/arzvpn/arzxray/main/dependencies.sh;ch
 rm dependencies.sh
 clear
 
-wget -q "https://raw.githubusercontent.com/arzvpn/arzxray/main/cf.sh" && chmod +x cf.sh && ./cf.sh
+wget -q "https://raw.githubusercontent.com/arzvpn/arzxray/main/cf.sh" && chmod +x cf.sh && ./cf.sh -e pp
 echo "$pp" > /root/domain
 echo "$pp" > /root/scdomain
 echo "$pp" > /etc/xray/domain

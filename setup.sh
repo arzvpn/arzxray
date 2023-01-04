@@ -196,12 +196,7 @@ wget -q https://raw.githubusercontent.com/arzvpn/arzxray/main/dependencies.sh;ch
 rm dependencies.sh
 clear
 
-wget -q "https://raw.githubusercontent.com/arzvpn/arzxray/main/cf.sh" && chmod +x cf.sh && ./cf.sh -e pp
-echo "$pp" > /root/domain
-echo "$pp" > /root/scdomain
-echo "$pp" > /etc/xray/domain
-echo "$pp" > /etc/xray/scdomain
-echo "IP=$pp" > /var/lib/arzpn-pro/ipvps.conf
+wget -q "https://raw.githubusercontent.com/arzvpn/arzxray/main/cf.sh" && chmod +x cf.sh && ./cf.sh
 
 #THEME RED
 cat <<EOF>> /etc/arzvpn/theme/red

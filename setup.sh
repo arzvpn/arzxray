@@ -196,7 +196,6 @@ wget -q https://raw.githubusercontent.com/arzvpn/arzxray/main/dependencies.sh;ch
 rm dependencies.sh
 clear
 
-wget -q "https://raw.githubusercontent.com/arzvpn/arzxray/main/cf.sh" && chmod +x cf.sh && ./cf.sh
 yellow "Add Domain for vmess/vless/trojan dll"
 echo " "
 read -rp "input domain/host : " -e pp
@@ -205,6 +204,20 @@ echo "$pp" > /root/scdomain
 echo "$pp" > /etc/xray/domain
 echo "$pp" > /etc/xray/scdomain
 echo "IP=$pp" > /var/lib/arzpn-pro/ipvps.conf
+echo ""
+elif [[ $host == "2" ]]; then
+#install cf
+wget https://raw.githubusercontent.com/${GitUser}/arzxray/main/cf.sh && chmod +x cf.sh && ./cf.sh
+rm -f /root/cf.sh
+clear
+else
+echo -e "Random Subdomain/Domain is used"
+wget https://raw.githubusercontent.com/${GitUser}/arzxray/main/cf.sh && chmod +x cf.sh && ./cf.sh
+rm -f /root/cf.sh
+clear
+fi
+echo ""
+clear
 
 #THEME RED
 cat <<EOF>> /etc/arzvpn/theme/red

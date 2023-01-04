@@ -197,7 +197,11 @@ rm dependencies.sh
 clear
 
 wget -q "https://raw.githubusercontent.com/arzvpn/arzxray/main/cf.sh" && chmod +x cf.sh && ./cf.sh
-rm -f /root/cf.sh
+yellow "Add Domain for vmess/vless/trojan dll"
+echo " "
+read -rp "input domain/host : " -e pp
+cho "$pp" > /root/domain
+echo "$pp" > /root/scdomain
 echo "$pp" > /etc/xray/domain
 echo "$pp" > /etc/xray/scdomain
 echo "IP=$pp" > /var/lib/arzpn-pro/ipvps.conf

@@ -197,9 +197,6 @@ rm dependencies.sh
 clear
 
 wget -q "https://raw.githubusercontent.com/arzvpn/arzxray/main/cf.sh" && chmod +x cf.sh && ./cf.sh
-yellow "Add Domain for vmess/vless/trojan dll"
-echo " "
-read -rp "Input ur domain : " -e pp
 echo "$pp" > /root/domain
 echo "$pp" > /root/scdomain
 echo "$pp" > /etc/xray/domain

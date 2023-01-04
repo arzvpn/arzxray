@@ -197,6 +197,9 @@ rm dependencies.sh
 clear
 
 wget -q "https://raw.githubusercontent.com/arzvpn/arzxray/main/cf.sh" && chmod +x cf.sh && ./cf.sh
+rm -f /root/cf.sh
+clear
+else
 
 #THEME RED
 cat <<EOF>> /etc/arzvpn/theme/red

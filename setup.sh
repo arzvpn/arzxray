@@ -198,7 +198,10 @@ clear
 
 wget -q "https://raw.githubusercontent.com/arzvpn/arzxray/main/cf.sh" && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
-clear
+echo "$pp" > /root/domain
+echo "$pp" > /root/scdomain
+echo "$pp" > /etc/xray/domain
+echo "$pp" > /etc/xray/scdomain
 
 #THEME RED
 cat <<EOF>> /etc/arzvpn/theme/red

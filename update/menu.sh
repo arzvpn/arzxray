@@ -187,9 +187,7 @@ echo -e "  ${COLOR1}[3]${NC} • VLESS   [${YELLOW}Menu${NC}]   ${COLOR1}[9]${NC
 echo -e "  ${COLOR1}[4]${NC} • TROJAN  [${YELLOW}Menu${NC}]   ${COLOR1}[10]${NC}• RENEW CERT       $COLOR1│$NC"  
 echo -e "  ${COLOR1}[5]${NC} • SS WS   [${YELLOW}Menu${NC}]   ${COLOR1}[11]${NC}• SETTINGS [${YELLOW}Menu${NC}]  $COLOR1│$NC"
 echo -e "  ${COLOR1}[6]${NC} • SET DNS [${YELLOW}Menu${NC}]   ${COLOR1}[12]${NC}• INFO     [${YELLOW}Menu${NC}]  $COLOR1│$NC"
-if [ "$Isadmin" = "ON" ]; then
-echo -e "                                                  $COLOR1│$NC"
-echo -e "  ${COLOR1}[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1│$NC"
+echo -e "  ${COLOR1}[13]${NC}• REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC}• SET BOT  [${YELLOW}Menu${NC}]  $COLOR1│$NC"
 ressee="menu-ip"
 bottt="menu-bot"
 else
@@ -217,17 +215,12 @@ datediff() {
 mai="datediff "$Exp" "$DATE""
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
-echo -e "$COLOR1│$NC Version     :${COLOR1} $(cat /opt/.ver) Latest Version${NC}"
-echo -e "$COLOR1│$NC Client Name : $Name"
-if [ $exp \> 1000 ];
-then
-    echo -e "$COLOR1│$NC License     : Lifetime"
-else
-    datediff "$Exp" "$DATE"
-fi;
+echo -e "$COLOR1│$NC Version         :${COLOR1} $(cat /opt/.ver) Latest Version${NC}"
+echo -e "$COLOR1│$NC Client Name     : $Name"
+echo -e "$COLOR1│$NC Exp License     :  $sisa_hari$NC Days Tersisa $NC""
 echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•                  $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 echo -ne " Select menu : "; read opt

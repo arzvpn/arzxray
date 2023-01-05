@@ -182,7 +182,7 @@ echo -e "$COLOR1│$NC [ SSH WEBSOCKET : ${status_ws} ]  [ XRAY : ${status_xray}
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${COLOR1}[1]${NC}  • SSH WS  [${YELLOW}Menu${NC}]   ${COLOR1}[7]${NC}  • THEME    [${YELLOW}Menu${NC}]  $COLOR1│$NC"   
-echo -e "  ${COLOR1}[2]${NC}  •VMESS   [${YELLOW}Menu${NC}]   ${COLOR1}[8]${NC}   • BACKUP   [${YELLOW}Menu${NC}]  $COLOR1│$NC"  
+echo -e "  ${COLOR1}[2]${NC}  • VMESS   [${YELLOW}Menu${NC}]   ${COLOR1}[8]${NC}  • BACKUP   [${YELLOW}Menu${NC}]  $COLOR1│$NC"  
 echo -e "  ${COLOR1}[3]${NC}  • VLESS   [${YELLOW}Menu${NC}]   ${COLOR1}[9]${NC}  • ADD HOST/DOMAIN  $COLOR1│$NC"  
 echo -e "  ${COLOR1}[4]${NC}  • TROJAN  [${YELLOW}Menu${NC}]   ${COLOR1}[10]${NC} • RENEW CERT       $COLOR1│$NC"  
 echo -e "  ${COLOR1}[5]${NC}  • SS WS   [${YELLOW}Menu${NC}]   ${COLOR1}[11]${NC} • SETTINGS [${YELLOW}Menu${NC}]  $COLOR1│$NC"
@@ -218,7 +218,7 @@ mai="datediff "$Exp" "$DATE""
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
 echo -e "$COLOR1│$NC Version     :${COLOR1} $(cat /opt/.ver) Latest Version${NC}"
-echo -e "$COLOR1│$NC Client Name :  ${GREEN}$Nama$NC"
+echo -e "$COLOR1│$NC Client Name : $Nama$NC"
 if [ $exp \< 1000 ];
 then
 echo -e "$COLOR1│$NC License     : ${GREEN}$sisa_hari$NC Days Tersisa $NC"

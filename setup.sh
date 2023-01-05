@@ -197,14 +197,8 @@ rm dependencies.sh
 clear
 
 wget https://raw.githubusercontent.com/arzvpn/arzxray/main/cf.sh && chmod +x cf.sh && ./cf.sh
-yellow "Add Manual Domain"
-echo " "
-read -rp "input domain : " -e pp
-echo "$pp" > /root/domain
-echo "$pp" > /root/scdomain
-echo "$pp" > /etc/xray/domain
-echo "$pp" > /etc/xray/scdomain
-echo "IP=$pp" > /var/lib/arzpn-pro/ipvps.conf
+rm -f /root/cf.sh
+echo "IP=" > /var/lib/arzpn-pro/ipvps.conf
 
 #THEME RED
 cat <<EOF>> /etc/arzvpn/theme/red

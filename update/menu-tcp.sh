@@ -309,9 +309,9 @@ tcp_status
 tcp_2_status
 bbr_status
 echo -e "$COLOR1│${NC}  "
-echo -e "$COLOR1│${NC}  ${COLOR1}[01]${NC} • Install BBR      ${COLOR1}[04]${NC} • Delete BBR "
-echo -e "$COLOR1│${NC}  ${COLOR1}[02]${NC} • Install TCP 1    ${COLOR1}[05]${NC} • Delete TCP 1"
-echo -e "$COLOR1│${NC}  ${COLOR1}[03]${NC} • Install TCP 2    ${COLOR1}[06]${NC} • Delete TCP 2"
+echo -e "$COLOR1│${NC}  ${COLOR1}[1]${NC} • Install BBR      ${COLOR1}[4]${NC} • Delete BBR "
+echo -e "$COLOR1│${NC}  ${COLOR1}[2]${NC} • Install TCP 1    ${COLOR1}[5]${NC} • Delete TCP 1"
+echo -e "$COLOR1│${NC}  ${COLOR1}[3]${NC} • Install TCP 2    ${COLOR1}[6]${NC} • Delete TCP 2"
 echo -e "$COLOR1│${NC}  "
 echo -e "$COLOR1│${NC}  ${COLOR1}[00]${NC} • GO BACK          ${COLOR1}[07]${NC} • REBOOT"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 

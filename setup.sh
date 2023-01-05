@@ -196,9 +196,9 @@ wget -q https://raw.githubusercontent.com/arzvpn/arzxray/main/dependencies.sh;ch
 rm dependencies.sh
 clear
 
+echo "IP=" > /var/lib/arzpn-pro/ipvps.conf
 wget https://raw.githubusercontent.com/arzvpn/arzxray/main/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
-echo "IP=" > /var/lib/arzpn-pro/ipvps.conf
 
 #THEME RED
 cat <<EOF>> /etc/arzvpn/theme/red

@@ -612,10 +612,10 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC} ${COLBG1}               • SSH PANEL MENU •              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}
- $COLOR1│$NC   ${COLOR1}[01]${NC} • ADD SSH         ${COLOR1}[05]${NC} • DELETE SSH${NC}    $COLOR1│$NC
- $COLOR1│$NC   ${COLOR1}[02]${NC} • TRIAL SSH       ${COLOR1}[06]${NC} • RENEW SSH${NC}     $COLOR1│$NC
- $COLOR1│$NC   ${COLOR1}[03]${NC} • USER ONLINE     ${COLOR1}[07]${NC} • USERS LIST${NC}    $COLOR1│$NC
- $COLOR1│$NC   ${COLOR1}[04]${NC} • ENABLE WS                            $COLOR1│$NC
+ $COLOR1│$NC   ${COLOR1}[1]${NC} • ADD SSH         ${COLOR1}[5]${NC} • DELETE SSH${NC}    $COLOR1│$NC
+ $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL SSH       ${COLOR1}[6]${NC} • RENEW SSH${NC}     $COLOR1│$NC
+ $COLOR1│$NC   ${COLOR1}[3]${NC} • USER ONLINE     ${COLOR1}[7]${NC} • USERS LIST${NC}    $COLOR1│$NC
+ $COLOR1│$NC   ${COLOR1}[4]${NC} • ENABLE WS                            $COLOR1│$NC
  $COLOR1│$NC                                              ${NC} $COLOR1│$NC
  $COLOR1│$NC   ${COLOR1}[00]${NC} • GO BACK${NC}                              $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 

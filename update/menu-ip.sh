@@ -535,11 +535,11 @@ else
 ISON=""
 ressee="menu-ip"
 fi
-echo -e "   $COLOR1 [01]$NC • $APIOK        $COLOR1 [04]$NC • RENEW IPVPS" 
-echo -e "   $COLOR1 [02]$NC • ADD IPVPS      $COLOR1 [05]$NC • LIST IPVPS"
-echo -e "   $COLOR1 [03]$NC • DELETE IPVPS   $COLOR1 [06]$NC • $ISON"
+echo -e "   $COLOR1 [1]$NC • $APIOK        $COLOR1 [4]$NC • RENEW IPVPS" 
+echo -e "   $COLOR1 [2]$NC • ADD IPVPS      $COLOR1 [5]$NC • LIST IPVPS"
+echo -e "   $COLOR1 [3]$NC • DELETE IPVPS   $COLOR1 [6]$NC • $ISON"
 echo -e "   "
-echo -e "   $COLOR1 [00]$NC • GO BACK"
+echo -e "   $COLOR1 [0]$NC • GO BACK"
 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"

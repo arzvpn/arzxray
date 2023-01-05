@@ -219,7 +219,12 @@ mai="datediff "$Exp" "$DATE""
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
 echo -e "$COLOR1│$NC Version     :${COLOR1} $(cat /opt/.ver) Latest Version${NC}"
 echo -e "$COLOR1│$NC Client Name :  ${GREEN}$Nama$NC"
+if [ $exp \< 1000 ];
+then
 echo -e "$COLOR1│$NC License     : ${GREEN}$sisa_hari$NC Days Tersisa $NC"
+else
+    datediff "$Exp" "$DATE"
+fi;
 echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"

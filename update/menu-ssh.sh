@@ -216,7 +216,7 @@ portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '
 if [ -f "/etc/systemd/system/sshws.service" ]; then
 clear
 else
-wget -q -O /usr/bin/proxy3.js "https://raw.githubusercontent.com/arzvpn/multiws/main/ssh/proxy3.js"
+wget -q -O /usr/bin/proxy3.js "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/proxy3.js"
 cat <<EOF > /etc/systemd/system/sshws.service
 [Unit]
 Description=WSenabler
@@ -536,7 +536,7 @@ ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
 OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{print $1}'`
 
 
-Login=artavpn`</dev/urandom tr -dc X-Z0-9 | head -c4`
+Login=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 hari="1"
 Pass=1
 echo Ping Host &> /dev/null

@@ -152,7 +152,7 @@ menu
 }
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               •VPS MENU•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •MENU UTAMA•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
@@ -177,26 +177,26 @@ echo -e "$COLOR1│$NC ISP & City     : $ISP & $CITY"
 echo -e "$COLOR1│$NC Current Domain : $(cat /etc/xray/domain)"
 echo -e "$COLOR1│$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│$NC [ SSH WEBSOCKET : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ] $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${COLOR1}[1]${NC}  • SSH WS  [${YELLOW}Menu${NC}]   ${COLOR1}[7]${NC}  • THEME    [${YELLOW}Menu${NC}]  $COLOR1│$NC"   
-echo -e "  ${COLOR1}[2]${NC}  • VMESS   [${YELLOW}Menu${NC}]   ${COLOR1}[8]${NC}  • BACKUP   [${YELLOW}Menu${NC}]  $COLOR1│$NC"  
-echo -e "  ${COLOR1}[3]${NC}  • VLESS   [${YELLOW}Menu${NC}]   ${COLOR1}[9]${NC}  • ADD HOST/DOMAIN  $COLOR1│$NC"  
-echo -e "  ${COLOR1}[4]${NC}  • TROJAN  [${YELLOW}Menu${NC}]   ${COLOR1}[10]${NC} • RENEW CERT       $COLOR1│$NC"  
-echo -e "  ${COLOR1}[5]${NC}  • SS WS   [${YELLOW}Menu${NC}]   ${COLOR1}[11]${NC} • SETTINGS [${YELLOW}Menu${NC}]  $COLOR1│$NC"
-echo -e "  ${COLOR1}[6]${NC}  • SET DNS [${YELLOW}Menu${NC}]   ${COLOR1}[12]${NC} • INFO     [${YELLOW}Menu${NC}]  $COLOR1│$NC"
+echo -e "$COLOR1┏─━─━─━─━─━─━─━─━─━─━─━∞◆∞━─━─━─━─━─━─━─━─━─━─━─┓${NC}"
+echo -e "$COLOR1│$NC [ SSH WEBSOCKET : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ]  $COLOR1│$NC"
+echo -e "$COLOR1┗─━─━─━─━─━─━─━─━─━─━─━∞◆∞━─━─━─━─━─━─━─━─━─━─━─┛${NC}"
+echo -e "$COLOR1╔─━━━━━━━━━━━━━━━━━━━━━░★░━━━━━━━━━━━━━━━━━━━━━─╗${NC}"
+echo -e "  ${COLOR1}[1]${NC}  • SSH WS  [${YELLOW}Menu${NC}]   ${COLOR1}[7]${NC}  • THEME    [${YELLOW}Menu${NC}] $COLOR1❚$NC"   
+echo -e "  ${COLOR1}[2]${NC}  • VMESS   [${YELLOW}Menu${NC}]   ${COLOR1}[8]${NC}  • BACKUP   [${YELLOW}Menu${NC}] $COLOR1❚$NC"  
+echo -e "  ${COLOR1}[3]${NC}  • VLESS   [${YELLOW}Menu${NC}]   ${COLOR1}[9]${NC}  • ADD HOST/DOMAIN $COLOR1❚$NC"  
+echo -e "  ${COLOR1}[4]${NC}  • TROJAN  [${YELLOW}Menu${NC}]   ${COLOR1}[10]${NC} • RENEW CERT      $COLOR1❚$NC"  
+echo -e "  ${COLOR1}[5]${NC}  • SS WS   [${YELLOW}Menu${NC}]   ${COLOR1}[11]${NC} • SETTINGS [${YELLOW}Menu${NC}] $COLOR1❚$NC"
+echo -e "  ${COLOR1}[6]${NC}  • SET DNS [${YELLOW}Menu${NC}]   ${COLOR1}[12]${NC} • INFO     [${YELLOW}Menu${NC}] $COLOR1❚$NC"
 if [ "$Isadmin" = "ON" ]; then
 echo -e "                                                  $COLOR1│$NC"
-echo -e "  ${COLOR1}[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1│$NC"
+echo -e "  ${COLOR1}[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1❚$NC"
 ressee="menu-ip"
 bottt="menu-bot"
 else
 ressee="menu"
 bottt="menu"
 fi
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1╚─━━━━━━━━━━━━━━━━━━━━░★░━━━━━━━━━━━━━━━━━━━━─╝${NC}"
 myver="$(cat /opt/.ver)"
 
 if [[ $serverV > $myver ]]; then
@@ -226,9 +226,9 @@ else
     datediff "$Exp" "$DATE"
 fi;
 echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
+echo -e "$COLOR1❚${NC}             •Arz-VPN-STORE•                 $COLOR1❚$NC"
+echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
 echo -e ""
 echo -ne " Select menu : "; read opt
 case $opt in

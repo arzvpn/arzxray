@@ -24,7 +24,7 @@ DOMAIN=scriptarzvpn.tech
 SUB_DOMAIN=${sub}.scriptarzvpn.tech
 NS_DOMAIN=ns-${sub}.scriptarzvpn.tech
 CF_ID=arzstore22@gmail.com
-CF_KEY=
+CF_KEY=8772ff286d8515ccb36caf0f0f69b2fde1831
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."

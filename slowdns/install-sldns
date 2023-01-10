@@ -1,6 +1,6 @@
 #!/bin/bash
-# Script  By SL
-# 2022 SLOWDNS
+# Script  By Arz
+# 2023 SLOWDNS
 # ===============================================
 cd
 rm -rf slhostdns.sh
@@ -67,8 +67,8 @@ cd
 #install server-sldns.service
 cat > /etc/systemd/system/server-sldns.service << END
 [Unit]
-Description=Server SlowDNS By SL
-Documentation=https://nekopoi.care
+Description=Server SlowDNS By Arz
+Documentation=https://qris.arzvpn.my.id
 After=network.target nss-lookup.target
 [Service]
 Type=simple

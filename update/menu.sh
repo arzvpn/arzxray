@@ -177,10 +177,10 @@ echo -e "$COLOR1│$NC ISP & City     : $ISP & $CITY"
 echo -e "$COLOR1│$NC Current Domain : $(cat /etc/xray/domain)"
 echo -e "$COLOR1│$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┏─━─━─━─━─━─━─━─━─━─━─━∞◆∞━─━─━─━─━─━─━─━─━─━─━─┓${NC}"
+echo -e "$COLOR1┏─━─━─━─━─━─━─━─━─━─━─━─━─━─━─━∞◆∞━─━─━─━─━─━─━─━─━─━─━─━─━─━─┓${NC}"
 echo -e "$COLOR1│$NC [ SSH WEBSOCKET : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ]  $COLOR1│$NC"
-echo -e "$COLOR1┗─━─━─━─━─━─━─━─━─━─━─━∞◆∞━─━─━─━─━─━─━─━─━─━─━─┛${NC}"
-echo -e "$COLOR1╔─━━━━━━━━━━━━━━━━━━━━━░★░━━━━━━━━━━━━━━━━━━━━━─╗${NC}"
+echo -e "$COLOR1┗─━─━─━─━─━─━─━─━─━─━─━─━─━─━─━∞◆∞━─━─━─━─━─━─━─━─━─━─━─━─━─━─┛${NC}"
+echo -e "$COLOR1╔─━━━━━━━━━━━━━━━━━━━━━━━━━━━━━░★░━━━━━━━━━━━━━━━━━━━━━━━━━━━─╗${NC}"
 echo -e "  ${COLOR1}[1]${NC}  • SSH WS  [${YELLOW}Menu${NC}]   ${COLOR1}[7]${NC}  • THEME    [${YELLOW}Menu${NC}] $COLOR1❚$NC"   
 echo -e "  ${COLOR1}[2]${NC}  • VMESS   [${YELLOW}Menu${NC}]   ${COLOR1}[8]${NC}  • BACKUP   [${YELLOW}Menu${NC}] $COLOR1❚$NC"  
 echo -e "  ${COLOR1}[3]${NC}  • VLESS   [${YELLOW}Menu${NC}]   ${COLOR1}[9]${NC}  • ADD HOST/DOMAIN $COLOR1❚$NC"  
@@ -196,7 +196,7 @@ else
 ressee="menu"
 bottt="menu"
 fi
-echo -e "$COLOR1╚─━━━━━━━━━━━━━━━━━━━━░★░━━━━━━━━━━━━━━━━━━━━─╝${NC}"
+echo -e "$COLOR1╚─━━━━━━━━━━━━━━━━━━━━━━━━━━━━░★░━━━━━━━━━━━━━━━━━━━━━━━━━━─╝${NC}"
 myver="$(cat /opt/.ver)"
 
 if [[ $serverV > $myver ]]; then
@@ -218,7 +218,7 @@ mai="datediff "$Exp" "$DATE""
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
 echo -e "$COLOR1│$NC Version     :${COLOR1} $(cat /opt/.ver) Latest Version${NC}"
-echo -e "$COLOR1│$NC Client Name : $Nama $NC"
+echo -e "$COLOR1│$NC Client Name : $Nama$NC"
 if [ $exp \< 1000 ];
 then
 echo -e "$COLOR1│$NC License     : ${GREEN}$sisa_hari$NC Days Tersisa $NC"
@@ -227,7 +227,7 @@ else
 fi;
 echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
 echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}             •Arz-VPN-STORE•                 $COLOR1❚$NC"
+echo -e "$COLOR1❚${NC}                       •Arz-VPN-STORE•                 $COLOR1❚$NC"
 echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
 echo -e ""
 echo -ne " Select menu : "; read opt

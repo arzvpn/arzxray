@@ -3,7 +3,7 @@
 # 2023 SLOWDNS
 # ===============================================
 cd
-rm -rf slhostdns.sh
+rm -rf arzhostdns.sh
 wget https://raw.githubusercontent.com/arzvpn/sldns/main/slowdns/arzhostdns.sh && chmod +x arzhostdns.sh && ./arzhostdns.sh
 nameserver=$(cat /root/nsdomain)
 apt update -y

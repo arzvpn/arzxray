@@ -8,7 +8,13 @@ RED="\033[0;31m"
 COLOR1="$(cat /etc/arzvpn/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
 COLBG1="$(cat /etc/arzvpn/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"                    
 ###########- END COLOR CODE -##########
+# Getting
 
+domain=$(cat /etc/xray/domain)
+sldomain=$(cat /root/nsdomain)
+cdndomain=$(cat /root/awscdndomain)
+slkey=$(cat /etc/slowdns/server.pub)
+clear
 BURIQ () {
     curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
@@ -163,6 +169,9 @@ echo -e "$COLOR1│$NC  Username   : $Login"
 echo -e "$COLOR1│$NC  Password   : $Pass"
 echo -e "$COLOR1│$NC  Expired On : $exp" 
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
+echo -e "$COLOR1$NC   Domain Name System(DNS): 8.8.8.8:1.1.1.1"
+echo -e "$COLOR1$NC   Name Server(NS): $sldomain"
+echo -e "$COLOR1$NC   DNS PUB KEY: $slkey"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "$COLOR1│$NC  IP         : $IP" 
 echo -e "$COLOR1│$NC  Host       : $domen" 
@@ -188,6 +197,9 @@ echo -e "$COLOR1│$NC  Username   : $Login"
 echo -e "$COLOR1│$NC  Password   : $Pass"
 echo -e "$COLOR1│$NC  Expired On : $exp" 
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
+echo -e "$COLOR1$NC   Domain Name System(DNS): 8.8.8.8:1.1.1.1"
+echo -e "$COLOR1$NC   Name Server(NS): $sldomain"
+echo -e "$COLOR1$NC   DNS PUB KEY: $slkey"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "$COLOR1│$NC  IP         : $IP" 
 echo -e "$COLOR1│$NC  Host       : $domen" 
@@ -559,6 +571,9 @@ echo -e "$COLOR1│$NC  Username   : $Login"
 echo -e "$COLOR1│$NC  Password   : $Pass"
 echo -e "$COLOR1│$NC  Expired On : $exp" 
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
+echo -e "$COLOR1$NC   Domain Name System(DNS): 8.8.8.8:1.1.1.1"
+echo -e "$COLOR1$NC   Name Server(NS): $sldomain"
+echo -e "$COLOR1$NC   DNS PUB KEY: $slkey"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "$COLOR1│$NC  IP         : $IP" 
 echo -e "$COLOR1│$NC  Host       : $domen" 
@@ -586,6 +601,9 @@ echo -e "$COLOR1│$NC  Username   : $Login"
 echo -e "$COLOR1│$NC  Password   : $Pass"
 echo -e "$COLOR1│$NC  Expired On : $exp" 
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
+echo -e "$COLOR1$NC   Domain Name System(DNS): 8.8.8.8:1.1.1.1"
+echo -e "$COLOR1$NC   Name Server(NS): $sldomain"
+echo -e "$COLOR1$NC   DNS PUB KEY: $slkey"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "$COLOR1│$NC  IP         : $IP" 
 echo -e "$COLOR1│$NC  Host       : $domen" 

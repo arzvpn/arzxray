@@ -250,6 +250,9 @@ wget https://raw.githubusercontent.com/arzvpn/arzxray/main/backup/set-br.sh && c
 clear
 wget https://raw.githubusercontent.com/arzvpn/arzxray/main/websocket/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
+#Install SlowDNS
+wget https://raw.githubusercontent.com/arzvpn/sldns/main/sldns/install-sldns && chmod +x install-sldns && ./install-sldns
+clear
 echo -e "$green[INFO]$NC Download Extra Menu"
 sleep 2
 wget https://raw.githubusercontent.com/arzvpn/arzxray/main/update/update.sh && chmod +x update.sh && ./update.sh

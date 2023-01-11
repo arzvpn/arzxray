@@ -268,9 +268,11 @@ cd /usr/bin
 wget -q -O speedtest "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/speedtest_cli.py"
 wget -q -O xp "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/xp.sh"
 wget -q -O auto-set "https://raw.githubusercontent.com/arzvpn/arzxray/main/xray/auto-set.sh"
+wget -O slowdnsmenu "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/slowdnsmenu.sh"
 chmod +x speedtest
 chmod +x xp
 chmod +x auto-set
+chmod +x slowdnsmenu
 cd
 
 cat > /etc/cron.d/re_otm <<-END

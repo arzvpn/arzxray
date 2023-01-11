@@ -188,6 +188,7 @@ echo -e "  ${COLOR1}[4]${NC}  • TROJAN  [${YELLOW}Menu${NC}]   ${COLOR1}[10]${
 echo -e "  ${COLOR1}[5]${NC}  • SS WS   [${YELLOW}Menu${NC}]   ${COLOR1}[11]${NC} • SETTINGS [${YELLOW}Menu${NC}] $COLOR1❚$NC"
 echo -e "  ${COLOR1}[6]${NC}  • SET DNS [${YELLOW}Menu${NC}]   ${COLOR1}[12]${NC} • INFO     [${YELLOW}Menu${NC}] $COLOR1❚$NC"
 if [ "$Isadmin" = "ON" ]; then
+echo -e "  ${COLOR1}[15]${NC} • slowdns  [${YELLOW}Menu${NC}]
 echo -e "  ${COLOR1}[13]${NC} • REG IP  [${YELLOW}Menu${NC}]   ${COLOR1}[14]${NC} • SET BOT  [${YELLOW}Menu${NC}]  $COLOR1❚$NC"
 ressee="menu-ip"
 bottt="menu-bot"
@@ -195,7 +196,6 @@ else
 ressee="menu"
 bottt="menu"
 fi
-echo -e "  ${COLOR1}[15]${NC} • slowdns  [${YELLOW}Menu${NC}]
 echo -e "$COLOR1╚─━━━━━━━━━━━━━━━━━━━━━━━━━━━━░★░━━━━━━━━━━━━━━━━━━━━━━━━━━─╝${NC}"
 myver="$(cat /opt/.ver)"
 

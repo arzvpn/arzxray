@@ -94,7 +94,7 @@ Opcao9 () {
 
 Opcao10 () {
     clear
-    wget https://raw.githubusercontent.com/arzvpn/arzxray/main/Slowdns/update
+    wget https://raw.githubusercontent.com/arzvpn/arzxray/main/slowdns/update
     chmod +x update
     bash update
 }

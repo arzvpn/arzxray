@@ -198,7 +198,7 @@ clear
 
 echo "IP=" > /var/lib/arzpn-pro/ipvps.conf
 wget https://raw.githubusercontent.com/arzvpn/arzxray/main/setdns.sh && chmod +x setdns.sh && ./setdns.sh
-rm -f /root/cf.sh
+rm -f /root/setdns.sh
 
 #THEME RED
 cat <<EOF>> /etc/arzvpn/theme/red

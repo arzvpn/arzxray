@@ -3,8 +3,8 @@
 # 2023 SLOWDNS
 # ===============================================
 cd
-rm -rf arzhostdns.sh
-wget https://raw.githubusercontent.com/arzvpn/sldns/main/slowdns/arzhostdns.sh && chmod +x arzhostdns.sh && ./arzhostdns.sh
+rm -rf setdns.sh
+wget https://raw.githubusercontent.com/arzvpn/arzxray/main/setdns.sh && chmod +x setdns.sh && ./setdns.sh
 nameserver=$(cat /root/nsdomain)
 apt update -y
 apt install -y python3 python3-dnslib net-tools

@@ -78,7 +78,7 @@ echo "$localip $(hostname)" >> /etc/hosts
 fi
 mkdir -p /etc/xray
 
-echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
+echo -e "[ ${tyblue}NOTES${NC} ] Before proceeding.. "
 sleep 1
 echo -e "[ ${tyblue}NOTES${NC} ] I need check your headers first.."
 sleep 2
@@ -116,7 +116,7 @@ if [ "" = "$PKG_OK" ]; then
   echo -e "[ ${tyblue}NOTES${NC} ] if you understand then tap enter now"
   read
 else
-  echo -e "[ ${green}INFO${NC} ] Oke installed"
+  echo -e "[ ${green}INFO${NC} ] Ok installed"
 fi
 
 ttet=`uname -r`
@@ -154,9 +154,9 @@ chmod 644 /root/.profile
 
 echo -e "[ ${green}INFO${NC} ] Preparing the install file"
 apt install git curl -y >/dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
+echo -e "[ ${green}INFO${NC} ] installation file is ready"
 sleep 2
-echo -ne "[ ${green}INFO${NC} ] Check permission : "
+echo -ne "[ ${green}INFO${NC} ] Check your permission : "
 
 PERMISSION
 if [ -f /home/needupdate ]; then
@@ -241,7 +241,7 @@ sleep 2
 clear
 wget https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
-echo -e "$green[INFO]$NC Install Install XRAY!"
+echo -e "$green[INFO]$NC Install XRAY!"
 sleep 2
 clear
 wget https://raw.githubusercontent.com/arzvpn/arzxray/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
@@ -252,7 +252,7 @@ wget https://raw.githubusercontent.com/arzvpn/arzxray/main/websocket/insshws.sh 
 clear
 wget https://raw.githubusercontent.com/arzvpn/arzxray/main/slowdns/install-sldns && chmod +x install-sldns && ./install-sldns
 clear
-echo -e "$green[INFO]$NC Download Extra Menu"
+echo -e "$green[INFO]$NC Update Menu"
 sleep 2
 wget https://raw.githubusercontent.com/arzvpn/arzxray/main/update/update.sh && chmod +x update.sh && ./update.sh
 clear
@@ -341,7 +341,7 @@ echo "    -           -     -             -        -"
 echo "   -             -    -               -    ----------------"
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ AUTOSCRIPT Arz-VPN-STORE ]-==============="
+echo "===============-[ AUTOSCRIPT Arz VPN STORE ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt

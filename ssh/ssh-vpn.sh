@@ -13,11 +13,11 @@ ver=$VERSION_ID
 #detail nama perusahaan
 country=ID
 state=INDONESIA
-locality=JAWATENGAH
-organization=Blogger
-organizationalunit=Blogger
+locality=ArzWorld
+organization=ArzVpnStore
+organizationalunit=ArzConfig
 commonname=none
-email=admin@sedang.my.id
+email=admin@arzvip.site
 
 # simple password minimal
 curl -sS https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
@@ -268,11 +268,9 @@ cd /usr/bin
 wget -q -O speedtest "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/speedtest_cli.py"
 wget -q -O xp "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/xp.sh"
 wget -q -O auto-set "https://raw.githubusercontent.com/arzvpn/arzxray/main/xray/auto-set.sh"
-wget -O slowdnsmenu "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/slowdnsmenu.sh"
 chmod +x speedtest
 chmod +x xp
 chmod +x auto-set
-chmod +x slowdnsmenu
 cd
 
 cat > /etc/cron.d/re_otm <<-END

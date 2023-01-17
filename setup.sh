@@ -331,7 +331,14 @@ echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Backup & Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""
-echo ""
+echo "          -           -----------          ----------------"
+echo "         - -          -          -                     -"
+echo "        -   -         -         -                    -"
+echo "       -     -        ----------                   -"
+echo "      ---------       -         -                -"
+echo "     -----------      -           -            -"
+echo "    -           -     -             -        -"
+echo "   -             -    -               -    ----------------"
 echo "------------------------------------------------------------"
 echo ""
 echo "===============-[ AUTOSCRIPT Arz-VPN-STORE ]-==============="

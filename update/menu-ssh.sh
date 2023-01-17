@@ -94,7 +94,7 @@ if grep -qw "$Login" /etc/xray/ssh.txt; then
 echo -e "$COLOR1│${NC}  [Error] Username \e[31m$Login\e[0m already exist"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
+echo -e "$COLOR1│${NC}               •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
@@ -107,7 +107,7 @@ if [ -z $Login ]; then
 echo -e "$COLOR1│${NC} [Error] Username cannot be empty "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
+echo -e "$COLOR1│${NC}               •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "    Press any key to back on menu"
@@ -119,7 +119,7 @@ if [ -z $Pass ]; then
 echo -e "$COLOR1│${NC}  [Error] Password cannot be empty "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
+echo -e "$COLOR1│${NC}               •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -159,7 +159,7 @@ PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}           •DETAIL SSH ACCOUNT•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}       •DETAIL SSH ACCOUNT•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "$COLOR1│$NC  Username   : $Login" 
@@ -393,7 +393,7 @@ menu-ssh
 function delssh(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}              •SSH DELETE USER•             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •SSH DELETE USER•             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 read -p "   Username : " Pengguna
@@ -421,7 +421,7 @@ menu-ssh
 function renewssh(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             •RENEW SSH ACCOUNT•             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}              •RENEW SSH ACCOUNT•             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 read -p "   Username : " User

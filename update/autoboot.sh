@@ -14,7 +14,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 function menu1(){
     clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│ $NC$COLBG1                •AUTO REBOOT•                $COLOR1 │$NC"
+echo -e "$COLOR1│ $NC$COLBG1               •AUTO REBOOT•                $COLOR1 │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 FILE=/etc/cron.d/re_otm
@@ -30,7 +30,7 @@ echo -e " $COLOR1│$NC [INFO] Auto Reboot : Every 30 Min"
 echo -e " $COLOR1│$NC [INFO] Active & Running Automaticly"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌──────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             • Arz-VPN-STORE•              $COLOR1│$NC"
+echo -e "$COLOR1│${NC}              •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
@@ -55,7 +55,7 @@ echo -e " $COLOR1│$NC [INFO] Auto Reboot : Every 1 Hours"
 echo -e " $COLOR1│$NC [INFO] Active & Running Automaticly"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌──────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
+echo -e "$COLOR1│${NC}              •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
@@ -64,7 +64,7 @@ autoboot
 function menu3(){
         clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│ $NC$COLBG1                •AUTO REBOOT•                $COLOR1 │$NC"
+echo -e "$COLOR1│ $NC$COLBG1                 •AUTO REBOOT•                $COLOR1 │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 FILE=/etc/cron.d/re_otm
@@ -105,7 +105,7 @@ echo -e " $COLOR1│$NC [INFO] Auto Reboot : Every 24 Hours"
 echo -e " $COLOR1│$NC [INFO] Active & Running Automaticly"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌──────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
+echo -e "$COLOR1│${NC}              •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
@@ -113,7 +113,7 @@ autoboot
 }
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│ $NC$COLBG1                •AUTO REBOOT•                $COLOR1 │$NC"
+echo -e "$COLOR1│ $NC$COLBG1                 •AUTO REBOOT•                $COLOR1 │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • Every 30 Min  ${COLOR1}[3]${NC} • Every 12 H/s"
@@ -122,7 +122,7 @@ echo -e " $COLOR1│$NC "
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • Go Back"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌──────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
+echo -e "$COLOR1│${NC}              •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -p "  Select menu :  "  opt

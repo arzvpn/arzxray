@@ -163,14 +163,15 @@ echo -e " $COLOR1│${NC}  • WS STUNNEL                       • $rews2"
 echo -e " $COLOR1│${NC}  • STUNNEL                          • $resst"
 echo -e " $COLOR1│${NC}  • XRAY-SS                          • $resv2r"
 echo -e " $COLOR1│${NC}  • XRAY                             • $resv2r"
+echo -e " $COLOR1│${NC}  • VMESS                             • $resv2r"
 echo -e " $COLOR1│${NC}  • VLESS                            • $resvles"
 echo -e " $COLOR1│${NC}  • TROJAN                           • $restr"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
+echo -e "$COLOR1│${NC}              •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
-read -n 1 -s -r -p "  Press any key to back on menu"
+read -n 1 -s -r -p "  Press any key to back on menu" 
 menu-set
 }
 function restart(){
@@ -213,7 +214,7 @@ echo -e " $COLOR1│${NC}  [INFO] • All Services Restates Successfully  $COLOR
 sleep 1
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
+echo -e "$COLOR1│${NC}               •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"

@@ -18,8 +18,8 @@ mkdir -p /etc/xray
 mkdir -p /etc/v2ray
 echo "$SUB_DOMAIN" >> /etc/v2ray/domain
 #
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
+subsl=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 DOMAIN=scriptarzvpn.tech
 SUB_DOMAIN=${sub}.scriptarzvpn.tech
 NS_DOMAIN=ns-${sub}.scriptarzvpn.tech

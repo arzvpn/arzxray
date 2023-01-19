@@ -192,8 +192,7 @@ echo -e "  ${COLOR1}[8]${NC}  • BACKUP "
 echo -e "  ${COLOR1}[9]${NC}  • ADD HOST/DOMAIN "
 echo -e "  ${COLOR1}[10]${NC} • RENEW CERT/GEN SSL"
 echo -e "  ${COLOR1}[11]${NC} • SETTINGS "
-echp -e "  ${COLOR1}[12]${NC} • INFO AUTOSCRIPT  "
-if [ "$Isadmin" = "ON" ]; then
+echo -e "  ${COLOR1}[12]${NC} • INFO AUTOSCRIPT  "
 echo -e "$COLOR1╚─━━━━━━━━━━━━━━━━━━━━━━━━━━━━░★░━━━━━━━━━━━━━━━━━━━━━━━━━━─╝${NC}"
 myver="$(cat /opt/.ver)"
 

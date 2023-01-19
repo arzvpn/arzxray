@@ -229,7 +229,7 @@ wget -q -O /usr/bin/proxy3.js "https://raw.githubusercontent.com/arzvpn/arzxray/
 cat <<EOF > /etc/systemd/system/sshws.service
 [Unit]
 Description=WSenabler
-Documentation=https://arzvpnstore.my.id
+Documentation=https://panel.arzvpnstore.biz.id
 
 [Service]
 Type=simple
@@ -300,9 +300,9 @@ else
 echo -e "$COLOR1│$NC   • Websocket Is ${red}Not Running$NC"
 fi
 echo -e "$COLOR1│$NC"  
-echo -e "$COLOR1│$NC   ${COLOR1}[1]${NC} • Enable SSH WS   ${COLOR1}[2]${NC} • Disable SSH WS"
-echo -e "$COLOR1│$NC"  
-echo -e "$COLOR1│$NC   ${COLOR1}[0]${NC} • GO BACK"
+echo -e "$COLOR1│$NC   ${COLOR1}[1]${NC} • Enable SSH WS"
+echo -e "$COLOR1│$NC   ${COLOR1}[2]${NC} • Disable SSH WS"  
+echo -e "$COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
@@ -629,7 +629,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}
  $COLOR1│$NC   ${COLOR1}[1]${NC} • ADD SSH $NC"
  $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL SSH $NC"
- $COLOR1│$NC   ${COLOR1}[3]${NC} • USER ACTIVE $NC"
+ $COLOR1│$NC   ${COLOR1}[3]${NC} • CEK USER ACTIVE $NC"
  $COLOR1│$NC   ${COLOR1}[4]${NC} • ENABLE WS $NC"
  $COLOR1│$NC   ${COLOR1}[5]${NC} • DELETE SSH $NC"  
  $COLOR1│$NC   ${COLOR1}[6]${NC} • RENEW SSH $NC" 

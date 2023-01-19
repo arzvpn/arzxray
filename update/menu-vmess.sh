@@ -389,7 +389,7 @@ echo -e " $COLOR1┌────────────────────
 echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • ADD VMESS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • RENEW VMESS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • DELETE VMESS $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • USER ACTIVE $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • CEK USER ACTIVE $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"

@@ -194,14 +194,6 @@ echo -e "  ${COLOR1}[10]${NC} • RENEW CERT/GEN SSL"
 echo -e "  ${COLOR1}[11]${NC} • SETTINGS "
 echp -e "  ${COLOR1}[12]${NC} • INFO AUTOSCRIPT  "
 if [ "$Isadmin" = "ON" ]; then
-echo -e "  ${COLOR1}[13]${NC} • REG IP"
-echo -e "  ${COLOR1}[14]${NC} • SET BOT          "
-ressee="menu-ip"
-bottt="menu-bot"
-else
-ressee="menu"
-bottt="menu"
-fi
 echo -e "$COLOR1╚─━━━━━━━━━━━━━━━━━━━━━━━━━━━━░★░━━━━━━━━━━━━━━━━━━━━━━━━━━─╝${NC}"
 myver="$(cat /opt/.ver)"
 
@@ -250,8 +242,6 @@ case $opt in
 10) clear ; crtxray ;;
 11) clear ; menu-set ;;
 12) clear ; info ;;
-13) clear ; $ressee ;;
-14) clear ; $bottt ;;
 100) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;

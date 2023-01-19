@@ -75,7 +75,7 @@ clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^#!' | cut -d ' ' -f 2 | sort | uniq`);
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            • ROJAN ONLINE •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}            • TROJAN ONLINE •              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 
@@ -323,10 +323,11 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC} ${COLBG1}              •TROJAN MENU•            ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • ADD TROJAN    ${COLOR1}[3]${NC} • DELETE TROJAN${NC}   $COLOR1│$NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • RENEW TROJAN${NC}  ${COLOR1}[4]${NC} • USER ONLINE     $COLOR1│$NC"
-echo -e " $COLOR1│$NC                                              ${NC} $COLOR1│$NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • GO BACK${NC}                              $COLOR1│$NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • ADD TROJAN $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • RENEW TROJAN $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • DELETE TROJAN $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • USER ONLINE $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"

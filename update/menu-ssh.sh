@@ -627,14 +627,14 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC} ${COLBG1}               • SSH PANEL MENU •              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}
- $COLOR1│$NC   ${COLOR1}[1]${NC} • ADD SSH"
- $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL SSH"
- $COLOR1│$NC   ${COLOR1}[3]${NC} • CEK USER ACTIVE"
- $COLOR1│$NC   ${COLOR1}[4]${NC} • ENABLE WS"
- $COLOR1│$NC   ${COLOR1}[5]${NC} • DELETE SSH $NC"  
- $COLOR1│$NC   ${COLOR1}[6]${NC} • RENEW SSH $NC" 
- $COLOR1│$NC   ${COLOR1}[7]${NC} • MEMBER SSH $NC" 
- $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"     
+ $COLOR1│$NC   ${COLOR1}[1]${NC} • ADD SSH
+ $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL SSH
+ $COLOR1│$NC   ${COLOR1}[3]${NC} • CEK USER ACTIVE
+ $COLOR1│$NC   ${COLOR1}[4]${NC} • ENABLE WS
+ $COLOR1│$NC   ${COLOR1}[5]${NC} • DELETE SSH $NC
+ $COLOR1│$NC   ${COLOR1}[6]${NC} • RENEW SSH $NC 
+ $COLOR1│$NC   ${COLOR1}[7]${NC} • MEMBER SSH $NC 
+ $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC     
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"

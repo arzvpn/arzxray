@@ -266,19 +266,20 @@ menu-set
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│ $NC$COLBG1               • VPS SETTINGS •                 $COLOR1 │$NC"
+echo -e "$COLOR1│ $NC$COLBG1                MENU SETTINGS                 $COLOR1 │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • RUNNING"
-echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • SET BANNER"
-echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • BANDWITH USAGE"
-echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • ANTI TORRENT $sts "
-echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • INSTALL TCP BBR"
-echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • RESTART ALL"
-echo -e " $COLOR1│$NC   ${COLOR1}[7]${NC} • AUTO REBOOT"
-echo -e " $COLOR1│$NC   ${COLOR1}[8]${NC} • SPEEDTEST"
-echo -e " $COLOR1│$NC   ${COLOR1}[9]${NC} • LIMIT SPEED"
-echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU"
+echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC}  • RUNNING"
+echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC}  • SET BANNER"
+echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC}  • BANDWITH USAGE"
+echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC}  • ANTI TORRENT $sts "
+echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC}  • INSTALL TCP BBR"
+echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC}  • RESTART ALL"
+echo -e " $COLOR1│$NC   ${COLOR1}[7]${NC}  • AUTO REBOOT"
+echo -e " $COLOR1│$NC   ${COLOR1}[8]${NC}  • SPEEDTEST"
+echo -e " $COLOR1│$NC   ${COLOR1}[9]${NC}  • LIMIT SPEED"
+echo -e " $COLOR1│$NC   ${COLOR1}[10]${NC} • WEBMIN"
+echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC}  • BACK TO MENU"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
@@ -296,6 +297,7 @@ case $opt in
 07 | 7) clear ; autoboot ;;
 08 | 8) clear ; mspeed ;;
 09 | 9) clear ; limitspeed ;;
+10 | 10) clear ; m-webmin ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
 esac

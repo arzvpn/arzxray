@@ -68,6 +68,7 @@ else
 red "Permission Denied!"
 exit 0
 fi
+
 function status(){
 clear
 cek=$(service ssh status | grep active | cut -d ' ' -f5)
@@ -272,7 +273,7 @@ echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • RUNNING"
 echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • SET BANNER"
 echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • BANDWITH USAGE"
 echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • ANTI TORRENT $sts "
-echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • TCP TWEAK"
+echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • INSTALL TCP BBR"
 echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • RESTART ALL"
 echo -e " $COLOR1│$NC   ${COLOR1}[7]${NC} • AUTO REBOOT"
 echo -e " $COLOR1│$NC   ${COLOR1}[8]${NC} • SPEEDTEST"

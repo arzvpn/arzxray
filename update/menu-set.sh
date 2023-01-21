@@ -277,6 +277,7 @@ echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • INSTALL TCP BBR"
 echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • RESTART ALL"
 echo -e " $COLOR1│$NC   ${COLOR1}[7]${NC} • AUTO REBOOT"
 echo -e " $COLOR1│$NC   ${COLOR1}[8]${NC} • SPEEDTEST"
+echo -e " $COLOR1│$NC   ${COLOR1}[9]${NC} • LIMIT SPEED"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -294,6 +295,7 @@ case $opt in
 06 | 6) clear ; restart ;;
 07 | 7) clear ; autoboot ;;
 08 | 8) clear ; mspeed ;;
+09 | 9) clear ; limitspeed ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
 esac

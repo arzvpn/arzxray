@@ -134,13 +134,13 @@ systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "\E[0;41;36m                 Trial Mmess      \E[0m"
+echo -e "\E[0;41;36m              Trial Mmess          \E[0m"
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
-echo -e "Port TLS       : ${tls}"
-echo -e "Port none TLS  : ${none}"
-echo -e "Port gRPC      : ${tls}"
+echo -e "Port TLS       : 443"
+echo -e "Port none TLS  : 80"
+echo -e "Port gRPC      : 443"
 echo -e "id             : ${uuid}"
 echo -e "alterId        : 0"
 echo -e "Security       : auto"

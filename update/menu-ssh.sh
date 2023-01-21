@@ -626,7 +626,7 @@ clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}               • SSH PANEL MENU •              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}
  $COLOR1│$NC   ${COLOR1}[1]${NC} • ADD SSH${NC} 
  $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL SSH${NC}
  $COLOR1│$NC   ${COLOR1}[3]${NC} • CEK USER ACTIVE${NC}

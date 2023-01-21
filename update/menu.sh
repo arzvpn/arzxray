@@ -186,13 +186,12 @@ echo -e "  ${COLOR1}[2]${NC}  • VMESS "
 echo -e "  ${COLOR1}[3]${NC}  • VLESS "  
 echo -e "  ${COLOR1}[4]${NC}  • TROJAN  WS "  
 echo -e "  ${COLOR1}[5]${NC}  • SHADOWSOCKS WS  "
-echo -e "  ${COLOR1}[6]${NC}  • SET DNS "
-echo -e "  ${COLOR1}[7]${NC}  • THEME "
+echo -e "  ${COLOR1}[6]${NC}  • ADD HOST/DOMAIN "
+echo -e "  ${COLOR1}[7]${NC}  • RENEW CERT/GEN SSL "
 echo -e "  ${COLOR1}[8]${NC}  • BACKUP "
-echo -e "  ${COLOR1}[9]${NC}  • ADD HOST/DOMAIN "
-echo -e "  ${COLOR1}[10]${NC} • RENEW CERT/GEN SSL"
-echo -e "  ${COLOR1}[11]${NC} • SETTINGS "
-echo -e "  ${COLOR1}[12]${NC} • INFO AUTOSCRIPT  "
+echo -e "  ${COLOR1}[9]${NC}  • THEME "
+echo -e "  ${COLOR1}[10]${NC} • SETTINGS "
+echo -e "  ${COLOR1}[11]${NC} • INFO AUTOSCRIPT "
 echo -e "$COLOR1╚─━━━━━━━━━━━━━━━━━━━━━━━━━━━━░★░━━━━━━━━━━━━━━━━━━━━━━━━━━─╝${NC}"
 myver="$(cat /opt/.ver)"
 
@@ -234,13 +233,12 @@ case $opt in
 03 | 3) clear ; menu-vless ;;
 04 | 4) clear ; menu-trojan ;;
 05 | 5) clear ; menu-ss ;;
-06 | 6) clear ; menu-dns ;;
-06 | 7) clear ; menu-theme ;;
+06 | 6) clear ; add-host ;;
+06 | 7) clear ; crtxray ;;
 07 | 8) clear ; menu-backup ;;
-09 | 9) clear ; add-host ;;
-10) clear ; crtxray ;;
-11) clear ; menu-set ;;
-12) clear ; info ;;
+09 | 9) clear ; menu-theme ;;
+10) clear ; menu-set ;;
+11) clear ; info ;;
 100) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;

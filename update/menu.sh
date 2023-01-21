@@ -152,7 +152,7 @@ menu
 }
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               •MENU UTAMA•                 ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}                  •MENU UTAMA•                 ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
@@ -162,20 +162,20 @@ cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 serverV=$( curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/version)
 if [ "$Isadmin" = "ON" ]; then
-uis="${GREEN}Premium Version$NC"
+uis="${GREEN}XRAY PREMIUM Arz V1$NC"
 else
-uis="${RED}Free Version$NC"
+uis="${BLUE}XRAY PREMIUM Arz V1$NC"
 fi
-echo -e "$COLOR1│$NC User Roles     : $uis"
+echo -e "$COLOR1│$NC Premium Version  : $uis"
 if [ "$cekup" = "day" ]; then
-echo -e "$COLOR1│$NC System Uptime  : $uphours $upminutes $uptimecek"
+echo -e "$COLOR1│$NC System Uptime    : $uphours $upminutes $uptimecek"
 else
-echo -e "$COLOR1│$NC System Uptime  : $uphours $upminutes"
+echo -e "$COLOR1│$NC System Uptime    : $uphours $upminutes"
 fi
-echo -e "$COLOR1│$NC Memory Usage   : $uram / $tram"
-echo -e "$COLOR1│$NC ISP & City     : $ISP & $CITY"
-echo -e "$COLOR1│$NC Current Domain : $(cat /etc/xray/domain)"
-echo -e "$COLOR1│$NC IP-VPS         : ${COLOR1}$IPVPS${NC}"
+echo -e "$COLOR1│$NC Memory Usage     : $uram / $tram"
+echo -e "$COLOR1│$NC ISP & City       : $ISP & $CITY"
+echo -e "$COLOR1│$NC Current Domain   : $(cat /etc/xray/domain)"
+echo -e "$COLOR1│$NC IP-VPS           : ${COLOR1}$IPVPS${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┏─━─━─━─━─━─━─━─━─━─━─━─━─━─━─━∞◆∞━─━─━─━─━─━─━─━─━─━─━─━─━─━─┓${NC}"
 echo -e "$COLOR1│$NC [ SSH WEBSOCKET : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ]      $COLOR1│$NC"

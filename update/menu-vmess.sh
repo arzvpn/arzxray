@@ -161,7 +161,8 @@ echo -e "Expired On     : $exp"
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-
+menu-vmess
+}
 function delvmess(){
     clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
@@ -480,9 +481,10 @@ echo -e "$COLOR1│${NC} ${COLBG1}             •VMESS MENU•              ${N
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VMESS ACCOUNT $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • RENEW VMESS $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • DELETE VMESS $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • CHECK USER ACTIVE $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL VMESS $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW VMESS $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE VMESS $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"

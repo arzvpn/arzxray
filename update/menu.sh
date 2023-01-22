@@ -184,7 +184,7 @@ echo -e "$COLOR1╔─━━━━━━━━━━━━━━━━━━━�
 echo -e "  ${COLOR1}[1]${NC}  • SSH(${COLOR1}menu-ssh${NC})  "   
 echo -e "  ${COLOR1}[2]${NC}  • VMESS(${COLOR1}menu-vmess${NC}) "  
 echo -e "  ${COLOR1}[3]${NC}  • VLESS(${COLOR1}menu-vless${NC}) "  
-echo -e "  ${COLOR1}[4]${NC}  • TROJAN  WS(${COLOR1}menu-trojan${NC}) "  
+echo -e "  ${COLOR1}[4]${NC}  • TROJAN WS(${COLOR1}menu-trojan${NC}) "  
 echo -e "  ${COLOR1}[5]${NC}  • SHADOWSOCKS WS(${COLOR1}menu-ss${NC})  "
 echo -e "  ${COLOR1}[6]${NC}  • ADD HOST/DOMAIN(${COLOR1}add-host${NC}) "
 echo -e "  ${COLOR1}[7]${NC}  • RENEW CERT/GEN SSL(${COLOR1}crtxray${NC}) "

@@ -181,7 +181,7 @@ echo -e "$COLOR1┏─━─━─━─━─━─━─━─━─━─━�
 echo -e "$COLOR1│$NC [ SSH WEBSOCKET : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ]      $COLOR1│$NC"
 echo -e "$COLOR1┗─━─━─━─━─━─━─━─━─━─━─━─━─━─━─━∞◆∞━─━─━─━─━─━─━─━─━─━─━─━─━─━─┛${NC}"
 echo -e "$COLOR1╔─━━━━━━━━━━━━━━━━━━━━━━━━━━━━━░★░━━━━━━━━━━━━━━━━━━━━━━━━━━━─╗${NC}"
-echo -e "  ${COLOR1}[1]${NC}  • SSH WS(${COLOR1}menu-ssh${NC})  "   
+echo -e "  ${COLOR1}[1]${NC}  • SSH(${COLOR1}menu-ssh${NC})  "   
 echo -e "  ${COLOR1}[2]${NC}  • VMESS(${COLOR1}menu-vmess${NC}) "  
 echo -e "  ${COLOR1}[3]${NC}  • VLESS(${COLOR1}menu-vless${NC}) "  
 echo -e "  ${COLOR1}[4]${NC}  • TROJAN  WS(${COLOR1}menu-trojan${NC}) "  

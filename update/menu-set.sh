@@ -298,8 +298,8 @@ case $opt in
 07 | 7) clear ; autoboot ;;
 08 | 8) clear ; reboot ;;
 09 | 9) clear ; mspeed ;;
-10 | 10) clear ; limitspeed ;;
-11 | 11) clear ; webmin ;;
+10 | 10) clear ; mlimitspeed ;;
+11 | 11) clear ; mwebmin ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
 esac

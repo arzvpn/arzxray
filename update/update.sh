@@ -5,7 +5,8 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 echo -e " [INFO] Downloading Update File"
 sleep 2
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu.sh" && chmod +x /usr/bin/menu
-wget -O install-sldns "https://raw.githubusercontent.com/arzvpn/arzxray/main/slowdns/install-sldns"
+wget -q -O install-sldns "https://raw.githubusercontent.com/arzvpn/arzxray/main/slowdns/install-sldns"
+wget -q -O /usr/bin/mwebmin "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-webmin.sh" && chmod +x /usr/bin/mwebmin
 wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-ss.sh" && chmod +x /usr/bin/menu-ss
 wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-vless.sh" && chmod +x /usr/bin/menu-vless
@@ -24,6 +25,7 @@ wget -q -O /usr/bin/menu-dns "https://raw.githubusercontent.com/arzvpn/arzxray/m
 wget -q -O /usr/bin/info "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/info.sh" && chmod +x /usr/bin/info
 wget -q -O /usr/bin/mspeed "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-speedtest.sh" && chmod +x /usr/bin/mspeed
 wget -q -O /usr/bin/mbandwith "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-bandwith.sh" && chmod +x /usr/bin/mbandwith
+wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/limitspeed.sh" && chmod +x /usr/bin/limitspeed
 echo -e " [INFO] Update Successfully"
 sleep 2
 exit

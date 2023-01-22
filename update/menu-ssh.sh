@@ -627,16 +627,17 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC} ${COLBG1}               • SSH PANEL MENU •              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}
- $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE SSH ACCOUNT(${COLOR1}addssh${NC})
- $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL SSH(${COLOR1}trialssh${NC})
- $COLOR1│$NC   ${COLOR1}[3]${NC} • CHECK USER ACTIVE(${COLOR1}cekssh${NC})
- $COLOR1│$NC   ${COLOR1}[4]${NC} • ENABLE WS(${COLOR1}sshwss${NC})
- $COLOR1│$NC   ${COLOR1}[5]${NC} • DELETE SSH(${COLOR1}delssh${NC})
- $COLOR1│$NC   ${COLOR1}[6]${NC} • RENEW SSH(${COLOR1}renewssh${NC})
- $COLOR1│$NC   ${COLOR1}[7]${NC} • MEMBER SSH(${COLOR1}memberssh${NC})
- $COLOR1│$NC   ${COLOR1}[8]${NC} • SETUP AUTOKILL SSH(${COLOR1}autokill${NC})
- $COLOR1│$NC   ${COLOR1}[9]${NC} • CHECK USERS WHO DO MULTI LOGIN SSH(${COLOR1}ceklim${NC})
- $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU"    
+ $COLOR1│$NC   ${COLOR1}[1]${NC}  • CREATE SSH ACCOUNT(${COLOR1}addssh${NC})
+ $COLOR1│$NC   ${COLOR1}[2]${NC}  • TRIAL SSH(${COLOR1}trialssh${NC})
+ $COLOR1│$NC   ${COLOR1}[3]${NC}  • CHECK USER ACTIVE(${COLOR1}cekssh${NC})
+ $COLOR1│$NC   ${COLOR1}[4]${NC}  • ENABLE WS(${COLOR1}sshwss${NC})
+ $COLOR1│$NC   ${COLOR1}[5]${NC}  • DELETE SSH(${COLOR1}delssh${NC})
+ $COLOR1│$NC   ${COLOR1}[6]${NC}  • RENEW SSH(${COLOR1}renewssh${NC})
+ $COLOR1│$NC   ${COLOR1}[7]${NC}  • MEMBER SSH(${COLOR1}memberssh${NC})
+ $COLOR1│$NC   ${COLOR1}[8]${NC}  • SETUP AUTOKILL SSH(${COLOR1}autokill${NC})
+ $COLOR1│$NC   ${COLOR1}[9]${NC}  • CHECK USERS WHO DO MULTI LOGIN SSH(${COLOR1}ceklim${NC})
+ $COLOR1│$NC   ${COLOR1}[10]${NC} • AUTO DELETE USER EXP(${COLOR1}delete${NC})
+ $COLOR1│$NC   ${COLOR1}[0]${NC}  • BACK TO MENU"    
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
@@ -654,6 +655,7 @@ case $opt in
 07 | 7) clear ; memberssh ;;
 08 | 8) clear ; autokill ;;
 09 | 9) clear ; ceklim ;;
+10 | 10) clear ; delete ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-ssh ;;
 esac

@@ -18,6 +18,9 @@ wondershaper -a $NIC -d $down -u $up > /dev/null 2>&1
 systemctl enable --now wondershaper.service
 echo "start" > /home/limit
 echo "Done"
+echo -e ""
+read -n 1 -s -r -p "    Press any key to back on menu"
+menu-set
 fi
 }
 function stop () {
@@ -27,6 +30,9 @@ echo "Stop Configuration"
 sleep 0.5
 echo > /home/limit
 echo "Done"
+echo -e ""
+read -n 1 -s -r -p "    Press any key to back on menu"
+menu-set
 }
 if [[ "$cek" = "start" ]]; then
 sts="${Info}"

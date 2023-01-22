@@ -92,7 +92,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
         echo "     No  Expired   User"
         grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
         until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
-                if [[ ${CLIENT_NUMBER} == '1' ]]; then
+                if [[ ${CLIENT_NUMBER} == '0' ]]; then
                         read -rp "Select one client [1]: " CLIENT_NUMBER
                 else
                         read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
@@ -195,6 +195,7 @@ menu-vmess
 }
 
 function trialvmess(){
+domain=$(cat /etc/xray/domain)
 user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1

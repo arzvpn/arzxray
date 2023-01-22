@@ -627,13 +627,13 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC} ${COLBG1}               • SSH PANEL MENU •              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}
- $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE SSH ACCOUNT
- $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL SSH
- $COLOR1│$NC   ${COLOR1}[3]${NC} • CHECK USER ACTIVE
- $COLOR1│$NC   ${COLOR1}[4]${NC} • ENABLE WS
- $COLOR1│$NC   ${COLOR1}[5]${NC} • DELETE SSH
- $COLOR1│$NC   ${COLOR1}[6]${NC} • RENEW SSH
- $COLOR1│$NC   ${COLOR1}[7]${NC} • MEMBER SSH 
+ $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE SSH ACCOUNT(${BLUE}addssh${NC})
+ $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL SSH(${BLUE}trialssh${NC})
+ $COLOR1│$NC   ${COLOR1}[3]${NC} • CHECK USER ACTIVE(${BLUE}cekssh${NC})
+ $COLOR1│$NC   ${COLOR1}[4]${NC} • ENABLE WS(${BLUE}sshwss${NC})
+ $COLOR1│$NC   ${COLOR1}[5]${NC} • DELETE SSH(${BLUE}delssh${NC})
+ $COLOR1│$NC   ${COLOR1}[6]${NC} • RENEW SSH(${BLUE}renewssh${NC})
+ $COLOR1│$NC   ${COLOR1}[7]${NC} • MEMBER SSH(${BLUE}memberssh${NC})
  $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU"    
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"

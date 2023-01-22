@@ -213,7 +213,7 @@ datediff() {
 mai="datediff "$Exp" "$DATE""
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
-echo -e "$COLOR1│$NC Version     :${COLOR1} $(cat /opt/.ver) Latest Version${NC}"
+echo -e "$COLOR1│$NC Version     :${COLOR1} $(cat /opt/.ver) Last Version${NC}"
 echo -e "$COLOR1│$NC Client Name : $Name"
 if [ $exp \< 1000 ];
 then

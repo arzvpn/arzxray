@@ -26,6 +26,8 @@ wget -q -O /usr/bin/info "https://raw.githubusercontent.com/arzvpn/arzxray/main/
 wget -q -O /usr/bin/mspeed "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-speedtest.sh" && chmod +x /usr/bin/mspeed
 wget -q -O /usr/bin/mbandwith "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-bandwith.sh" && chmod +x /usr/bin/mbandwith
 wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/limitspeed.sh" && chmod +x /usr/bin/limitspeed
+wget -q -O /usr/bin/ceklim "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/ceklim.sh" && chmod +x /usr/bin/ceklim
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/tendang.sh" && chmod +x /usr/bin/tendang
 echo -e " [INFO] Update Successfully"
 sleep 2
 exit

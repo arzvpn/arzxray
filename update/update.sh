@@ -27,7 +27,7 @@ wget -q -O /usr/bin/mspeed "https://raw.githubusercontent.com/arzvpn/arzxray/mai
 wget -q -O /usr/bin/mbandwith "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-bandwith.sh" && chmod +x /usr/bin/mbandwith
 wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/limitspeed.sh" && chmod +x /usr/bin/limitspeed
 wget -q -O /usr/bin/ceklim "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/ceklim.sh" && chmod +x /usr/bin/ceklim
-wget -q -O /usr/bin/cautokill "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/autokill.sh" && chmod +x /usr/bin/autokill
+wget -q -O /usr/bin/autokill "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/autokill.sh" && chmod +x /usr/bin/autokill
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/tendang.sh" && chmod +x /usr/bin/tendang
 wget -q -O /usr/bin/delete "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/delete.sh" && chmod +x /usr/bin/delete
 echo -e " [INFO] Update Successfully"

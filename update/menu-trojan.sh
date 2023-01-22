@@ -70,6 +70,7 @@ exit 0
 fi
 
 function trialtrojan(){
+domain=$(cat /etc/xray/domain)
 user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1

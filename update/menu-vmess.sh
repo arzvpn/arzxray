@@ -144,6 +144,7 @@ echo -e "$COLOR1═════════════════════�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e ""
 }
 
 function trialvmess(){

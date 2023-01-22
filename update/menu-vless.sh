@@ -72,6 +72,7 @@ fi
 function trialvless(){
 user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
+domain=$(cat /etc/xray/domain)
 masaaktif=1
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vless$/a\#& '"$user $exp"'\
@@ -328,7 +329,7 @@ vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none
 systemctl restart xray
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •CREATE VLESS USER•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL VLESS ACCOUNT•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1════════════════════════════════════${NC}"
 echo -e "Remarks       : ${user}" 
@@ -367,11 +368,11 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC} ${COLBG1}             •VLESS MENU•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VLESS ACCOUNT $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL VLESS $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW VLESS $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE VLESS $NC"   
-echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CEK USER ACTIVE $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VLESS ACCOUNT(${BLUE}addvless${NC}) $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL VLESS(${BLUE}trialless${NC}) $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW VLESS(${BLUE}renewvless${NC}) $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE VLESS(${BLUE}delvless${NC}) $NC"   
+echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE(${BLUE}cekvless${NC}) $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"

@@ -29,6 +29,7 @@ wget -q -O /usr/bin/limitspeed "https://raw.githubusercontent.com/arzvpn/arzxray
 wget -q -O /usr/bin/ceklim "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/ceklim.sh" && chmod +x /usr/bin/ceklim
 wget -q -O /usr/bin/cautokill "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/autokill.sh" && chmod +x /usr/bin/autokill
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/tendang.sh" && chmod +x /usr/bin/tendang
+wget -q -O /usr/bin/delete "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/delete.sh" && chmod +x /usr/bin/delete
 echo -e " [INFO] Update Successfully"
 sleep 2
 exit

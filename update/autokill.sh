@@ -39,7 +39,10 @@ case $AutoKill in
                 echo -e "      AutoKill Every     : 5 Minutes"      
                 echo -e ""
                 echo -e "======================================"                                                                                                                                 
-                exit                                                                  
+                echo -e ""
+read -n 1 -s -r -p "    Press any key to back on menu"
+menu-ssh
+fi
                 ;;
                 2)
                 echo -e ""
@@ -55,7 +58,10 @@ case $AutoKill in
                 echo -e "      AutoKill Every     : 10 Minutes"
                 echo -e ""
                 echo -e "======================================"
-                exit
+                echo -e ""
+read -n 1 -s -r -p "    Press any key to back on menu"
+menu-ssh
+fi
                 ;;
                 3)
                 echo -e ""
@@ -71,7 +77,10 @@ case $AutoKill in
                 echo -e "      AutoKill Every     : 15 Minutes"
                 echo -e ""
                 echo -e "======================================"
-                exit
+                echo -e ""
+read -n 1 -s -r -p "    Press any key to back on menu"
+menu-ssh
+fi
                 ;;
                 4)
                 clear
@@ -82,11 +91,17 @@ case $AutoKill in
                 echo -e "      AutoKill MultiLogin Turned Off  "
                 echo -e ""
                 echo -e "======================================"
-                exit
+                echo -e ""
+read -n 1 -s -r -p "    Press any key to back on menu"
+menu-ssh
+fi
                 ;;
                 x)
                 clear
-                exit
+                echo -e ""
+read -n 1 -s -r -p "    Press any key to back on menu"
+menu-ssh
+fi
                 ;;
                 esac
 echo -e ""

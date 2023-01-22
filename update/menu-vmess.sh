@@ -98,7 +98,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
                         read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
                 fi
         done
-user=$(grep -E "^### " "etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+user=$(grep -E "^### " "etc/xray/config.json" | cut -d ' ' -f 1 | sed -n "${CLIENT_NUMBER}"p)
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 domain=$(cat /etc/xray/domain)
@@ -603,12 +603,12 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC} ${COLBG1}             •VMESS MENU•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VMESS ACCOUNT(${COLOR1}addvmess${NC}) $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL VMESS(${COLOR1}trialvmess${NC}) $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW VMESS(${COLOR1}renewvmess${NC}) $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE VMESS(${COLOR1}delvmess${NC}) $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE(${COLOR1}cekvmess${NC}) $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • DETAIL VMESS(${COLOR1}detailvmess${NC}) $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VMESS ACCOUNT $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL VMESS $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW VMESS $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE VMESS $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • DETAIL VMESS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"

@@ -91,20 +91,64 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
         echo "     No  Expired   User"
         grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
-        until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
-                if [[ ${CLIENT_NUMBER} == '1' ]]; then
+        until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; then
                         read -rp "Select one client [1]: " CLIENT_NUMBER
                 else
                         read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
                 fi
         done
-user=$(grep -E "^### " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+user=$(grep -E "^### " "etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 domain=$(cat /etc/xray/domain)
 uuid=$(grep "},{" /etc/xray/config.json | cut -b 11-46 | sed -n "${CLIENT_NUMBER}"p)
 exp=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 hariini=`date -d "0 days" +"%Y-%m-%d"`
+asu=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "443",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
+      "path": "/vmess",
+      "type": "none",
+      "host": "",
+      "tls": "tls"
+}
+EOF`
+ask=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "80",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
+      "path": "/vmess",
+      "type": "none",
+      "host": "",
+      "tls": "none"
+}
+EOF`
+grpc=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "443",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "grpc",
+      "path": "vmess-grpc",
+      "type": "none",
+      "host": "",
+      "tls": "tls"
+}
+EOF`
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
 vmess_base643=$( base64 -w 0 <<< $vmess_json3)
@@ -555,12 +599,12 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1│${NC} ${COLBG1}             •VMESS MENU•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VMESS ACCOUNT(${BLUE}addvmess${NC}) $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL VMESS(${BLUE}trialvmess${NC}) $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW VMESS(${BLUE}renewvmess${NC}) $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE VMESS(${BLUE}delvmess${NC}) $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE(${BLUE}cekvmess${NC}) $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • DETAIL VMESS(${BLUE}detailvmess${NC}) $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VMESS ACCOUNT(${COLOR1}addvmess${NC}) $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL VMESS(${COLOR1}trialvmess${NC}) $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW VMESS(${COLOR1}renewvmess${NC}) $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE VMESS(${COLOR1}delvmess${NC}) $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE(${COLOR1}cekvmess${NC}) $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • DETAIL VMESS(${COLOR1}detailvmess${NC}) $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"

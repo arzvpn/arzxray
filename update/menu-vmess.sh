@@ -69,6 +69,83 @@ red "Permission Denied!"
 exit 0
 fi
 
+function detailvmess(){
+clear
+MYIP=$(wget -qO- ipv4.icanhazip.com);
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
+        if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
+                echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+                echo -e "\\E[0;41;36m     Check Detail XRAY Vmess     \E[0m"
+                echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+                echo ""
+                echo "You have no existing clients!"
+                clear
+                exit 1
+        fi
+
+        echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo -e "\\E[0;41;36m     Check Detail XRAY Vmess     \E[0m"
+        echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo " Select the existing client to view the config"
+        echo " Press CTRL+C to return"
+		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo "     No  Expired   User"
+        grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
+        until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
+                if [[ ${CLIENT_NUMBER} == '1' ]]; then
+                        read -rp "Select one client [1]: " CLIENT_NUMBER
+                else
+                        read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
+                fi
+        done
+user=$(grep -E "^### " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
+none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
+domain=$(cat /etc/xray/domain)
+uuid=$(cat /proc/sys/kernel/random/uuid)"${CLIENT_NUMBER}"p)
+exp=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
+hariini=`date -d "0 days" +"%Y-%m-%d"`
+vmess_base641=$( base64 -w 0 <<< $vmess_json1)
+vmess_base642=$( base64 -w 0 <<< $vmess_json2)
+vmess_base643=$( base64 -w 0 <<< $vmess_json3)
+vmesslink1="vmess://$(echo $asu | base64 -w 0)"
+vmesslink2="vmess://$(echo $ask | base64 -w 0)"
+vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
+clear
+echo -e ""
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL VMESS ACCOUNT•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1════════════════════════════════════${NC}"
+echo -e "Remarks       : ${user}"
+echo -e "Expired On    : $exp" 
+echo -e "Domain        : ${domain}" 
+echo -e "Port TLS      : 443" 
+echo -e "Port none TLS : 80" 
+echo -e "Port  GRPC    : 443" 
+echo -e "id            : ${uuid}" 
+echo -e "alterId       : 0" 
+echo -e "Security      : auto" 
+echo -e "Network       : ws" 
+echo -e "Path          : /vmess" 
+echo -e "Path WSS      : wss://yourbug/vmess" 
+echo -e "ServiceName   : vmess-grpc" 
+echo -e "$COLOR1════════════════════════════════════${NC}" 
+echo -e "$COLOR1════════════════════════════════════${NC}"
+echo -e "Link TLS : "
+echo -e "${vmesslink1}" 
+echo -e "$COLOR1════════════════════════════════════${NC} "
+echo -e "Link none TLS : "
+echo -e "${vmesslink2}" 
+echo -e "$COLOR1════════════════════════════════════${NC} "
+echo -e "Link GRPC : "
+echo -e "${vmesslink3}"
+echo -e "$COLOR1════════════════════════════════════${NC}" 
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+}
+
 function trialvmess(){
 user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
@@ -335,7 +412,7 @@ clear
 source /var/lib/arzvpn-pro/ipvps.conf
 domain=$(cat /etc/xray/domain)
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •CREATE VMESS USER•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL VMESS ACCOUNT•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
@@ -359,7 +436,7 @@ fi
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •CREATE VMESS USER•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL VMESS ACCOUNT•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} Please choose another name."
@@ -482,6 +559,7 @@ echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL VMESS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW VMESS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE VMESS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • DETAIL VMESS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -496,6 +574,7 @@ case $opt in
 03 | 3) clear ; renewvmess ;;
 04 | 4) clear ; delvmess ;;
 05 | 5) clear ; cekvmess ;;
+06 | 6) clear ; detailvmess ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-vmess ;;
 esac

@@ -78,9 +78,9 @@ echo "$localip $(hostname)" >> /etc/hosts
 fi
 mkdir -p /etc/xray
 
-echo -e "[ ${tyblue}NOTES${NC} ] Before proceeding.. "
+echo -e "[ ${tyblue}NOTES${NC} ] Before process installing...... "
 sleep 1
-echo -e "[ ${tyblue}NOTES${NC} ] I need check your headers first.."
+echo -e "[ ${tyblue}NOTES${NC} ] process check your headers ....."
 sleep 2
 echo -e "[ ${green}INFO${NC} ] Checking headers"
 sleep 1
@@ -113,7 +113,7 @@ if [ "" = "$PKG_OK" ]; then
   echo -e "[ ${tyblue}NOTES${NC} ] After rebooting"
   sleep 1
   echo -e "[ ${tyblue}NOTES${NC} ] Then run this script again"
-  echo -e "[ ${tyblue}NOTES${NC} ] if you understand then tap enter now"
+  echo -e "[ ${tyblue}NOTES${NC} ] tap enter now"
   read
 else
   echo -e "[ ${green}INFO${NC} ] Ok installed"

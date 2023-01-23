@@ -162,9 +162,9 @@ cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 serverV=$( curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/version)
 if [ "$Isadmin" = "ON" ]; then
-uis="${GREEN}Arz XRAY V1$NC"
+uis="${GREEN}XRAY Arz V1$NC"
 else
-uis="${BLUE}Arz XRAY V1$NC"
+uis="${BLUE}XRAY Arz V1$NC"
 fi
 echo -e "$COLOR1│$NC Premium Version  : $uis"
 if [ "$cekup" = "day" ]; then

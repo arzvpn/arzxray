@@ -74,9 +74,9 @@ echo -e " $COLOR1│$NC  $COLOR1 [5]$NC • GREEN"
 echo -e " $COLOR1│$NC  $COLOR1 [6]$NC • MAGENTA"
 echo -e " $COLOR1│$NC  $COLOR1 [0]$NC • BACK TO MENU"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
+echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
+echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
 echo -e ""
 read -p "  Select Options :  " colormenu 
 case $colormenu in
@@ -91,9 +91,7 @@ echo -e " $COLOR1│$NC"
 echo -e " $COLOR1│$NC [INFO] TEAM BLUE Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"                                                                                                                          
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"                                                                                                                          
 ;;
 02 | 2)
 clear
@@ -106,9 +104,7 @@ echo -e " $COLOR1│$NC"
 echo -e " $COLOR1│$NC [INFO] TEAM RED Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 ;;
 03 | 3)
 clear
@@ -121,9 +117,7 @@ echo -e " $COLOR1│$NC"
 echo -e " $COLOR1│$NC [INFO] TEAM YELLOW Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"  
 ;;
 04 | 4)
 clear
@@ -136,9 +130,7 @@ echo -e " $COLOR1│$NC"
 echo -e " $COLOR1│$NC [INFO] TEAM CYAN Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 ;;
 05 | 5)
 clear
@@ -151,9 +143,7 @@ echo -e " $COLOR1│$NC"
 echo -e " $COLOR1│$NC [INFO] TEAM GREEN Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 ;;
 06 | 6)
 clear
@@ -166,9 +156,7 @@ echo -e " $COLOR1│$NC"
 echo -e " $COLOR1│$NC [INFO] TEAM MAGENTA Active Successfully"
 echo -e " $COLOR1│$NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 ;;
 00 | 0)
 clear

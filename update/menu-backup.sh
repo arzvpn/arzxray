@@ -5,11 +5,13 @@ green='\e[0;32m'
 purple='\e[0;35m'
 orange='\e[0;33m'
 NC='\e[0m'
+
+function backup(){ 
 clear
 IP=$(wget -qO- icanhazip.com);
 date=$(date +"%Y-%m-%d")
 clear
-echo " VPS Data Backup By wunuit "
+echo " VPS Data Backup By Arz "
 sleep 1
 echo ""
 echo -e "[ ${green}INFO${NC} ] Please Insert Password To Secure Backup Data ."
@@ -26,7 +28,7 @@ sleep 1
 clear
 echo " Please Wait VPS Data Backup In Progress . . . "
 #cp -r /root/.acme.sh /root/backup/ &> /dev/null
-#cp -r /var/lib/premium-script/ /root/backup/premium-script
+#cp -r /var/lib/arzvpn-pro/ /root/backup/arzvpn-pro
 #cp -r /etc/xray /root/backup/xray
 cp -r /etc/xray/*.json /root/backup/ >/dev/null 2>&1
 cp -r /home/vps/public_html /root/backup/public_html
@@ -54,3 +56,56 @@ echo "If you want to restore data, please enter the link above"
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 echo ""
+}
+
+function restore(){
+clear
+echo ""
+echo " This Feature Can Only Be Used According To VPS Data With This Autoscript"
+echo " Please Insert VPS Data Backup Link To Restore The Data"
+echo ""
+read -rp " Password File: " -e InputPass
+read -rp " Link File: " -e url
+wget -O backup.zip "$url"
+unzip -P $InputPass /root/backup.zip &> /dev/null
+rm -f backup.zip
+sleep 1
+echo -e "[ ${green}INFO${NC} ] Start Restore . . . "
+#cp -r /root/backup/.acme.sh /root/ &> /dev/null
+#cp -r /root/backup/arzvpn-pro /var/lib/ &> /dev/null
+#cp -r /root/backup/xray /usr/local/etc/ &> /dev/null
+cp -r /root/backup/*.json /etc/xray/ >/dev/null
+cp -r /root/backup/public_html /home/vps/ &> /dev/null
+cp -r /root/backup/crontab /etc/ &> /dev/null
+cp -r /root/backup/cron.d /etc/ &> /dev/null
+rm -rf /root/backup
+rm -f backup.zip
+echo ""
+echo -e "[ ${green}INFO${NC} ] VPS Data Restore Complete !"
+echo ""
+echo -e "[ ${green}INFO${NC} ] Restart All Service"
+systemctl restart nginx
+systemctl restart xray.service
+service cron restart
+sleep 0.5
+clear
+}
+
+clear
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC} ${COLBG1}             •BACKUP MENU•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
+echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VMESS ACCOUNT $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL VMESS $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
+echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
+echo -e ""
+read -p " Select menu :  "  opt
+echo -e ""
+case $opt in
+01 | 1) clear ; backup ;;
+02 | 2) clear ; restore ;;
+00 | 0) clear ; menu ;;
+*) clear ; menu-backup ;;
+esac

@@ -42,7 +42,6 @@ case $AutoKill in
                 echo -e ""
 read -n 1 -s -r -p "    Press any key to back on menu"
 menu-ssh
-fi
                 ;;
                 2)
                 echo -e ""
@@ -61,7 +60,6 @@ fi
                 echo -e ""
 read -n 1 -s -r -p "    Press any key to back on menu"
 menu-ssh
-fi
                 ;;
                 3)
                 echo -e ""
@@ -94,17 +92,11 @@ fi
                 echo -e ""
 read -n 1 -s -r -p "    Press any key to back on menu"
 menu-ssh
-fi
                 ;;
                 x)
                 clear
                 echo -e ""
 read -n 1 -s -r -p "    Press any key to back on menu"
 menu-ssh
-fi
                 ;;
                 esac
-echo -e ""
-read -n 1 -s -r -p "    Press any key to back on menu"
-menu-ssh
-fi

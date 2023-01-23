@@ -69,7 +69,7 @@ red "Permission Denied!"
 exit 0
 fi
 
-function detailvlesss(){
+function detailvless(){
 clear
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
@@ -427,7 +427,7 @@ echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL VLESS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW VLESS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE VLESS $NC"   
 echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • DETAIL VLESS $NC" 
+echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • CHECK DETAIL VLESS $NC" 
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"

@@ -362,7 +362,7 @@ user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 if [[ ${user_EXISTS} == '1' ]]; then
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}           •CREATE TROJAN USER•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}           •DETAIL TROJAN ACCOUNT•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}  Please choose another name."
@@ -385,10 +385,9 @@ systemctl restart xray
 trojanlink1="trojan://${uuid}@${domain}:${tr}?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
 trojanlink="trojan://${uuid}@${domain}:${tr}?path=%2Ftrojan-ws&security=tls&host=bug.com&type=ws&sni=bug.com#${user}"
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}         •DETAIL TROJAN ACCOUNT•              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR════════════════════════════════════${NC}"
+echo -e "\033[0;34m════════════════════════════════════\033[0m"
+echo -e "\E[0;41;36m        Detail Trojan Acoount       \E[0m"
+echo -e "\033[0;34m════════════════════════════════════\033[0m"
 echo -e "Remarks     : ${user}" 
 echo -e "Expired On  : $exp" 
 echo -e "Host/IP     : ${domain}" 
@@ -397,7 +396,6 @@ echo -e "Key         : ${uuid}"
 echo -e "Path        : /trojan-ws"
 echo -e "Path WSS    : wss://yourbug/trojan-ws" 
 echo -e "ServiceName : trojan-grpc" 
-echo -e "$COLOR1════════════════════════════════════${NC}" 
 echo -e "$COLOR1════════════════════════════════════${NC}"
 echo -e "Link WS : "
 echo -e "${trojanlink}" 
@@ -424,6 +422,7 @@ echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL TROJAN $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW TROJAN $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE TROJAN $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • CHECK DETAIL TROJAN $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -438,6 +437,7 @@ case $opt in
 03 | 3) clear ; renewtrojan ;;
 04 | 4) clear ; deltrojan ;;
 05 | 5) clear ; cektrojan ;;
+06 | 6) clear ; detailtrojan ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-trojan ;;
 esac

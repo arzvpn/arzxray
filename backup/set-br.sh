@@ -120,6 +120,7 @@ chown -R www-data:www-data /etc/msmtprc
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Downloading files... "
 wget -q -O /usr/bin/backup "https://raw.githubusercontent.com/arzvpn/arzxray/main/backup/backup.sh" && chmod +x /usr/bin/backup
+wget -q -O /usr/bin/autobackup "https://raw.githubusercontent.com/arzvpn/arzxray/main/autobackup/autobackup.sh" && chmod +x /usr/bin/autobackup
 wget -q -O /usr/bin/restore "https://raw.githubusercontent.com/arzvpn/arzxray/main/backup/restore.sh" && chmod +x /usr/bin/restore
 wget -q -O /usr/bin/cleaner "https://raw.githubusercontent.com/arzvpn/arzxray/main/backup/logcleaner.sh" && chmod +x /usr/bin/cleaner
 

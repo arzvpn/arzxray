@@ -98,7 +98,7 @@ cp /etc/shadow /root/backup/ &> /dev/null
 cp /etc/gshadow /root/backup/ &> /dev/null
 cp /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
 cp /etc/ipsec.d/passwd /root/backup/passwd1 &> /dev/null
-cp -r /var/lib/artanodrop-pro/ /root/backup/arzvpn-pro &> /dev/null
+cp -r /var/lib/arzvpn-pro/ /root/backup/arzvpn-pro &> /dev/null
 cp -r /etc/xray /root/backup/xray &> /dev/null
 cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
 cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
@@ -137,7 +137,7 @@ Save_And_Exit () {
     git commit -m backup &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/arzvpn/backupuserarz
-    git push -f https://ghp_v8d51q9efX6VuyDodAYGo0271QJlhx1toMX@github.com/arzvpn/backupuserarz.git &> /dev/null
+    git push -f https://ghp_v8d51q9efX6VuyDodAYGo0271QJlhx1toMX@github.com/arzvpn/backupmultiport.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then

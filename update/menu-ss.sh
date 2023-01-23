@@ -69,6 +69,75 @@ red "Permission Denied!"
 exit 0
 fi
 
+function detailssws(){
+clear
+MYIP=$(wget -qO- ipv4.icanhazip.com);
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
+        if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
+                echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+                echo -e "\\E[0;41;36m      Check Detail XRAY SSWS      \E[0m"
+                echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+                echo ""
+                echo "You have no existing clients!"
+                clear
+                exit 1
+        fi
+
+        echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo -e "\\E[0;41;36m      Check Detail XRAY SSWS      \E[0m"
+        echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo " Select the existing client to view the config"
+        echo " Press CTRL+C to return"
+		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo "     No  User   Expired"
+        grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
+	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
+                if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
+        echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+                        read -rp "Select one client [1]: " CLIENT_NUMBER
+                else
+                        read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
+                fi
+        done
+user=$(cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
+none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
+domain=$(cat /etc/xray/domain)
+uuid=$(grep "},{" /etc/xray/config.json | cut -b 11-46 | sed -n "${CLIENT_NUMBER}"p)
+exp=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
+hariini=`date -d "0 days" +"%Y-%m-%d"`
+
+shadowsockslink="ss://${shadowsocks_base64e}@isi_bug_disini:$tls?path=ss-ws&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
+shadowsockslink1="ss://${shadowsocks_base64e}@${domain}:$tls?mode=gun&security=tls&type=grpc&serviceName=ss-grpc&sni=bug.com#${user}"
+
+echo -e ""
+clear
+echo -e "$COLOR1════════════════════════════════════${NC}"
+echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL SSWS ACCOUNT•             ${NC}"
+echo -e "$COLOR1════════════════════════════════════${NC}"
+echo -e "Remarks      : ${user}" 
+echo -e "Expired On   : $exp"  
+echo -e "Domain       : ${domain}"  
+echo -e "Port TLS     : ${tls}"  
+echo -e "Port  GRPC   : ${tls}" 
+echo -e "Password     : ${uuid}"  
+echo -e "Chipers      : aes-128-gcm"  
+echo -e "Network      : ws/grpc"  
+echo -e "Path         : /ss-ws"  
+echo -e "ServiceName  : ss-grpc"  
+echo -e "$COLOR1════════════════════════════════════${NC}" 
+echo -e "Link TLS : "
+echo -e "${shadowsockslink}"  
+echo -e "$COLOR1════════════════════════════════════${NC} "
+echo -e "Link GRPC : "
+echo -e "${shadowsockslink1}"    
+echo -e "$COLOR1════════════════════════════════════${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
+echo ""  
+read -n 1 -s -r -p "   Press any key to back on menu"
+menu-ss
+}
+
 function trialssws(){
 domain=$(cat /etc/xray/domain)
 user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
@@ -127,9 +196,7 @@ read -rp "   Input Username : " -e user
 if [ -z $user ]; then
 echo -e "$COLOR1│${NC} [Error] Username cannot be empty "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
@@ -144,9 +211,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} Please choose another name."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ss
@@ -389,21 +454,19 @@ systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
 echo -e "$COLOR1════════════════════════════════════${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             • CREATE SSWS USER •              ${NC}"
+echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL SSWS ACCOUNT•             ${NC}"
 echo -e "$COLOR1════════════════════════════════════${NC}"
-echo -e "$COLOR1════════════════════════════════════${NC}"
-echo -e "$Remarks     : ${user}" 
-echo -e "Expired On  : $exp"  
-echo -e "Domain      : ${domain}"  
-echo -e "Port TLS    : ${tls}"  
-echo -e "Port  GRPC  : ${tls}" 
-echo -e "Password    : ${uuid}"  
+echo -e "Remarks      : ${user}" 
+echo -e "Expired On   : $exp"  
+echo -e "Domain       : ${domain}"  
+echo -e "Port TLS     : ${tls}"  
+echo -e "Port  GRPC   : ${tls}" 
+echo -e "Password     : ${uuid}"  
 echo -e "Chipers      : aes-128-gcm"  
-echo -e "Network     : ws/grpc"  
-echo -e "Path        : /ss-ws"  
-echo -e "ServiceName : ss-grpc"  
+echo -e "Network      : ws/grpc"  
+echo -e "Path         : /ss-ws"  
+echo -e "ServiceName  : ss-grpc"  
 echo -e "$COLOR1════════════════════════════════════${NC}" 
-echo -e "$COLOR1════════════════════════════════════${NC}"
 echo -e "Link TLS : "
 echo -e "${shadowsockslink}"  
 echo -e "$COLOR1════════════════════════════════════${NC} "
@@ -412,9 +475,7 @@ echo -e "${shadowsockslink1}"
 echo -e "$COLOR1════════════════════════════════════${NC} "
 echo -e "Link JSON : http://${domain}:81/ss-ws/ss-$user.txt"  
 echo -e "$COLOR1════════════════════════════════════${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""  
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ss
@@ -430,9 +491,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^## " "/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 echo -e "$COLOR1│${NC}  • You have no existing clients!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ss
@@ -446,9 +505,7 @@ grep -E "^## " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | 
 echo -e "$COLOR1│${NC}"
 echo -e "$COLOR1│${NC}  • [NOTE] Press any key to back on menu"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo -e "$COLOR1───────────────────────────────────────────────────${NC}"
 read -rp "   Input Username : " user
 if [ -z $user ]; then
@@ -478,9 +535,7 @@ echo -e "$COLOR1│${NC}   Client Name : $user"
 echo -e "$COLOR1│${NC}   Days Added  : $masaaktif Days"
 echo -e "$COLOR1│${NC}   Expired On  : $exp4"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ss
@@ -497,9 +552,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}  • You Dont have any existing clients!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ss
@@ -532,9 +585,7 @@ echo -e "$COLOR1│${NC}"
 echo -e "$COLOR1│${NC}   • Client Name : $user"
 echo -e "$COLOR1│${NC}   • Expired On  : $exp"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ss
@@ -584,9 +635,7 @@ done
 
 rm -rf /tmp/other.txt
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ss
@@ -602,6 +651,7 @@ echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL SHADOWSOCKS WS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW SHADOWSOCKS WS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE SHADOWSOCKS WS $NC" 
 echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE $NC" 
+echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • CHECK DETAIL SHADOWSOCKS WS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -616,6 +666,7 @@ case $opt in
 03 | 3) clear ; renewssws ;;
 04 | 4) clear ; delssws ;;
 05 | 5) clear ; cekssws ;;
+06 | 6) clear ; detailssws ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-ss ;;
 esac

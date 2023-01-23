@@ -129,9 +129,7 @@ read -p "   Expired (hari): " masaaktif
 if [ -z $masaaktif ]; then
 echo -e "$COLOR1│${NC}  [Error] EXP Date cannot be empty "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"  
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 menu-ssh
@@ -179,12 +177,10 @@ echo -e "SSH-WS-SSL : $wsssl"
 echo -e "SSL/TLS    :$ssl" 
 echo -e "UDPGW      : 7100-7300" 
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1─────────────────────────────────────────────────${NC}"
 echo -e "  GET/ HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
+echo -e "$COLOR1─────────────────────────────────────────────────${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 else
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}           •DETAIL SSH ACCOUNT•              ${NC} $COLOR1│$NC"
@@ -210,9 +206,7 @@ echo -e "$COLOR1═════════════════════�
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}"
 echo -e "  GET / HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"  
 fi
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
@@ -259,9 +253,7 @@ echo -e "$COLOR1│${NC}  [INFO] • ${green}SSH Websocket Started${NC}"
 echo -e "$COLOR1│${NC}  [INFO] • Restart is require for Changes"
 echo -e "$COLOR1│${NC}           to take effect"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}"  
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 sshwss 
@@ -280,9 +272,7 @@ echo -e "$COLOR1│${NC}  [INFO] • ${red}SSH Websocket Stopped${NC}"
 echo -e "$COLOR1│${NC}  [INFO] • Restart is require for Changes"
 echo -e "$COLOR1│${NC}           to take effect"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 sshwss 
@@ -304,10 +294,7 @@ echo -e "$COLOR1│$NC   ${COLOR1}[1]${NC} • Enable SSH WS"
 echo -e "$COLOR1│$NC   ${COLOR1}[2]${NC} • Disable SSH WS"  
 echo -e "$COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
-echo ""
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
@@ -382,9 +369,7 @@ rm -f /tmp/login-db.txt
 rm -f /tmp/vpn-login-tcp.txt
 rm -f /tmp/vpn-login-udp.txt
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo "";
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ssh
@@ -410,9 +395,7 @@ echo -e "   [INFO] Failure: User $Pengguna Not Exist."
 fi
 fi
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ssh
@@ -431,9 +414,7 @@ ok="ok"
 else
 echo -e "$COLOR1│${NC}   [INFO] Failure: User $User Not Exist."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
@@ -442,9 +423,7 @@ fi
 if [ -z $User ]; then
 echo -e "$COLOR1│${NC}   [Error] Username cannot be empty "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
@@ -474,9 +453,7 @@ echo -e "   Username   : $User"
 echo -e "   Days Added : $Days Days"
 echo -e "   Expires on : $Expiration_Display"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 else
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -485,10 +462,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "   Username Doesnt Exist      "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
-fi
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ssh
@@ -523,9 +497,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"  
 echo "   Total: $JUMLAH User"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ssh
@@ -584,9 +556,7 @@ echo -e "$COLOR1═════════════════════�
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}"
 echo -e "  GET / HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 
 else
 

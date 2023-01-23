@@ -92,7 +92,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
         echo "     No  User   Expired"
         grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
         until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
-                if [[ ${CLIENT_NUMBER} == '0' ]]; then
+                if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
                         read -rp "Select one client [1]: " CLIENT_NUMBER
                 else
                         read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER

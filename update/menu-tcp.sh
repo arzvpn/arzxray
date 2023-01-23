@@ -60,9 +60,7 @@ sysctl -p /etc/sysctl.conf >/dev/null
 echo "cubic" >/proc/sys/net/ipv4/tcp_congestion_control
 echo -e "$COLOR1│$NC   [INFO] BBR settings successfully removed."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
     menu-tcp
@@ -109,9 +107,7 @@ install_bbr2() {
   if [ $? -eq 0 ]; then
 echo -e "$COLOR1│$NC   [INFO]  TCP BBR already  installed."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
     menu-tcp
@@ -122,9 +118,7 @@ echo -e "$COLOR1│$NC  [INFO]  Your kernel version is greater than 4.9, directl
     sysctl_config
 echo -e "$COLOR1│$NC   [INFO]  Setting TCP BBR completed..."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"  
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
     menu-tcp
@@ -133,9 +127,7 @@ read -n 1 -s -r -p "   Press any key to back on menu"
   if [[ x"${release}" == x"centos" ]]; then
 echo -e "$COLOR1│$NC   [ERROR] Centos not support"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
     menu-tcp
@@ -153,9 +145,7 @@ echo -e "$COLOR1┌────────────────────�
     install_bbr2
   else
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
     menu-tcp
@@ -181,9 +171,7 @@ net.ipv4.tcp_slow_start_after_idle = 0" /etc/sysctl.conf >/tmp/syscl && mv /tmp/
     sysctl -p /etc/sysctl.conf >/dev/null
 echo -e "$COLOR1│$NC   [INFO] TCP Tweaker settings successfully removed."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
     menu-tcp
@@ -213,9 +201,7 @@ net.ipv4.tcp_slow_start_after_idle = 0" >>/etc/sysctl.conf
     sysctl -p /etc/sysctl.conf >/dev/null
 echo -e "$COLOR1│$NC  [INFO] TCP Tweaker settings added successfully."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
     menu-tcp
@@ -249,9 +235,7 @@ net.core.netdev_max_backlog = 16384" /etc/sysctl.conf >/tmp/syscl && mv /tmp/sys
     sysctl -p /etc/sysctl.conf >/dev/null
 echo -e "$COLOR1│$NC  TCP Tweaker settings successfully removed."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"  
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
     menu-tcp
@@ -287,9 +271,7 @@ net.core.netdev_max_backlog = 16384" >>/etc/sysctl.conf
     sysctl -p /etc/sysctl.conf >/dev/null
 echo -e "$COLOR1│$NC   [INFO] TCP Tweaker settings added successfully."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
     echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
     menu-tcp
@@ -317,9 +299,6 @@ echo -e "$COLOR1│${NC}  ${COLOR1}[5]${NC} • Delete TCP 1"
 echo -e "$COLOR1│${NC}  ${COLOR1}[6]${NC} • Delete TCP 2"
 echo -e "$COLOR1│${NC}  ${COLOR1}[7]${NC} • REBOOT"
 echo -e "$COLOR1│${NC}  ${COLOR1}[0]${NC} • BACK TO MENU"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -p " Select menu :  " opt

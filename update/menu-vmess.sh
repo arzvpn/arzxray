@@ -187,9 +187,7 @@ echo -e "$COLOR1═════════════════════�
 echo -e "Link GRPC : "
 echo -e "${vmesslink3}"
 echo -e "$COLOR1════════════════════════════════════${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"  
 echo -e ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu-vmess
@@ -330,10 +328,7 @@ echo -e "$COLOR1│${NC}   • Accound Delete Successfully"
 echo -e "$COLOR1│${NC}"
 echo -e "$COLOR1│${NC}   • Client Name : $user"
 echo -e "$COLOR1│${NC}   • Expired On  : $exp"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•                $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess
@@ -349,9 +344,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 echo -e "$COLOR1│${NC}  • You have no existing clients!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•                $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"  
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess
@@ -365,9 +358,7 @@ grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort |
 echo -e "$COLOR1│${NC}"
 echo -e "$COLOR1│${NC}  • [NOTE] Press any key to back on menu"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•                $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo -e "$COLOR1───────────────────────────────────────────────────${NC}"
 read -rp "   Input Username : " user
 if [ -z $user ]; then
@@ -397,9 +388,7 @@ echo -e "$COLOR1│${NC}   Client Name : $user"
 echo -e "$COLOR1│${NC}   Days Added  : $masaaktif Days"
 echo -e "$COLOR1│${NC}   Expired On  : $exp4"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•                $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess
@@ -449,9 +438,7 @@ done
 
 rm -rf /tmp/other.txt
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess
@@ -474,9 +461,7 @@ read -rp "   Input Username : " -e user
 if [ -z $user ]; then
 echo -e "$COLOR1│${NC} [Error] Username cannot be empty "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu
@@ -491,9 +476,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} Please choose another name."
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 			read -n 1 -s -r -p "   Press any key to back on menu"
 menu
 		fi
@@ -589,9 +572,7 @@ echo -e "$COLOR1═════════════════════�
 echo -e "Link GRPC : "
 echo -e "${vmesslink3}"
 echo -e "$COLOR1════════════════════════════════════${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 
 read -n 1 -s -r -p "   Press any key to back on menu"

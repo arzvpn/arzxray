@@ -168,9 +168,7 @@ echo -e " $COLOR1│${NC}  • VMESS                            • $resv2r"
 echo -e " $COLOR1│${NC}  • VLESS                            • $resvles"
 echo -e " $COLOR1│${NC}  • TROJAN                           • $restr"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}              •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu" 
 menu-set
@@ -214,9 +212,7 @@ echo -e " $COLOR1│${NC}  [INFO] • Restarting Cron Services            $COLOR
 echo -e " $COLOR1│${NC}  [INFO] • All Services Restates Successfully  $COLOR1│${NC}"
 sleep 1
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}               •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 menu-set
@@ -282,9 +278,6 @@ echo -e " $COLOR1│$NC   ${COLOR1}[10]${NC} • LIMIT SPEED(${COLOR1}limitspeed
 echo -e " $COLOR1│$NC   ${COLOR1}[11]${NC} • WEBMIN(${COLOR1}mwebmin${NC})"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC}  • BACK TO MENU"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -p "  Select menu :  "  opt
 echo -e   ""

@@ -69,6 +69,79 @@ red "Permission Denied!"
 exit 0
 fi
 
+function detailvlesss(){
+clear
+MYIP=$(wget -qO- ipv4.icanhazip.com);
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
+        if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
+                echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+                echo -e "\\E[0;41;36m       Check Detail Vless         \E[0m"
+                echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+                echo ""
+                echo "You have no existing clients!"
+                clear
+                exit 1
+        fi
+
+        echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo -e "\\E[0;41;36m        Check Detail Vless        \E[0m"
+        echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo " Select the existing client to view the config"
+        echo " Press CTRL+C to return"
+		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo "     No  Expired   User"
+        grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
+        until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
+                if [[ ${CLIENT_NUMBER} == '1' ]]; then
+                        read -rp "Select one client [1]: " CLIENT_NUMBER
+                else
+                        read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
+                fi
+        done
+
+user=$(cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+domain=$(cat /etc/xray/domain)
+uuid=$(grep "},{" /etc/xray/config.json | cut -b 11-46 | sed -n "${CLIENT_NUMBER}"p)
+exp=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
+hariini=`date -d "0 days" +"%Y-%m-%d"`
+
+vlesslink1="vless://${uuid}@${domain}:$tls?path=/vlessws&security=tls&encryption=none&type=ws#${user}"
+vlesslink2="vless://${uuid}@${domain}:$none?path=/vlessws&encryption=none&type=ws#${user}"
+vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=bug.com#${user}"
+systemctl restart xray
+clear
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL VLESS ACCOUNT•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1════════════════════════════════════${NC}"
+echo -e "Remarks       : ${user}" 
+echo -e "Expired On    : $exp" 
+echo -e "Domain        : ${domain}" 
+echo -e "port TLS      : 443" 
+echo -e "port none TLS : 80" 
+echo -e "port GRPC     : 443" 
+echo -e "id            : ${uuid}"
+echo -e "Encryption    : none" 
+echo -e "Network       : ws" 
+echo -e "Path          : /vless" 
+echo -e "Path WSS      : wss://yourbug/vless" 
+echo -e "Path          : vless-grpc" 
+echo -e "$COLOR1════════════════════════════════════${NC}" 
+echo -e "$COLOR1════════════════════════════════════${NC}"
+echo -e "Link TLS :"
+echo -e "${vlesslink1}" 
+echo -e "$COLOR1════════════════════════════════════${NC}"   
+echo -e "Link none TLS : "
+echo -e "${vlesslink2}" 
+echo -e "$COLOR1════════════════════════════════════${NC}"
+echo -e "Link GRPC : "
+echo -e "${vlesslink3}" 
+echo -e "$COLOR1════════════════════════════════════${NC}" 
+cho -e ""
+read -n 1 -s -r -p "   Press any key to back on menu"
+menu-vless
+}
+
 function trialvless(){
 user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
@@ -336,7 +409,8 @@ echo -e "Remarks       : ${user}"
 echo -e "Expired On    : $exp" 
 echo -e "Domain        : ${domain}" 
 echo -e "port TLS      : $tls" 
-echo -e "port none TLS : $none" 
+echo -e "port none TLS : $none"
+echo -e "port GRPC     : $tls" 
 echo -e "id            : ${uuid}"
 echo -e "Encryption    : none" 
 echo -e "Network       : ws" 

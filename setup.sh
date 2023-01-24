@@ -78,9 +78,11 @@ echo "$localip $(hostname)" >> /etc/hosts
 fi
 mkdir -p /etc/xray
 
+echo -e "[ ${tyblue}NOTES${NC} ] Welcome To Arz AutoScript...... "
+sleep 1
 echo -e "[ ${tyblue}NOTES${NC} ] Before process installing...... "
 sleep 1
-echo -e "[ ${tyblue}NOTES${NC} ] process check your headers ....."
+echo -e "[ ${tyblue}NOTES${NC} ] process check your headers......"
 sleep 2
 echo -e "[ ${green}INFO${NC} ] Checking headers"
 sleep 1
@@ -250,8 +252,6 @@ wget https://raw.githubusercontent.com/arzvpn/arzxray/main/backup/set-br.sh && c
 clear
 wget https://raw.githubusercontent.com/arzvpn/arzxray/main/websocket/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
-wget https://raw.githubusercontent.com/arzvpn/arzxray/main/slowdns/install-sldns && chmod +x install-sldns && ./install-sldns
-clear
 echo -e "$green[INFO]$NC Update Menu"
 sleep 2
 wget https://raw.githubusercontent.com/arzvpn/arzxray/main/update/update.sh && chmod +x update.sh && ./update.sh
@@ -331,21 +331,13 @@ echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Backup & Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""
-echo "          -           -----------          ----------------"
-echo "         - -          -          -                     -"
-echo "        -   -         -         -                    -"
-echo "       -     -        ----------                   -"
-echo "      ---------       -         -                -"
-echo "     -----------      -           -            -"
-echo "    -           -     -             -        -"
-echo "   -             -    -               -    ----------------"
+
 echo "------------------------------------------------------------"
 echo ""
 echo "===============-[ AUTOSCRIPT Arz VPN STORE ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
-rm /root/cf.sh >/dev/null 2>&1
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/insshws.sh 
 rm -f /root/install-sldns

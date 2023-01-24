@@ -103,7 +103,7 @@ user=$(cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sed -n "${CLI
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 domain=$(cat /etc/xray/domain)
-uuid=$(cat /proc/sys/kernel/random/uuid | cut -b 11-46 | sed -n "${CLIENT_NUMBER}"p)
+uuid=$(grep "},{" /etc/xray/config.json | cut -b 11-46 | sed -n "${CLIENT_NUMBER}"p)
 exp=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 hariini=`date -d "0 days" +"%Y-%m-%d"`
 
@@ -117,8 +117,8 @@ echo -e "$COLOR1═════════════════════�
 echo -e "Remarks      : ${user}" 
 echo -e "Expired On   : $exp"  
 echo -e "Domain       : ${domain}"  
-echo -e "Port TLS     : ${tls}"  
-echo -e "Port  GRPC   : ${tls}" 
+echo -e "Port TLS     : 443"  
+echo -e "Port  GRPC   : 443" 
 echo -e "Password     : ${uuid}"  
 echo -e "Chipers      : aes-128-gcm"  
 echo -e "Network      : ws/grpc"  

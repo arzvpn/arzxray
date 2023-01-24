@@ -107,8 +107,7 @@ trojanlink="trojan://${uuid}@${domain}:${tr}?path=%2Ftrojan-ws&security=tls&host
 
 clear
 echo -e ""     
-echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "\E[0;41;36m          Detail Trojan WS          \E[0m"
+echo -e "$COLOR1════════════XRAY/TROJANWS════════════${NC}"
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
 echo -e "Remarks        : ${user}"
 echo -e "Host/IP        : ${domain}"
@@ -144,8 +143,7 @@ systemctl restart xray
 trojanlink1="trojan://${uuid}@${domain}:${tr}?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
 trojanlink="trojan://${uuid}@isi_bug_disini:${tr}?path=%2Ftrojan-ws&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
 clear
-echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "\E[0;41;36m           TRIAL TROJAN           \E[0m"
+echo -e "$COLOR1════════════XRAY/TROJANWS════════════${NC}"
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
 echo -e "Remarks        : ${user}"
 echo -e "Host/IP        : ${domain}"
@@ -368,8 +366,7 @@ systemctl restart xray
 trojanlink1="trojan://${uuid}@${domain}:${tr}?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
 trojanlink="trojan://${uuid}@${domain}:${tr}?path=%2Ftrojan-ws&security=tls&host=bug.com&type=ws&sni=bug.com#${user}"
 clear
-echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "\E[0;41;36m        Detail Trojan Acoount       \E[0m"
+echo -e "$COLOR1════════════XRAY/TROJANWS════════════${NC}"
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
 echo -e "Remarks     : ${user}" 
 echo -e "Expired On  : $exp" 

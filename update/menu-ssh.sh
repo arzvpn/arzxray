@@ -459,7 +459,6 @@ echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ssh
 }
-
 function memberssh(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -497,6 +496,8 @@ menu-ssh
 function trialssh(){
 clear
 domen=`cat /etc/xray/domain`
+sldomain=$(cat /root/nsdomain)
+slkey=$(cat /etc/slowdns/server.pub)
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 clear

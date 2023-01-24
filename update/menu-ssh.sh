@@ -458,7 +458,9 @@ echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ssh
+fi
 }
+
 function memberssh(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"

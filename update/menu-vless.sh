@@ -72,7 +72,7 @@ fi
 function detailvless(){
 clear
 MYIP=$(wget -qO- ipv4.icanhazip.com);
-NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/vless.json")
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/vless.json")
         if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
                 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
                 echo -e "\\E[0;41;36m       Check Detail Vless         \E[0m"
@@ -90,7 +90,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/vless.json")
         echo " Press CTRL+C to return"
 		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
         echo "     No  Expired   User"
-        grep -E "^### " "/etc/xray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
+        grep -E "^### " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
         until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
                 if [[ ${CLIENT_NUMBER} == '1' ]]; then
                         read -rp "Select one client [1]: " CLIENT_NUMBER
@@ -99,9 +99,9 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/vless.json")
                 fi
         done
 
-user=$(cat /etc/xray/vless.json | grep '^###' | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
+user=$(cat /usr/local/etc/xray/vless.json | grep '^###' | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 domain=$(cat /etc/xray/domain)
-uuid=$(grep "},{" /etc/xray/vless.json | cut -b 11-46 | sed -n "${CLIENT_NUMBER}"p)
+uuid=$(grep "},{" /usr/local/etc/xray/vless.json | cut -b 11-46 | sed -n "${CLIENT_NUMBER}"p)
 exp=$(grep -E "^### " "/etc/xray/vless.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 hariini=`date -d "0 days" +"%Y-%m-%d"`
 

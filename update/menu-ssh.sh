@@ -152,15 +152,13 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}       •DETAIL SSH ACCOUNT•              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1═════════════════════SSH ACCOUNTS═══════════════════${NC}"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "Username   : $Login" 
 echo -e "Password   : $Pass"
 echo -e "Expired On : $exp" 
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
-echo -e "Domain Name System(DNS): 8.8.8.8:1.1.1.1"
+echo -e "Domain Name System(DNS): 8.8.8.8/1.1.1.1"
 echo -e "Name Server(NS): $sldomain"
 echo -e "DNS PUB KEY: $slkey"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
@@ -178,9 +176,7 @@ echo -e "  GET/ HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}" 
 echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 else
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}           •DETAIL SSH ACCOUNT•              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1═════════════════════SSH ACCOUNTS═══════════════════${NC}"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "Username   : $Login" 
 echo -e "Password   : $Pass"
@@ -485,7 +481,7 @@ printf "%-17s %2s %-17s %2s \n" "   • $AKUN" "$exp     " "LOCKED"
 else
 printf "%-17s %2s %-17s %2s \n" "   • $AKUN" "$exp     " "UNLOCKED"
 fi
-fi
+
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -527,15 +523,13 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •SSH TRIAL ACCOUNT•              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1═════════════════════SSH ACCOUNTS═══════════════════${NC}"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "Username   : $Login" 
 echo -e "Password   : $Pass"
 echo -e "Expired On : $exp" 
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
-echo -e "Domain Name System(DNS): 8.8.8.8:1.1.1.1"
+echo -e "Domain Name System(DNS): 8.8.8.8/1.1.1.1"
 echo -e "Name Server(NS): $sldomain"
 echo -e "DNS PUB KEY: $slkey"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
@@ -555,15 +549,13 @@ echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"
 
 else
 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •SSH TRIAL ACCOUNT•              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1═════════════════════SSH ACCOUNTS═══════════════════${NC}"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "Username   : $Login" 
 echo -e "Password   : $Pass"
 echo -e "Expired On : $exp" 
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
-echo -e "Domain Name System(DNS): 8.8.8.8:1.1.1.1"
+echo -e "Domain Name System(DNS): 8.8.8.8/1.1.1.1"
 echo -e "Name Server(NS): $sldomain"
 echo -e "DNS PUB KEY: $slkey"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
@@ -579,9 +571,7 @@ echo -e "$COLOR1═════════════════════�
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}"
 echo -e "$COLOR1│${NC}  GET / HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}" 
-echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
-echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLOR1❚$NC"
-echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"
 fi
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"

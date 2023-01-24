@@ -5,3 +5,4 @@
 ## Lifetime 3x ganti ip 50K
 ## Source script 500k
 <pre><code>t.me/Store_Arz</code></pre>
+wa.me/6283117634078

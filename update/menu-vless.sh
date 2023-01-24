@@ -110,9 +110,7 @@ vlesslink2="vless://${uuid}@${domain}:$none?path=/vlessws&encryption=none&type=w
 vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=bug.com#${user}"
 
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL VLESS ACCOUNT•              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1═════════════XRAY/VLESS═════════════${NC}"
 echo -e "$COLOR1════════════════════════════════════${NC}"
 echo -e "Remarks       : ${user}" 
 echo -e "Expired On    : $exp" 
@@ -156,8 +154,7 @@ vlesslink2="vless://${uuid}@${domain}:$none?path=/vless&encryption=none&type=ws#
 vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=bug.com#${user}"
 systemctl restart xray
 clear
-echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "\E[44;1;39m              Trial Vless        \E[0m"
+echo -e "$COLOR1═════════════XRAY/VLESS═════════════${NC}"
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
@@ -384,9 +381,7 @@ vlesslink2="vless://${uuid}@${domain}:$none?path=/vlessws&encryption=none&type=w
 vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=bug.com#${user}"
 systemctl restart xray
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL VLESS ACCOUNT•              ${NC} $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1═════════════XRAY/VLESS═════════════${NC}"
 echo -e "$COLOR1════════════════════════════════════${NC}"
 echo -e "Remarks       : ${user}" 
 echo -e "Expired On    : $exp" 

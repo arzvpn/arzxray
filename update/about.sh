@@ -1,4 +1,4 @@
-          *               **************            *********************
+ echo -e "         *               **************            *********************
          *  *             *              *                           *
         *    *            *               *                        *
        *      *           *             *                        *
@@ -20,6 +20,6 @@ For Debian 9 & Debian 10
 
 Contact Owner AutoScript
 > WA: 083117634078
-> TELEGRAM: t.me/Store_Arz
+> TELEGRAM: t.me/Store_Arz"
 
-Thanks for your Order Arz AutoScript
+echo -e "Thanks for your Order Arz AutoScript"

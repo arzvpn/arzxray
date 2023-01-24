@@ -134,7 +134,7 @@ echo -e "$COLOR1═════════════════════�
 echo -e "Link GRPC : "
 echo -e "${vlesslink3}" 
 echo -e "$COLOR1════════════════════════════════════${NC}" 
-cho -e ""
+echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vless
 }
@@ -239,7 +239,6 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 echo -e "$COLOR1│${NC}  • You have no existing clients!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"  
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vless

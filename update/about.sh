@@ -23,3 +23,7 @@ Contact Owner AutoScript
 > TELEGRAM: t.me/Store_Arz"
 
 echo -e "Thanks for your Order Arz AutoScript"
+echo ""
+read -n 1 -s -r -p "  Press any key to Renew Cret"
+menu
+fi

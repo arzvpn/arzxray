@@ -324,6 +324,7 @@ echo -e "$COLOR1│${NC}   • Accound Delete Successfully"
 echo -e "$COLOR1│${NC}"
 echo -e "$COLOR1│${NC}   • Client Name : $user"
 echo -e "$COLOR1│${NC}   • Expired On  : $exp"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -339,8 +340,7 @@ echo -e "$COLOR1┌────────────────────�
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 echo -e "$COLOR1│${NC}  • You have no existing clients!"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"  
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"   
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vmess

@@ -482,7 +482,6 @@ printf "%-17s %2s %-17s %2s \n" "   • $AKUN" "$exp     " "LOCKED"
 else
 printf "%-17s %2s %-17s %2s \n" "   • $AKUN" "$exp     " "UNLOCKED"
 fi
-
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"

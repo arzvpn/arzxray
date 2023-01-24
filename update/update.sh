@@ -30,6 +30,7 @@ wget -q -O /usr/bin/ceklim "https://raw.githubusercontent.com/arzvpn/arzxray/mai
 wget -q -O /usr/bin/autokill "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/autokill.sh" && chmod +x /usr/bin/autokill
 wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/tendang.sh" && chmod +x /usr/bin/tendang
 wget -q -O /usr/bin/delete "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/delete.sh" && chmod +x /usr/bin/delete
+wget -q -O /usr/bin/about "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/about.sh" && chmod +x /usr/bin/about
 echo -e " [INFO] Update Successfully"
 sleep 2
 exit

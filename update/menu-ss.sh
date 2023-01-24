@@ -103,7 +103,7 @@ user=$(cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sed -n "${CLI
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess None TLS" | cut -d: -f2|sed 's/ //g')"
 domain=$(cat /etc/xray/domain)
-uuid=$(grep "},{" /etc/xray/config.json | cut -b 11-46 | sed -n "${CLIENT_NUMBER}"p)
+uuid=$(cat /proc/sys/kernel/random/uuid | cut -b 11-46 | sed -n "${CLIENT_NUMBER}"p)
 exp=$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 hariini=`date -d "0 days" +"%Y-%m-%d"`
 
@@ -112,8 +112,7 @@ shadowsockslink1="ss://${shadowsocks_base64e}@${domain}:$tls?mode=gun&security=t
 
 echo -e ""
 clear
-echo -e "$COLOR1════════════════════════════════════${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL SSWS ACCOUNT•             ${NC}"
+echo -e "$COLOR1═════════════XRAY/SSWS══════════════${NC}"
 echo -e "$COLOR1════════════════════════════════════${NC}"
 echo -e "Remarks      : ${user}" 
 echo -e "Expired On   : $exp"  
@@ -158,8 +157,7 @@ shadowsockslink1="ss://${shadowsocks_base64e}@${domain}:$tls?mode=gun&security=t
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-echo -e "\033[0;34m════════════════════════════════════\033[0m"
-echo -e "\\E[0;41;36m            TRIAL SSWS      \E[0m"
+echo -e "$COLOR1═════════════XRAY/SSWS══════════════${NC}"
 echo -e "\033[0;34m════════════════════════════════════\033[0m"
 echo -e "Remarks        : ${user}"
 echo -e "Domain         : ${domain}"
@@ -453,8 +451,7 @@ END
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-echo -e "$COLOR1════════════════════════════════════${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL SSWS ACCOUNT•             ${NC}"
+echo -e "$COLOR1═════════════XRAY/SSWS══════════════${NC}"
 echo -e "$COLOR1════════════════════════════════════${NC}"
 echo -e "Remarks      : ${user}" 
 echo -e "Expired On   : $exp"  

@@ -539,7 +539,7 @@ echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db" 
 echo -e "SSH-WS     : $portsshws" 
 echo -e "SSH-SSL-WS : $wsssl" 
-echo -e "SSL/TLS    :$ssl" 
+echo -e "SSL/TLS    : $ssl" 
 echo -e "UDPGW      : 7100-7300" 
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}"
@@ -548,7 +548,7 @@ echo -e "$COLOR1─────────────────────�
 echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 
 else
-
+clear
 echo -e "$COLOR1═════════════════════SSH ACCOUNTS═══════════════════${NC}"
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "Username   : $Login" 
@@ -565,7 +565,7 @@ echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db" 
 echo -e "SSH-WS     : $portsshws" 
 echo -e "SSH-SSL-WS : $wsssl" 
-echo -e "SSL/TLS    :$ssl" 
+echo -e "SSL/TLS    : $ssl" 
 echo -e "UDPGW      : 7100-7300" 
 echo -e "$COLOR1════════════════════════════════════════════════════${NC}"
 echo -e "$COLOR1─────────────────────────────────────────────────${NC}"

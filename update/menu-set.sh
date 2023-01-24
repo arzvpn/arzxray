@@ -276,6 +276,7 @@ echo -e " $COLOR1│$NC   ${COLOR1}[8]${NC}  • REBOOT(${COLOR1}reboot${NC})"
 echo -e " $COLOR1│$NC   ${COLOR1}[9]${NC}  • SPEEDTEST(${COLOR1}mspeed${NC})"
 echo -e " $COLOR1│$NC   ${COLOR1}[10]${NC} • LIMIT SPEED(${COLOR1}limitspeed${NC})"
 echo -e " $COLOR1│$NC   ${COLOR1}[11]${NC} • WEBMIN(${COLOR1}mwebmin${NC})"
+echo -e " $COLOR1│$NC   ${COLOR1}[12]${NC} • ABOUT(${COLOR1}about${NC})"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC}  • BACK TO MENU"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e ""
@@ -293,6 +294,7 @@ case $opt in
 09 | 9) clear ; mspeed ;;
 10 | 10) clear ; limitspeed ;;
 11 | 11) clear ; mwebmin ;;
+12 | 12) clear ; about ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-set ;;
 esac

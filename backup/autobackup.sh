@@ -55,7 +55,7 @@ sleep 1
 echo " Please Wait"
 clear
 echo " Autobackup Has Been Started"
-echo " Data Will Be Backed Up Automatically at 00:05 GMT +8"
+echo " Data Will Be Backed Up Automatically at 00:05 GMT +7"
 exit 0
 }
 function stop() {

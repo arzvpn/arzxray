@@ -190,7 +190,7 @@ clear
 domain=$(cat /etc/xray/domain)
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             •CREATE SSWS USER•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}              •CREATE SSWS USER•               ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 tls="$(cat ~/log-install.txt | grep -w "Sodosok WS/GRPC" | cut -d: -f2|sed 's/ //g')"

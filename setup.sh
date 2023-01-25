@@ -317,6 +317,7 @@ echo "   - Trojan GRPC             : 443" | tee -a log-install.txt
 echo "   - Trojan WS               : 443" | tee -a log-install.txt
 echo "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
+echo "----------------------------------------------------------------"
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
@@ -328,12 +329,25 @@ echo "   - Autoreboot On           : 00.00 GMT +7" | tee -a log-install.txt
 echo "   - Autobackup Data" | tee -a log-install.txt
 echo "   - AutoKill Multi Login User" | tee -a log-install.txt
 echo "   - Auto Delete Expired Account" | tee -a log-install.txt
+echo "   - Update Script" | tee -a log-install.txt
 echo "   - Fully automatic script" | tee -a log-install.txt
 echo "   - VPS settings" | tee -a log-install.txt
 echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Backup & Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""
+echo -e "          *               **************            *********************
+         *  *             *              *                           *
+        *    *            *               *                        *
+       *      *           *             *                        *
+      *        *          **************                       *
+     *          *         *             *                    *
+    **************        *              *                 *
+   *              *       *               *              *
+  *                *      *                *           *
+ *                  *     *                 *        *
+*                    *    *                  *    *********************"
+
 
 echo "------------------------------------------------------------"
 echo ""

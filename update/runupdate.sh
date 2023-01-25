@@ -47,11 +47,11 @@ echo -e "       \e[1;31mWould you like to proceed?\e[0m"
 echo ""
 echo -e "            \e[0;32m[ Select Option ]\033[0m"
 echo -e "     \e[$number [1]\e[m \e[$below CCheck Script Update Now\e[m"
-echo -e "     \e[$number [0]\e[m \e[$below BBack To Menu\e[m"
+echo -e "     \e[$number [x]\e[m \e[$below BBack To Menu\e[m"
 echo -e ""
 echo -e "   \e[$line--------------------------------------------------------\e[m"
 echo -e "\e[$line"
-read -p "PPlease Choose 1 or 0 : " option2
+read -p "PPlease Choose 1 or x : " option2
 case $option2 in
 1)
 version=$(cat /home/ver)
@@ -146,3 +146,11 @@ echo -e "\033[0;34m----------------------------------------\033[0m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
+;;
+x)
+clear
+echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
+;;
+esac

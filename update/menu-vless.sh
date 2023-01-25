@@ -427,7 +427,7 @@ echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLO
 echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
 echo -e ""
 read -p " Select menu :  "  opt
-echo -e ""
+
 case $opt in
 01 | 1) clear ; addvless ;;
 02 | 2) clear ; trialvless ;;

@@ -214,7 +214,7 @@ wget -q -O /usr/bin/proxy3.js "https://raw.githubusercontent.com/arzvpn/arzxray/
 cat <<EOF > /etc/systemd/system/sshws.service
 [Unit]
 Description=WSenabler
-Documentation=https://panel.arzvpnstore.biz.id
+Documentation=https://arzvpnstore.biz.id
 
 [Service]
 Type=simple
@@ -286,6 +286,7 @@ echo -e "$COLOR1│$NC   ${COLOR1}[2]${NC} • Disable SSH WS"
 echo -e "$COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
+echo -e ""
 read -p " Select menu :  "  opt
 echo -e ""
 case $opt in
@@ -361,7 +362,7 @@ rm -f /tmp/vpn-login-tcp.txt
 rm -f /tmp/vpn-login-udp.txt
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
-echo "";
+echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ssh
 }

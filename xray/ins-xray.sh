@@ -52,8 +52,7 @@ red='\e[1;31m'
 green='\e[0;32m'
 yell='\e[1;33m'
 NC='\e[0m'
-echo "XRAY Core Vmess / Vless"
-echo "Trojan"
+echo "XRAY Core Vmess / Vless / Trojan"
 echo "Progress..."
 sleep 3
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }

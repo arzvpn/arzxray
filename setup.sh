@@ -346,7 +346,7 @@ echo -e "          *               **************            *******************
    *              *       *               *              *
   *                *      *                *           *
  *                  *     *                 *        *
-*                    *    *                  *    *********************"
+*                    *    *                  *    *********************" | tee -a log-install.txt
 
 
 echo "------------------------------------------------------------"
@@ -362,7 +362,7 @@ rm /root/update.sh
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e "
 "
-echo -ne "[ ${yell}WARNING${NC} ] Silahkan Reboot Ulang Vps Anda ? (y/n)? "
+echo -ne "[ ${yell}WARNING${NC} ] Silahkan Reboot Ulang Vps Anda (y/n)? "
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
 exit 0

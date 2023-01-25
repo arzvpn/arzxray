@@ -418,8 +418,8 @@ echo -e " $COLOR1┌────────────────────
 echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VLESS ACCOUNT $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • TRIAL VLESS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • RENEW VLESS $NC"
-echo -e " $COLOR1│$NC   ${COLOR1}[4]${NC} • DELETE VLESS $NC"   
-echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE $NC"
+echo -e " $COLOR1│$NC   ${COLOR1}[5]${NC} • CHECK USER ACTIVE $NC
+echo -e " $COLOR1│$NC   ${COLOR1}[6]${NC} • DETAIL VLESS $NC"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1╔═══════════════════ ≪ •❈• ≫ ═══════════════════╗${NC}"
@@ -434,6 +434,7 @@ case $opt in
 03 | 3) clear ; renewvless ;;
 04 | 4) clear ; delvless ;;
 05 | 5) clear ; cekvless ;;
+06 | 6) clear ; detailvless ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-vless ;;
 esac

@@ -145,7 +145,4 @@ echo -e "\E[44;1;39m            SCRIPT UPDATED              \E[0m"
 echo -e "\033[0;34m----------------------------------------\033[0m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-menu;
-0)
-read -n 1 -s -r -p "Press any key to back on menu"
 menu

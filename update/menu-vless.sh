@@ -184,7 +184,7 @@ clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '#&' | cut -d ' ' -f 2 | sort | uniq`);
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             •VLESS USER ACTIVE•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}              •VLESS USER ACTIVE•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 
@@ -244,7 +244,7 @@ menu-vless
 fi
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             •RENEW VLESS USER•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}              •RENEW VLESS USER•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^#& " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | nl
@@ -272,7 +272,7 @@ sed -i "/#& $user/c\#& $user $exp4" /etc/xray/config.json
 systemctl restart xray > /dev/null 2>&1
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             •RENEW VLESS USER•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}              •RENEW VLESS USER•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}   [INFO]  $user Account Renewed Successfully"
@@ -293,7 +293,7 @@ function delvless(){
 NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •DELETE VLESS USER•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             •DELETE VLESS USER•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}  • You Dont have any existing clients!"
@@ -322,7 +322,7 @@ sed -i "/^#& $user $exp/,/^},{/d" /etc/xray/config.json
 systemctl restart xray > /dev/null 2>&1
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •DELETE VLESS USER•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             •DELETE VLESS USER•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}   • Accound Delete Successfully"
@@ -340,7 +340,7 @@ fi
 function addvless(){
 domain=$(cat /etc/xray/domain)
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •CREATE VLESS USER•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             •CREATE VLESS USER•              ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
@@ -412,7 +412,7 @@ menu-vless
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               •VLESS MENU•                ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               • VLESS MENU •                ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VLESS ACCOUNT $NC"

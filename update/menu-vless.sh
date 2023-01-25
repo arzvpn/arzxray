@@ -409,7 +409,6 @@ read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vless
 }
 
-
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}             •VLESS MENU•              ${NC} $COLOR1│$NC"
@@ -438,5 +437,3 @@ case $opt in
 00 | 0) clear ; menu ;;
 *) clear ; menu-vless ;;
 esac
-
-       

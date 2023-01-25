@@ -409,6 +409,7 @@ read -n 1 -s -r -p "   Press any key to back on menu"
 menu-vless
 }
 
+
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}             •VLESS MENU•              ${NC} $COLOR1│$NC"
@@ -426,7 +427,7 @@ echo -e "$COLOR1❚${NC}                •Arz-VPN-STORE•                $COLO
 echo -e "$COLOR1╚═══════════════════ ≪ •❈• ≫ ═══════════════════╝${NC}" 
 echo -e ""
 read -p " Select menu :  "  opt
-echo ""
+echo -e""
 case $opt in
 01 | 1) clear ; addvless ;;
 02 | 2) clear ; trialvless ;;

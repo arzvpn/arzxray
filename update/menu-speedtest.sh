@@ -77,9 +77,7 @@ echo -e ""
 speedtest
 echo -e ""
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC}             •Arz-VPN-STORE•              $COLOR1│$NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}" 
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 menu-set

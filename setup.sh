@@ -79,7 +79,7 @@ fi
 mkdir -p /etc/xray
 
 echo -e "[ ${tyblue}NOTES${NC} ] Welcome To Arz AutoScript...... "
-sleep 1
+sleep 2
 echo -e "[ ${tyblue}NOTES${NC} ] Before process installing...... "
 sleep 1
 echo -e "[ ${tyblue}NOTES${NC} ] process check your headers......"
@@ -167,7 +167,10 @@ exit 0
 elif [ "$res" = "Permission Accepted..." ]; then
 green "Permission Accepted!"
 else
-red "Permission Denied!"
+red "Permission Denied!
+Please Buy AutoScript Premium
+WA: 083117634078
+Telegram: t.me/Store_Arz"
 rm setup.sh > /dev/null 2>&1
 sleep 10
 exit 0

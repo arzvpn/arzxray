@@ -51,7 +51,7 @@ echo -e "     \e[$number [x]\e[m \e[$below Back To Menu\e[m"
 echo -e ""
 echo -e "   \e[$line--------------------------------------------------------\e[m"
 echo -e "\e[$line"
-read -p "Please Choose 1 or x & y : " option2
+read -p "Please Choose 1 or x : " option2
 case $option2 in
 1)
 version=$(cat /home/ver)
@@ -96,7 +96,6 @@ echo -e "\e[0;32mNew Version Downloading started!\e[0m"
 sleep 2
 cd /usr/bin
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu.sh" && chmod +x /usr/bin/menu
-wget -q -O install-sldns "https://raw.githubusercontent.com/arzvpn/arzxray/main/slowdns/install-sldns" && chmod +x /usr/bin/install-sldns
 wget -q -O /usr/bin/mwebmin "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-webmin.sh" && chmod +x /usr/bin/mwebmin
 wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-ss.sh" && chmod +x /usr/bin/menu-ss
 wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
@@ -147,3 +146,4 @@ echo -e "\033[0;34m----------------------------------------\033[0m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
+00 | 0) clear ; menu ;;

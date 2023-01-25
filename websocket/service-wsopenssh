@@ -1,6 +1,6 @@
 [Unit]
 Description=Websocket-OpenSSH By Arz VPN
-Documentation=https://wa.me/6283117634078
+Documentation=https://panel.arzvpnstore.biz.id
 After=network.target nss-lookup.target
 
 [Service]

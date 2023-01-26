@@ -1,11 +1,9 @@
 #wget https://github.com/${GitUser}/
 GitUser="arzvpn"
 #IZIN SCRIPT
-MYIP=$(curl -sS ipv4.icanhazip.com)
-echo -e "\e[32mloading...\e[0m"
 clear
-
-echo -e "\e[32mloading...\e[0m"
+IP=$(wget -qO- ipinfo.io/ip);
+date=$(date +"%Y-%m-%d")
 clear
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Green_background_prefix="\033[42;37m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m"
 Info="${Green_font_prefix}[ON]${Font_color_suffix}"
@@ -56,6 +54,7 @@ echo -e " =============================="
 echo -e " Status $sts"
 echo -e "  1. Start Autobackup"
 echo -e "  2. Stop Autobackup"
+echo -e ""
 echo -e " Press CTRL+C to return"
 read -rp " Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then

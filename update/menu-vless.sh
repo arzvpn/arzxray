@@ -412,7 +412,7 @@ menu-vless
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}                • VLESS MENU •                ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}                 • VLESS MENU •                ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VLESS ACCOUNT $NC"

@@ -91,11 +91,11 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 		echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
         echo "     No  User   Expired"
         grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | nl -s ') '
-
+        echo -e ""
         echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-                        read -rp "Select one client [1]: " CLIENT_NUMBER
+                        read -rp "Select one client [1]: " NUMBER_OF_CLIENTS
                 else
-                        read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
+                        read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " NUMBER_OF_CLIENTS
                 fi
         done
 user=$(cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)

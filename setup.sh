@@ -80,9 +80,7 @@ mkdir -p /etc/xray
 
 echo -e "[ ${tyblue}NOTES${NC} ] Welcome To Arz AutoScript...... "
 sleep 2
-echo -e "[ ${tyblue}NOTES${NC} ] Before process installing...... "
-sleep 1
-echo -e "[ ${tyblue}NOTES${NC} ] process check your headers......"
+echo -e "[ ${yell}NOTES${NC} ] process check your headers......"
 sleep 2
 echo -e "[ ${green}INFO${NC} ] Checking headers"
 sleep 1
@@ -102,19 +100,19 @@ if [ "" = "$PKG_OK" ]; then
   sleep 1
   echo ""
   sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 1. apt update -y"
+  echo -e "[ ${yell}NOTES${NC} ] 1. apt update -y"
   sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 2. apt upgrade -y"
+  echo -e "[ ${yell}NOTES${NC} ] 2. apt upgrade -y"
   sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 3. apt dist-upgrade -y"
+  echo -e "[ ${yell}NOTES${NC} ] 3. apt dist-upgrade -y"
   sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] 4. reboot"
+  echo -e "[ ${yell}NOTES${NC} ] 4. reboot"
   sleep 1
   echo ""
   sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] After rebooting"
+  echo -e "[ ${yell}NOTES${NC} ] After rebooting"
   sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] Then run this script again"
+  echo -e "[ ${yell}NOTES${NC} ] Then run this script again"
   echo -e "[ ${tyblue}NOTES${NC} ] tap enter now"
   read
 else
@@ -336,7 +334,7 @@ echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Backup & Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""
-echo -e "           *               **************            *********************
+echo -e "          *               **************            *********************
          *  *             *              *                           *
         *    *            *               *                        *
        *      *           *             *                        *
@@ -349,9 +347,9 @@ echo -e "           *               **************            ******************
 *                    *    *                  *    *********************" | tee -a log-install.txt
 
 
-echo "------------------------------------------------------------"
+echo "--------------------------------------------------------------------"
 echo ""
-echo "===============-[ AUTOSCRIPT Arz VPN STORE ]-==============="
+echo "===================-[ AUTOSCRIPT Arz VPN STORE ]-==================="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
@@ -362,7 +360,7 @@ rm /root/update.sh
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo -e "
 "
-echo -ne "[ ${yell}WARNING${NC} ] Silahkan Reboot Ulang Vps Anda (y/n)? "
+echo -ne "[ ${tyblue}WARNING${NC} ] Silahkan Reboot Ulang Vps Anda (y/n)? "
 read answer
 if [ "$answer" == "${answer#[Yy]}" ] ;then
 exit 0

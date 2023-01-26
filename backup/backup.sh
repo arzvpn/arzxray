@@ -45,7 +45,7 @@ url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
 echo -e "
-Detail Backup 
+Detail Backup Arz AutoScript
 ==================================
 IP VPS        : $IP
 Link Backup   : $link
@@ -56,14 +56,13 @@ rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 clear
 echo -e "
-Detail Backup 
+Detail Backup Arz AutoScript
 ==================================
 IP VPS        : $IP
 Link Backup   : $link
 Tanggal       : $date
 ==================================
 "
-echo "Silahkan cek Kotak Masuk $email" 
 echo
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-backup

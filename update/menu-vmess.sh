@@ -344,7 +344,7 @@ menu-vmess
 fi
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}              •RENEW VMESS USER•                 ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •RENEW VMESS USER•                 ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | nl
@@ -372,7 +372,7 @@ sed -i "/### $user/c\### $user $exp4" /etc/xray/config.json
 systemctl restart xray > /dev/null 2>&1
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}              •RENEW VMESS USER•                 ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               •RENEW VMESS USER•                 ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}   [INFO]  $user Account Renewed Successfully"
@@ -393,7 +393,7 @@ clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             •VMESS USER ACTIVE•               ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}              •VMESS USER ACTIVE•               ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 
@@ -573,7 +573,7 @@ menu-vmess
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             •VMESS MENU•              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}                •VMESS MENU•                 ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • CREATE VMESS ACCOUNT $NC"

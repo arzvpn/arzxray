@@ -13,7 +13,6 @@ echo -e "$COLOR1└────────────────────�
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • BACKUP(${COLOR1}backup${NC})"
 echo -e " $COLOR1│$NC   ${COLOR1}[2]${NC} • RESTORE(${COLOR1}restore${NC})"
-echo -e " $COLOR1│$NC   ${COLOR1}[3]${NC} • AUTOBACKUP(${COLOR1}autobackup${NC})"
 echo -e " $COLOR1│$NC   ${COLOR1}[0]${NC} • BACK TO MENU $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
 echo -e ""
@@ -22,7 +21,6 @@ echo -e ""
 case $opt in
 01 | 1) clear ; backup ;;
 02 | 2) clear ; restore ;;
-03 | 3) clear ; autobackup ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-backup ;;
 esac

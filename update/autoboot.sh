@@ -14,7 +14,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 function menu1(){
     clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│ $NC$COLBG1               •AUTO REBOOT•                $COLOR1 │$NC"
+echo -e "$COLOR1│ $NC$COLBG1                • AUTO REBOOT •                $COLOR1 │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 FILE=/etc/cron.d/re_otm
@@ -37,7 +37,7 @@ autoboot
 function menu2(){
         clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│ $NC$COLBG1                •AUTO REBOOT•                $COLOR1 │$NC"
+echo -e "$COLOR1│ $NC$COLBG1                • AUTO REBOOT •                $COLOR1 │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 FILE=/etc/cron.d/re_otm
@@ -60,7 +60,7 @@ autoboot
 function menu3(){
         clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│ $NC$COLBG1                 •AUTO REBOOT•                $COLOR1 │$NC"
+echo -e "$COLOR1│ $NC$COLBG1                 • AUTO REBOOT •               $COLOR1 │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 FILE=/etc/cron.d/re_otm
@@ -83,7 +83,7 @@ autoboot
 function menu4(){
         clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│ $NC$COLBG1                •AUTO REBOOT•                $COLOR1 │$NC"
+echo -e "$COLOR1│ $NC$COLBG1                • AUTO REBOOT •                $COLOR1 │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 FILE=/etc/cron.d/re_otm
@@ -105,7 +105,7 @@ autoboot
 }
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│ $NC$COLBG1                 •AUTO REBOOT•                $COLOR1 │$NC"
+echo -e "$COLOR1│ $NC$COLBG1                  •AUTO REBOOT•                $COLOR1 │$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e " $COLOR1│$NC   ${COLOR1}[1]${NC} • Every 30 Min"

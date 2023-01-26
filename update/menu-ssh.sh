@@ -78,7 +78,7 @@ portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               • SSH MENU •              ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             • SSH CREATE ACCOUNT •            ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 read -p "   Username : " Login
@@ -300,7 +300,7 @@ function cekssh(){
 
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}              •SSH ACTIVE USER•             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               • SSH ACTIVE USER •             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e ""
@@ -370,7 +370,7 @@ menu-ssh
 function delssh(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}               •SSH DELETE USER•             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}               • SSH DELETE USER •             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 read -p "   Username : " Pengguna
@@ -396,7 +396,7 @@ menu-ssh
 function renewssh(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}              •RENEW SSH ACCOUNT•             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             • RENEW SSH ACCOUNT •             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 read -p "   Username : " User
@@ -438,7 +438,7 @@ egrep "^$User" /etc/passwd >/dev/null
 echo -e "$Pass\n$Pass\n"|passwd $User &> /dev/null
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             •RENEW SSH ACCOUNT•             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             • RENEW SSH ACCOUNT •             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "   Username   : $User"
@@ -449,7 +449,7 @@ echo -e "$COLOR1 Enjoy our Arz Auto Script Service${NC}"
 else
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             •RENEW SSH ACCOUNT•             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}             • RENEW SSH ACCOUNT •             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "   Username Doesnt Exist      "
@@ -464,7 +464,7 @@ menu-ssh
 function memberssh(){
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}             •RENEW SSH ACCOUNT•             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}            • MEMBER SSH ACCOUNT •             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"    
 echo "   USERNAME          EXP DATE          STATUS"

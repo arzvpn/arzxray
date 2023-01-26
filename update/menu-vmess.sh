@@ -372,7 +372,7 @@ sed -i "/### $user/c\### $user $exp4" /etc/xray/config.json
 systemctl restart xray > /dev/null 2>&1
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}              •RENEW VMESS USER•                ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}              •RENEW VMESS USER•               ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}   [INFO]  $user Account Renewed Successfully"
@@ -442,7 +442,7 @@ clear
 source /var/lib/arzvpn-pro/ipvps.conf
 domain=$(cat /etc/xray/domain)
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL VMESS ACCOUNT•             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}            •CREATE VMESS ACCOUNT•             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 tls="$(cat ~/log-install.txt | grep -w "Vmess TLS" | cut -d: -f2|sed 's/ //g')"
@@ -464,7 +464,7 @@ fi
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1│${NC} ${COLBG1}            •DETAIL VMESS ACCOUNT•             ${NC} $COLOR1│$NC"
+echo -e "$COLOR1│${NC} ${COLBG1}            •CREATE VMESS ACCOUNT•             ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} Please choose another name."

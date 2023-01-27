@@ -7,4 +7,4 @@
 
 ## Silahkan Hubungi
 ### https://t.me/Store_Arz
-### http://wa.me/6283117634078
+### https://wa.me/6283117634078

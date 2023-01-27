@@ -4,4 +4,4 @@
 ### _1 Bulan 10k_
 ### _Lifetime 3x ganti ip 50K_
 ### _Source script 500k_
-## <pre><code>t.me/Store_Arz</code></pre>
+https://t.me/Store_Arz

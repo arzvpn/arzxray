@@ -4,4 +4,7 @@
 ### _1 Bulan 10k_
 ### _Lifetime 3x ganti ip 50K_
 ### _Source script 500k_
-https://t.me/Store_Arz
+
+## Silahkan Hubungi
+### https://t.me/Store_Arz
+### http://wa.me/6283117634078

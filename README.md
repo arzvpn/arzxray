@@ -9,3 +9,23 @@
 ### https://t.me/Store_Arz
 ### https://wa.me/6283117634078
 
+## ⏩ AUTOSCRIPT WEBSOCKET MULTIPORT 443 DETAILS ⏪
+<br>
+### Support SSH Multipath 
+[ SSH & XRAY SERVICES ] <br>
+<br>
+✅ OpenSSH : 22 <br>
+✅ Dropbear : 109
+✅ SSH SSL Websocket : 443 <br>
+✅ Vmess WS TLS : 443 <br>
+✅ Vless WS TLS : 443 <br>
+✅ Trojan WS TLS : 443 <br>
+✅ Shadowsocks WS TLS : 443 <br>
+✅ Vmess gRPC : 443 <br>
+✅ Vless gRPC : 443 <br>
+✅ Trojan gRPC : 443 <br>
+✅ Shadowsocks gRPC : 443 <br>
+✅ SSH Websocket : 80 <br>
+✅ Vmess WS none TLS : 80 <br>
+✅ Vless WS none TLS : 80 <br>
+✅ Stunnel4 : 447,777 <br>

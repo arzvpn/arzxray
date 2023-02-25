@@ -45,11 +45,11 @@ exit 0
 fi
 cek=$(netstat -nutlp | grep -w $vpn)
 if [[ -z $cek ]]; then
-rm -f /etc/systemd/system/cdn-dropbear.service
-cat > /etc/systemd/system/cdn-dropbear.service <<END
+rm -f /etc/systemd/system/ws-dropbear.service
+cat > /etc/systemd/system/ws-dropbear.service <<END
 [Unit]
 Description=Python WS-Dropbear
-Documentation=https://pelangisenja.me
+Documentation=https://
 After=network.target nss-lookup.target
 [Service]
 Type=simple
@@ -57,15 +57,15 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/cdn-dropbear $vpn
+ExecStart=/usr/bin/python -O /usr/local/bin/ws-dropbear $vpn
 Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 END
 systemctl daemon-reload
-systemctl enable cdn-dropbear
-systemctl start cdn-dropbear
-systemctl restart cdn-dropbear
+systemctl enable ws-dropbear
+systemctl start ws-dropbear
+systemctl restart ws-dropbear
 sed -i "s/   - Websocket SSH(HTTP)     : $portsshws/   - Websocket SSH(HTTP)     : $vpn/g" /root/log-install.txt
 echo -e "\e[032;1mPort $vpn modified successfully\e[0m"
 else

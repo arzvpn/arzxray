@@ -21,7 +21,7 @@ echo -e "\e[32mloading...\e[0m"
 clear
 ssl2="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $2}')"
 portsshws="$(cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2|sed 's/ //g')"
-wsstunnel="$(cat ~/log-install.txt | grep -w "SSL(HTTPS)" | cut -d: -f2|sed 's/ //g')"
+wsstunnel="$(cat ~/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2|sed 's/ //g')"
 wsovpn="$(cat ~/log-install.txt | grep -w "Websocket OpenVPN" | cut -d: -f2|sed 's/ //g')"
 echo -e "\e[0;31m.-----------------------------------------.\e[0m"
 echo -e "\e[0;31m|      \e[0;36mCHANGE PORT WEBSOCKET OPENSSH\e[m      \e[0;31m|\e[0m"
@@ -29,7 +29,6 @@ echo -e "\e[0;31m'-----------------------------------------'\e[0m"
 echo -e " \e[1;31m>>\e[0m\e[1;33mChange Port For SSH & OVPN WS:\e[0m"
 echo -e "     [1]  Change Port Websocket SSH(HTTP) $portsshws"
 echo -e "     [2]  Change Port Websocket SSL(HTTPS) $wsstunnel"
-echo -e "     [3]  Change Port Websocket OpenVPN $wsovpn"
 echo -e "======================================"
 echo -e "     [x]  Back To Menu Change Port"
 echo -e "     [y]  Go To Main Menu"
@@ -49,7 +48,7 @@ rm -f /etc/systemd/system/ws-dropbear.service
 cat > /etc/systemd/system/ws-dropbear.service <<END
 [Unit]
 Description=Python WS-Dropbear
-Documentation=https://
+Documentation=https://panel.arzvpnstore.my.id
 After=network.target nss-lookup.target
 [Service]
 Type=simple
@@ -101,7 +100,7 @@ rm -f /etc/systemd/system/cdn-ovpn.service
 cat > /etc/systemd/system/cdn-ovpn.service <<END
 [Unit]
 Description=Python WS-Ovpn 
-Documentation=https://pelangisenja.me
+Documentation=https://arzvpnstore.my.id
 After=network.target nss-lookup.target
 [Service]
 Type=simple

@@ -20,14 +20,14 @@ fi
 echo -e "\e[32mloading...\e[0m"
 clear
 ssl2="$(cat /etc/stunnel/stunnel.conf | grep -i accept | head -n 2 | cut -d= -f2 | sed 's/ //g' | tr '\n' ' ' | awk '{print $2}')"
-wsdropbear="$(cat ~/log-install.txt | grep -w "SSH(HTTP)" | cut -d: -f2|sed 's/ //g')"
+portsshws="$(cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2|sed 's/ //g')"
 wsstunnel="$(cat ~/log-install.txt | grep -w "SSL(HTTPS)" | cut -d: -f2|sed 's/ //g')"
 wsovpn="$(cat ~/log-install.txt | grep -w "Websocket OpenVPN" | cut -d: -f2|sed 's/ //g')"
 echo -e "\e[0;31m.-----------------------------------------.\e[0m"
 echo -e "\e[0;31m|      \e[0;36mCHANGE PORT WEBSOCKET OPENSSH\e[m      \e[0;31m|\e[0m"
 echo -e "\e[0;31m'-----------------------------------------'\e[0m"
 echo -e " \e[1;31m>>\e[0m\e[1;33mChange Port For SSH & OVPN WS:\e[0m"
-echo -e "     [1]  Change Port Websocket SSH(HTTP) $wsdropbear"
+echo -e "     [1]  Change Port Websocket SSH(HTTP) $portsshws"
 echo -e "     [2]  Change Port Websocket SSL(HTTPS) $wsstunnel"
 echo -e "     [3]  Change Port Websocket OpenVPN $wsovpn"
 echo -e "======================================"
@@ -66,7 +66,7 @@ systemctl daemon-reload
 systemctl enable cdn-dropbear
 systemctl start cdn-dropbear
 systemctl restart cdn-dropbear
-sed -i "s/   - Websocket SSH(HTTP)     : $wsdropbear/   - Websocket SSH(HTTP)     : $vpn/g" /root/log-install.txt
+sed -i "s/   - Websocket SSH(HTTP)     : $portsshws/   - Websocket SSH(HTTP)     : $vpn/g" /root/log-install.txt
 echo -e "\e[032;1mPort $vpn modified successfully\e[0m"
 else
 echo -e "\e[1;31mPort Websocket SSH(HTTP) $vpn is used\e[0m"

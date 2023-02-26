@@ -70,7 +70,7 @@ DATE=$(date +'%d %B %Y')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
-    echo -e "\033[1;96m Expires in    : $(( (d1 - d2) / 86400 )) Days"
+    echo -e "\033[1;96m  Expires in    : $(( (d1 - d2) / 86400 )) Days"
 }
 mai="datediff "$Exp" "$DATE""
 
@@ -78,59 +78,61 @@ clear
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}           SERVER INFORMATION           ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
-echo -e "\033[1;91m IP VPS        : $(curl -s ipinfo.io/ip ) \e[0m"
+echo -e "\033[1;91m  IP VPS        : $(curl -s ipinfo.io/ip ) \e[0m"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 if [ "$cekup" = "day" ]; then
-echo -e "\033[1;91m SYSTEM UPTIME : $uphours $upminutes $uptimecek \e[0m"
+echo -e "\033[1;91m  SYSTEM UPTIME : $uphours $upminutes $uptimecek \e[0m"
 else
-echo -e "\033[1;91m SYSTEM UPTIME : $uphours $upminutes \e[0m"
+echo -e "\033[1;91m  SYSTEM UPTIME : $uphours $upminutes \e[0m"
 fi
-echo -e "\033[1;91m OS VPS        : \e[0m"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
-echo -e "\033[1;91m MEMORY USAGE  : $uram / $tram \e[0m"
-echo -e "\033[1;91m ISP VPS       : $(curl -s ipinfo.io/org | cut -d " " -f 2-10 ) \e[0m"
-echo -e "\033[1;91m REGION        : $(curl -s ipinfo.io/timezone ) \e[0m"
-echo -e "\033[1;91m DOMAIN        : $(cat /etc/xray/domain)\e[0m"
-echo -e "\033[1;91m DATE&TIME     : $( date -d "0 days" +"%d-%m-%Y | %X" )\e[0m"
+echo -e "\033[1;91m  OS VPS        : \e[0m"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
+echo -e "\033[1;91m  MEMORY USAGE  : $uram / $tram \e[0m"
+echo -e "\033[1;91m  ISP VPS       : $(curl -s ipinfo.io/org | cut -d " " -f 2-10 ) \e[0m"
+echo -e "\033[1;91m  REGION        : $(curl -s ipinfo.io/timezone ) \e[0m"
+echo -e "\033[1;91m  DOMAIN        : $(cat /etc/xray/domain)\e[0m"
+echo -e "\033[1;91m  DATE&TIME     : $( date -d "0 days" +"%d-%m-%Y | %X" )\e[0m"
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}          AUTOSCRIPT INFORMATION        ${NC} $COLOR1│$NC"       
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
-echo -e "\033[1;96m Owner        : Arz Vpn Store \e[0m"
-echo -e "\033[1;96m Contact      : Wa: 083117634078 \e[0m"
-echo -e "\033[1;96m Telegram     : t.me/Store_Arz \e[0m"
-echo -e "\033[1;96m Official     : t.me/arzvpn \e[0m"
-echo -e "\033[1;96m Type Script  : Multiport V2 \e[0m"
-echo -e "\033[1;96m Version SC   : $(cat /opt/.ver) \e[0m"
+echo -e "\033[1;96m  Owner        : Arz Vpn Store \e[0m"
+echo -e "\033[1;96m  Contact      : Wa: 083117634078 \e[0m"
+echo -e "\033[1;96m  Telegram     : t.me/Store_Arz \e[0m"
+echo -e "\033[1;96m  Official     : t.me/arzvpn \e[0m"
+echo -e "\033[1;96m  Type Script  : Multiport V2 \e[0m"
+echo -e "\033[1;96m  Version SC   : $(cat /opt/.ver) \e[0m"
 if [ $Exp \< 1000 ];
 then
-echo -e "\033[1;96m License       : $sisa_hari$NC Days Tersisa \e[0m"
+echo -e "\033[1;96m  License      : $sisa_hari$NC Days Tersisa \e[0m"
 else
     datediff "$Exp" "$DATE"
 fi;
-echo -e "\033[1;96m CLIENT NAME   : $Name \e[0m"
+echo -e "\033[1;96m  CLIENT NAME  : $Name \e[0m"
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}          SERVER PORT INFORMATION       ${NC} $COLOR1│$NC"       
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
-echo -e "\033[1;93m Port SSH Websocket       :80\e[0m"
-echo -e "\033[1;93m Port SSH Websocket SSL   :443\e[0m"
-echo -e "\033[1;93m Port SSH SSL             :222,777\e[0m"
-echo -e "\033[1;93m Port OpenSSH             :22\e[0m"
-echo -e "\033[1;93m Port SSH Dropbear        :109,143\e[0m"
-echo -e "\033[1;93m Port Xray None TLS       :80\e[0m"
-echo -e "\033[1;93m Port Xray TLS            :443\e[0m"
-echo -e "\033[1;93m Port Vmess None TLS      :80\e[0m"
-echo -e "\033[1;93m Port Vmess TLS           :443\e[0m"
-echo -e "\033[1;93m Port Vmess GRPC          :443\e[0m"
-echo -e "\033[1;93m Port Vless None TLS      :80\e[0m"
-echo -e "\033[1;93m Port Vless TLS           :443\e[0m"
-echo -e "\033[1;93m Port Vless GRPC          :443\e[0m"
-echo -e "\033[1;93m Port Trojan WS           :443\e[0m"
-echo -e "\033[1;93m Port Trojan GRPC         :443\e[0m"
-echo -e "\033[1;93m Port ShadowSocks WS      :443\e[0m"
-echo -e "\033[1;93m Port ShadowSocks GRPC    :443\e[0m"
-echo -e "\033[1;97m Service Support Change Port \e[0m"
+echo -e "\033[1;93m  >Port SSH Websocket       :80\e[0m"
+echo -e "\033[1;93m  >Port SSH Websocket SSL   :443\e[0m"
+echo -e "\033[1;93m  >Port SSH SSL             :222,777\e[0m"
+echo -e "\033[1;93m  >Port OpenSSH             :22\e[0m"
+echo -e "\033[1;93m  >Port SSH Dropbear        :109,143\e[0m"
+echo -e "\033[1;93m  >Port Xray None TLS       :80\e[0m"
+echo -e "\033[1;93m  >Port Xray TLS            :443\e[0m"
+echo -e "\033[1;93m  >Port Vmess None TLS      :80\e[0m"
+echo -e "\033[1;93m  >Port Vmess TLS           :443\e[0m"
+echo -e "\033[1;93m  >Port Vmess GRPC          :443\e[0m"
+echo -e "\033[1;93m  >Port Vless None TLS      :80\e[0m"
+echo -e "\033[1;93m  >Port Vless TLS           :443\e[0m"
+echo -e "\033[1;93m  >Port Vless GRPC          :443\e[0m"
+echo -e "\033[1;93m  >Port Trojan WS           :443\e[0m"
+echo -e "\033[1;93m  >Port Trojan GRPC         :443\e[0m"
+echo -e "\033[1;93m  >Port ShadowSocks WS      :443\e[0m"
+echo -e "\033[1;93m  >Port ShadowSocks GRPC    :443\e[0m"
+echo -e "\033[1;97m  Service Support Change Port \e[0m"
+echo -e ""
+echo -e "\033[1;97mOrder AutoScript Lifetime wa.me/6283117634078\e[0m"
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 menu

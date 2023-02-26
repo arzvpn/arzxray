@@ -63,7 +63,7 @@ DATE=$(date +'%d %B %Y')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
-    echo -e "$COLOR1│$NC Expires In   : $(( (d1 - d2) / 86400 )) Days"
+    echo -e "Expires In   : $(( (d1 - d2) / 86400 )) Days"
 }
 mai="datediff "$Exp" "$DATE""
 clear

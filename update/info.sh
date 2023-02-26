@@ -89,11 +89,11 @@ echo -e "$COLOR1 DOMAIN        : $(cat /etc/xray/domain)${NC}"
 echo -e "$COLOR1 DATE&TIME     : $( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
 if [ $exp \< 1000 ];
 then
-echo -e "$COLOR1 License     : ${GREEN}$sisa_hari$NC Days Tersisa ${NC}"
+echo -e "$COLOR1 License       : ${GREEN}$sisa_hari$NC Days Tersisa ${NC}"
 else
     datediff "$Exp" "$DATE"
 fi;
-echo -e "${CYAN} CLIENT NAME  : $Name ${NC}"
+echo -e "${CYAN} CLIENT NAME   : $Name ${NC}"
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}          SERVER PORT INFORMATION       ${NC} $COLOR1│$NC"       
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"

@@ -5,7 +5,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 echo -e " [INFO] Downloading Update File"
 sleep 2
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu.sh" && chmod +x /usr/bin/menu
-wget -q -O /usr/bin/mwebmin "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-webmin.sh" && chmod +x /usr/bin/mwebmin
+wget -q -O /usr/bin/webmin "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-webmin.sh" && chmod +x /usr/bin/webmin
 wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-ss.sh" && chmod +x /usr/bin/menu-ss
 wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-vmess.sh" && chmod +x /usr/bin/menu-vmess
 wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/menu-vless.sh" && chmod +x /usr/bin/menu-vless

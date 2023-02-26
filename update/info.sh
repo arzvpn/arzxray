@@ -63,7 +63,7 @@ DATE=$(date +'%d %B %Y')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
-    echo -e "Expires In   : $(( (d1 - d2) / 86400 )) Days"
+    echo -e "$COLOR1 Expires In   : $(( (d1 - d2) / 86400 )) Days"
 }
 mai="datediff "$Exp" "$DATE""
 
@@ -93,7 +93,7 @@ echo -e "$COLOR1 License     : ${GREEN}$sisa_hari$NC Days Tersisa ${NC}"
 else
     datediff "$Exp" "$DATE"
 fi;
-echo -e "$COLOR1 CLIENT NAME  : $Name ${NC}"
+echo -e "${CYAN} CLIENT NAME  : $Name ${NC}"
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}          SERVER PORT INFORMATION       ${NC} $COLOR1│$NC"       
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"

@@ -29,7 +29,7 @@ else
 echo -e "$COLOR1 SYSTEM UPTIME : $uphours $upminutes ${NC}"
 fi
 echo -e "$COLOR1 MEMORY USAGE  : $uram / $tram ${NC}"
-echo -e " OS VPS        : "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-
+echo -e " OS VPS        : "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
 echo -e "$COLOR1 ISP VPS       : $(curl -s ipinfo.io/org | cut -d " " -f 2-10 ) ${NC}"
 echo -e "$COLOR1 REGION        : $(curl -s ipinfo.io/timezone ) ${NC}"
 echo -e "$COLOR1 DOMAIN        : $(cat /etc/xray/domain)${NC}"

@@ -36,6 +36,8 @@ wget -q -O /usr/bin/portws "https://raw.githubusercontent.com/arzvpn/arzxray/mai
 wget -q -O /usr/bin/portxray "https://raw.githubusercontent.com/arzvpn/arzxray/main/change-port/port-xray.sh" && chmod +x /usr/bin/portxray
 wget -q -O /usr/bin/ssh-wsenabler "https://raw.githubusercontent.com/arzvpn/arzxray/main/ssh/sshws-true.sh" && chmod +x /usr/bin/ssh-wsenabler
 wget -q -O /usr/bin/change-port "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/change-port.sh" && chmod +x /usr/bin/change-port
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/running.sh" && chmod +x /usr/bin/running
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/arzvpn/arzxray/main/update/restart.sh" && chmod +x /usr/bin/restart
 echo -e " [INFO] Update Successfully"
 sleep 2
 exit

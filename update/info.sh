@@ -130,7 +130,7 @@ echo -e "\033[1;93m Port Trojan WS           :443\e[0m"
 echo -e "\033[1;93m Port Trojan GRPC         :443\e[0m"
 echo -e "\033[1;93m Port ShadowSocks WS      :443\e[0m"
 echo -e "\033[1;93m Port ShadowSocks GRPC    :443\e[0m"
-echo -e "\033[1;93m Support Change Port \e[0m"
+echo -e "\033[1;97m Service Support Change Port \e[0m"
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 menu

@@ -18,36 +18,36 @@ clear
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}           SERVER INFORMATION           ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
-echo -e "\E[0;41;36m IP VPS        : $(curl -s ipinfo.io/ip ) \E[0m"
+echo -e "$COLOR1 IP VPS        : $(curl -s ipinfo.io/ip ) ${NC}"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 if [ "$cekup" = "day" ]; then
-echo -e "\E[0;41;36m SYSTEM UPTIME : $uphours $upminutes $uptimecek \E[0m"
+echo -e "$COLOR1 SYSTEM UPTIME : $uphours $upminutes $uptimecek ${NC}"
 else
-echo -e "\E[0;41;36m SYSTEM UPTIME : $uphours $upminutes \E[0m"
+echo -e "$COLOR1 SYSTEM UPTIME : $uphours $upminutes ${NC}"
 fi
-echo -e "\E[0;41;36m MEMORY USAGE  : $uram / $tram \E[0m"
-echo -e "\E[0;41;36m OS VPS        : \E[0m"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-
-echo -e "\E[0;41;36m ISP VPS       : $(curl -s ipinfo.io/org | cut -d " " -f 2-10 ) \E[0m"
-echo -e "\E[0;41;36m REGION        : $(curl -s ipinfo.io/timezone ) "
-echo -e "\E[0;41;36m DOMAIN        : $(cat /etc/xray/domain)"
-echo -e "\E[0;41;36m DATE&TIME     : $( date -d "0 days" +"%d-%m-%Y | %X" )"
+echo -e "$COLOR1 MEMORY USAGE  : $uram / $tram ${NC}"
+echo -e "$COLOR1 OS VPS        : ${NC}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-
+echo -e "$COLOR1 ISP VPS       : $(curl -s ipinfo.io/org | cut -d " " -f 2-10 ) ${NC}"
+echo -e "$COLOR1 REGION        : $(curl -s ipinfo.io/timezone ) ${NC}"
+echo -e "$COLOR1 DOMAIN        : $(cat /etc/xray/domain)${NC}"
+echo -e "$COLOR1 DATE&TIME     : $( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
 DATE=$(date +'%d %B %Y')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
-    echo -e "\E[0;41;36m Expires In   : $(( (d1 - d2) / 86400 )) Days"
+    echo -e "$COLOR1 Expires In   : $(( (d1 - d2) / 86400 )) Days"
 }
 mai="datediff "$Exp" "$DATE""
 if [ $exp \< 1000 ];
 then
-echo -e "\E[0;41;36m License     : ${GREEN}$sisa_hari$NC Days Tersisa \E[0m"
+echo -e "$COLOR1 License     : ${GREEN}$sisa_hari$NC Days Tersisa ${NC}"
 else
     datediff "$Exp" "$DATE"
 fi;
-echo -e "\E[0;41;36m CLIENT NAME  : $Name \E[0m"
+echo -e "$COLOR1 CLIENT NAME  : $Name ${NC}"
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}          SERVER PORT INFORMATION       ${NC} $COLOR1│$NC"       
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"

@@ -59,6 +59,12 @@ PERMISSION () {
     fi
     BURIQ
 }
+if [ "$res" = "Expired" ]; then
+Exp="\e[36mExpired\033[0m"
+rm -f /home/needupdate > /dev/null 2>&1
+else
+Exp=$(curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/ipmini | grep $MYIP | awk '{print $3}')
+fi
 
 DATE=$(date +'%d %B %Y')
 datediff() {
@@ -72,22 +78,22 @@ clear
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}           SERVER INFORMATION           ${NC} $COLOR1│$NC"
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1 IP VPS        : $(curl -s ipinfo.io/ip ) ${NC}"
+echo -e "\033[1;91m' IP VPS        : $(curl -s ipinfo.io/ip ) \e[0m"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 if [ "$cekup" = "day" ]; then
-echo -e "$COLOR1 SYSTEM UPTIME : $uphours $upminutes $uptimecek ${NC}"
+echo -e "\033[1;91m' SYSTEM UPTIME : $uphours $upminutes $uptimecek \e[0m"
 else
-echo -e "$COLOR1 SYSTEM UPTIME : $uphours $upminutes ${NC}"
+echo -e "\033[1;91m' SYSTEM UPTIME : $uphours $upminutes \e[0m"
 fi
-echo -e "$COLOR1 OS VPS        : ${NC}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
-echo -e "$COLOR1 MEMORY USAGE  : $uram / $tram ${NC}"
-echo -e "$COLOR1 ISP VPS       : $(curl -s ipinfo.io/org | cut -d " " -f 2-10 ) ${NC}"
-echo -e "$COLOR1 REGION        : $(curl -s ipinfo.io/timezone ) ${NC}"
-echo -e "$COLOR1 DOMAIN        : $(cat /etc/xray/domain)${NC}"
-echo -e "$COLOR1 DATE&TIME     : $( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
+echo -e "\033[1;91m' OS VPS        : \e[0m"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
+echo -e "\033[1;91m' MEMORY USAGE  : $uram / $tram \e[0m"
+echo -e "\033[1;91m' ISP VPS       : $(curl -s ipinfo.io/org | cut -d " " -f 2-10 ) \e[0m"
+echo -e "\033[1;91m' REGION        : $(curl -s ipinfo.io/timezone ) \e[0m"
+echo -e "\033[1;91m' DOMAIN        : $(cat /etc/xray/domain)\e[0m"
+echo -e "\033[1;91m' DATE&TIME     : $( date -d "0 days" +"%d-%m-%Y | %X" )\e[0m"
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}          AUTOSCRIPT INFORMATION        ${NC} $COLOR1│$NC"       
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
@@ -107,7 +113,7 @@ echo -e "\033[1;96m CLIENT NAME   : $Name \e[0m"
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}          SERVER PORT INFORMATION       ${NC} $COLOR1│$NC"       
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
-echo -e ""
+echo -e "\033[1;93m' Port SSH Websocket   :80\e[0m"
 read -n 1 -s -r -p "  Press any key to back on menu"
 menu
 esac

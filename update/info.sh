@@ -88,7 +88,7 @@ echo -e "$COLOR1 ISP VPS       : $(curl -s ipinfo.io/org | cut -d " " -f 2-10 ) 
 echo -e "$COLOR1 REGION        : $(curl -s ipinfo.io/timezone ) ${NC}"
 echo -e "$COLOR1 DOMAIN        : $(cat /etc/xray/domain)${NC}"
 echo -e "$COLOR1 DATE&TIME     : $( date -d "0 days" +"%d-%m-%Y | %X" )${NC}"
-if [ $exp \< 1000 ];
+if [ $Exp \< 1000 ];
 then
 echo -e "$COLOR1 License       : $sisa_hari$NC Days Tersisa ${NC}"
 else
@@ -99,7 +99,10 @@ echo -e ""
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}          AUTOSCRIPT INFORMATION        ${NC} $COLOR1│$NC"       
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1 Owner        : Arz Vpn Store ${NC}"
+echo -e "\033[1;96m Owner        : Arz Vpn Store \e[0m"
+echo -e "\033[1;96m Contact      : Wa: 083117634078 / Telegram: t.me/Store_Arz \e[0m"
+echo -e "\033[1;96m Official     : t.me/arzvpn \e[0m"
+echo -e "\033[1;96m Version SC   : \e[0m"
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}          SERVER PORT INFORMATION       ${NC} $COLOR1│$NC"       
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"

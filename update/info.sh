@@ -94,6 +94,11 @@ else
     datediff "$Exp" "$DATE"
 fi;
 echo -e "${CYAN} CLIENT NAME   : $Name ${NC}"
+echo -e ""
+echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1│${NC} ${COLBG1}          AUTOSCRIPT INFORMATION        ${NC} $COLOR1│$NC"       
+echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"
+echo -e ""
 echo -e "$COLOR1┌──────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} ${COLBG1}          SERVER PORT INFORMATION       ${NC} $COLOR1│$NC"       
 echo -e "$COLOR1└──────────────────────────────────────────┘${NC}"

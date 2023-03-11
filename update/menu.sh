@@ -165,29 +165,29 @@ cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 serverV=$( curl -sS https://raw.githubusercontent.com/arzvpn/permission/main/version)
 if [ "$Isadmin" = "ON" ]; then
-uis="${GREEN}XRAY Arz V1$NC"
+uis="${GREEN}MultiPort XRAY Arz V1$NC"
 else
-uis="${BLUE}XRAY Arz V1$NC"
+uis="${BLUE}MultiPort XRAY Arz V1$NC"
 fi
-echo -e "$COLOR1│$NC Premium Version  : $uis"
+echo -e "$COLOR1│$NC \033[1;96mPremium Version  : $uis\e[0m"
 if [ "$cekup" = "day" ]; then
-echo -e "$COLOR1│$NC System Uptime    : $uphours $upminutes $uptimecek"
+echo -e "$COLOR1│$NC \033[1;96mSystem Uptime    : $uphours $upminutes $uptimecek\e[0m"
 else
-echo -e "$COLOR1│$NC System Uptime    : $uphours $upminutes"
+echo -e "$COLOR1│$NC \033[1;96mSystem Uptime    : $uphours $upminutes\e[0m"
 fi
-echo -e "$COLOR1│$NC OS VPS           : "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`
-echo -e "$COLOR1│$NC Memory Usage     : $uram / $tram"
-echo -e "$COLOR1│$NC CPU Usage        : $cpu_usage"
-echo -e "$COLOR1│$NC ISP              : $ISP"
-echo -e "$COLOR1│$NC REGION           : $WKT"
-echo -e "$COLOR1│$NC Current Domain   : $(cat /etc/xray/domain)"
-echo -e "$COLOR1│$NC IP-VPS           : ${COLOR1}$IPVPS${NC}"
-echo -e "$COLOR1│$NC DATE&TIME        : $( date -d "0 days" +"%d-%m-%Y | %X" )"
+echo -e "$COLOR1│$NC \033[1;96mS VPS           : "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` \e[0m
+echo -e "$COLOR1│$NC \033[1;96mMemory Usage     : $uram / $tram\e[0m"
+echo -e "$COLOR1│$NC \033[1;96mCPU Usage        : $cpu_usage\e[0m"
+echo -e "$COLOR1│$NC \033[1;96mISP              : $ISP\e[0m"
+echo -e "$COLOR1│$NC \033[1;96mREGION           : $WKT\e[0m"
+echo -e "$COLOR1│$NC \033[1;96mCurrent Domain   : $(cat /etc/xray/domain)\e[0m"
+echo -e "$COLOR1│$NC \033[1;96mIP VPS           : $IPVPS\e[0m"
+echo -e "$COLOR1│$NC \033[1;96mDATE&TIME        : $( date -d "0 days" +"%d-%m-%Y | %X" )\e[0m"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┏─━─━─━─━─━─━─━─━─━─━─━─━─━─━─━∞◆∞━─━─━─━─━─━─━─━─━─━─━─━─━─━─┓${NC}"
 echo -e "$COLOR1│$NC [ SSH WEBSOCKET : ${status_ws} ]  [ XRAY : ${status_xray} ]   [ NGINX : ${status_nginx} ]      $COLOR1│$NC"
 echo -e "$COLOR1┗─━─━─━─━─━─━─━─━─━─━─━─━─━─━─━∞◆∞━─━─━─━─━─━─━─━─━─━─━─━─━─━─┛${NC}"
-echo -e "$COLOR1╔─━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━─╗${NC}"
+echo -e "$COLOR1╔─━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━─╗${NC}"
 echo -e "  ${COLOR1}[1]${NC}  • SSH(${COLOR1}menu-ssh${NC})  "   
 echo -e "  ${COLOR1}[2]${NC}  • VMESS(${COLOR1}menu-vmess${NC}) "  
 echo -e "  ${COLOR1}[3]${NC}  • VLESS(${COLOR1}menu-vless${NC}) "  
@@ -199,7 +199,8 @@ echo -e "  ${COLOR1}[8]${NC}  • BACKUP(${COLOR1}menu-backup${NC}) "
 echo -e "  ${COLOR1}[9]${NC}  • THEME(${COLOR1}menu-theme${NC}) "
 echo -e "  ${COLOR1}[10]${NC} • SETTINGS(${COLOR1}menu-set${NC}) "
 echo -e "  ${COLOR1}[11]${NC} • INFO AUTOSCRIPT(${COLOR1}info${NC}) "
-echo -e "$COLOR1╚─━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━─╝${NC}"
+echo -e "  ${COLOR1}[x]${NC}  • EXIT MAIN MENU(${COLOR1}exit${NC})"
+echo -e "$COLOR1╚─━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━─╝${NC}"
 myver="$(cat /opt/.ver)"
 
 if [[ $serverV > $myver ]]; then
@@ -248,5 +249,6 @@ case $opt in
 11) clear ; info ;;
 100) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
+x | 0) clear ; exit ;;
 *) clear ; menu ;;
 esac

@@ -175,7 +175,7 @@ echo -e "$COLOR1│$NC \033[1;96mSystem Uptime    : $uphours $upminutes $uptimec
 else
 echo -e "$COLOR1│$NC \033[1;96mSystem Uptime    : $uphours $upminutes\e[0m"
 fi
-echo -e "$COLOR1│$NC \033[1;96mS VPS           : "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` \e[0m
+echo -e "$COLOR1│$NC \033[1;96mOS VPS           : "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` \
 echo -e "$COLOR1│$NC \033[1;96mMemory Usage     : $uram / $tram\e[0m"
 echo -e "$COLOR1│$NC \033[1;96mCPU Usage        : $cpu_usage\e[0m"
 echo -e "$COLOR1│$NC \033[1;96mISP              : $ISP\e[0m"

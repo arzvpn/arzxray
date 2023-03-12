@@ -8,7 +8,7 @@ wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/arzvpn/arzxr
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 
-wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/arzvpn/arzxray/main/websocket/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
+#wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/arzvpn/arzxray/main/websocket/service-wsdropbear && chmod +x /etc/systemd/system/ws-dropbear.service
 
 wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/arzvpn/arzxray/main/websocket/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
 

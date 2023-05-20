@@ -1,5 +1,5 @@
 [Unit]
-Description=Websocket-Dropbear By Arz VPN
+Description=Websocket-Dropbear
 Documentation=https://panel.arzvpnstore.biz.id
 After=network.target nss-lookup.target
 
